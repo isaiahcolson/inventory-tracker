@@ -1,0 +1,26 @@
+{
+  "name": "project_1",
+  "version": "1.0.0",
+  "description": "Inventory tool for mythical creatures",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://git.generalassemb.ly/j0nathanp3nEnterprise/project_1.git"
+  },
+  "author": "colson/pen jonathanpen1230@gmail.com",
+  "license": "MIT",
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "body-parser": "^1.19.0",
+    "connect-mongo": "^3.2.0",
+    "ejs": "^3.1.3",
+    "express": "^4.17.1",
+    "express-session": "^1.17.1",
+    "method-override": "^3.0.0",
+    "mongoose": "^5.9.16"
+  }
+}
