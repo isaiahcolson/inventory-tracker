@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/styles/main.css">
+    <title>Inventory Page</title>
+</head>
+<body>
+    <header>
+        <h1>Welcome to the Mythical Creature's Inventory Tool</h1>
+    </header>
+            <div class="sidenav">
+                <a href="/">Home</a>
+                <a href="/create">Create</a>
+                <a href="/show">Show</a>
+                <a href="/logout">Logout</a>
+            </div>
+        <main>
+            <h2>Normally, this page will show up as the main Inventory Page</h2>
+            <p>For non-registered users - this window will print a registration form to for user to establish login crendentials</p>
+            <p>For registered users - this window will print a </p>
+            <table>
+                <tr>
+                    <th>Product Name</th>
+                    <th>Category</th>
+                    <th>Price</th>
+                    <th>Quanity</th>
+                    <th>Reorder Level</th>
+                    <th>Actions</th>
+                </tr>
+                <tr>
+                    <td>Item 1</td>
+                    <td>Item 2 Category</td>
+                    <td>$25</td>
+                    <td>50</td>
+                    <td>100</td>
+                    <td>
+                        <form action="/index/" method="POST">
+                            <input type="submit" value="Edit">
+                        </form>
+                        <form action="/index/" method="POST">
+                            <input type="submit" value="Remove">
+                        </form>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Item 2</td>
+                    <td>Item 2 Category</td>
+                    <td>$15</td>
+                    <td>23</td>
+                    <td>50</td>
+                    <td>
+                        <form action="/index/" method="POST">
+                            <input type="submit" value="Edit">
+                        </form>
+                        <form action="/index/" method="POST">
+                            <input type="submit" value="Remove">
+                        </form>
+                    </td>
+                </tr>
+              </table>
+        </main>
+</body>
+</html>

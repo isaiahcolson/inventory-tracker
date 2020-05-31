@@ -1,16 +1,16 @@
 MVP Scope
 
-	This is an invetory tool for shop owners.  As a shop owner (witches, orcs, elves, etc) creates a username/password to get started.  Once authenticated, they are forwarded to a page to add items to their inventory.  They'll also have the ability to update and remove items within that inventory.  Each user will only have access to their own inventory. 
+	This is an invetory tool for shop owners.  As a shop owner (witches, orcs, elves, etc), one must create a username/password to get started.  Once authenticated, they are forwarded to a page to add items to their inventory.  They'll also have the ability to update and remove items within that inventory.  Each user will only have access to their own inventory. 
 
 Technologies in play
 
 - bootstrap
+- mongoDB
+- mongoose
 - NodeJs
 - bcrypt
 - body parser
 - express/sessions
-- mongoDB
-- mongoose
 
 
 Non-authenticated Users can:
@@ -22,25 +22,25 @@ Non-authenticated Users can:
 
 
 Authenticated user can:
-2. Login
+1. Login
 - Enter email/username and password
 - Once authenticated, users are directed to the Inventory page. This page has all of the create, update, and remove functionality in place. 
 
-3. Adding items
+2. Adding items
 - Click onto the 'Add item' button. A smaller window pops up with fields to enter item details.
 - Enter item details.
 - Click onto submit.  This puts the new item into their inventory, the 'New item' window dissapears, and they're redirected to the Inventory page.
 
-4. Update current items
+3. Update current items
 - Click onto the 'Edit' button.  A smaller window pops up with fields to edit item details.
 - Make necessary changes to the item's details
 - Click onto submit.  The selected item will update, the 'Edit item' window dissapears, and they're redirected to the Inventory page.
 
-5. Remove items
+4. Remove items
 - Click onto the 'Delete' button.  A smaller window pops up asking if they're sure on removing the item
 - Click 'Yes' to confirm or 'No' if they change their mind.  Upon either selection, the inventory will update accordingly, this 'Remove items' window dissapears, and they redirected to the Inventory page.
 
-6. Logout
+5. Logout
 - Click onto the 'Logout' button.  Users will be redirected to the initial landing page.
 
 
@@ -89,7 +89,6 @@ Saturday Sprint:
 - set up submaster branch
 - set up developer branches
 - css design starts
-
 
 Monday Sprint:
 - users can see navigation
