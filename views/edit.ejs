@@ -3,22 +3,29 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/styles/main.css">
     <title>Editing Page</title>
 </head>
 <body>
     <header>
         <h1>Welcome to the Mythical Creature's Inventory Tool</h1>
-        <nav>
-            <ul>
-                <li><a href="/">Home</a></li>
-                <li><a href="/create">Create</a></li>
-                <li><a href="/show">Show</a></li>
-                <li><a href="/edit">Edit</a></li> 
-            </ul>
-        </nav>
-        <main>
-            <h2>This is the editing page for individual items</h2>
-        </main>
     </header>
+            <div class="sidenav">
+                <a href="/">Home</a>
+                <a href="/create">Create</a>
+                <a href="/show">Show</a>
+                <a href="/logout">Logout</a>
+            </div>
+        <main>
+            <form action="/index/" method="POST">
+                <ul style="list-style: none;">
+                    <li>Name: <input type="text" name="name"></li>     
+                    <li>Category: <input type="text" name="category"></li>   
+                    <li>Price: <input type="number" name="price"></li>    
+                    <li>Description:<input type="text" name="description"></li>
+                    <input type="submit" value="Submit to update this info">
+                <ul>	
+            </form>
+        </main>
 </body>
 </html>

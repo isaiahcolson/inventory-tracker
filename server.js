@@ -18,11 +18,19 @@ app.set('view engine', 'ejs');
 // Middleware
 app.use(bodyParser.urlencoded({extended:false}));
 app.use(methodOverride('_method'));
+app.use(express.static('public'));  //for public and styles folder access
 
 // Root route
 app.get('/', (req,res) =>{
     res.render('index');
 });
+
+// Create route
+app.get('/create', (req,res) => {
+    res.render('create');
+});
+
+// 
 
 // Bind server to PORT
 app.listen(PORT, function(){
