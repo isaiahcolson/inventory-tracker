@@ -20,7 +20,6 @@ body {
 
 .sidenav {
     height: 100vh;
-    width: var(--sidenav-width);
     position: fixed;
     top: 0;
     left: 0;
@@ -28,11 +27,22 @@ body {
     overflow-x: hidden;
     text-align: center;
     justify-content: center;
+    display: flex;
+}
+
+.sidenav ul {
+    width: var(--sidenav-width);
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.sidenav li {
+    margin: 15px;
 }
 
 .sidenav a {
     text-decoration: none;
-    margin: 15px;
     /* padding: 5px; */
     height: 40px;
     border-radius: 8px;
@@ -45,6 +55,12 @@ body {
 .sidenav a:hover {
     background: var(--light);
     color: var(--accent);
+}
+
+.sidenav li:last-child {
+    position: absolute;
+    bottom: 0;
+    width: 40px;
 }
 
 main {
