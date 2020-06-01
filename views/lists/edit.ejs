@@ -18,12 +18,9 @@
         </nav>
     </header>
         <main>
-            <form action="/lists/" method="POST">
+            <form action="/lists/<%= list._id %>?_method=PUT" method="POST">
                 <ul>
                     <li>Name: <input type="text" name="name"></li>     
-                    <li>Category: <input type="text" name="category"></li>   
-                    <li>Price: <input type="number" name="price"></li>    
-                    <li>Description:<input type="text" name="description"></li>
                     <input type="submit" value="Submit to update this info">
                 </ul>	
             </form>

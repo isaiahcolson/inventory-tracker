@@ -1,36 +1,83 @@
 :root {
-    --background: #FFF;
+    /* colors */
+    --light: #F8F8F8;
+    --dark: #2A303B;
+    --dark-alt: #3C4D5D;
+    --accent: #085ff3;
+    --accent-light: #4688fa;
+    --accent-dark: #0037bf;
+
+    /* size references */
+    --sidenav-width: 70px;
+
+    /* fonts */
+    --font: 'Roboto', sans-serif;
 }
 
 body {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    background: var(--background);
+    background: var(--accent);
+    font-family: var(--font);
 }
 
 .sidenav {
     height: 100vh;
-    width: 50px;
     position: fixed;
-    z-index: 1;
     top: 0;
     left: 0;
-    background: #f1f1f1;
+    background: var(--accent);
     overflow-x: hidden;
     text-align: center;
+    justify-content: center;
+    display: flex;
+}
+
+.sidenav ul {
+    width: var(--sidenav-width);
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.sidenav li {
+    margin: 15px;
 }
 
 .sidenav a {
     text-decoration: none;
+    /* padding: 5px; */
+    height: 40px;
+    border-radius: 8px;
     display: block;
-    color: black;
+    color: var(--light);
+    background: var(--accent-light);
+    line-height: 40px;
+}
+
+.sidenav a:hover {
+    background: var(--light);
+    color: var(--accent);
+}
+
+.sidenav li:last-child {
+    position: absolute;
+    bottom: 0;
+    width: 40px;
 }
 
 main {
-    margin-left: 50px;
+    margin-left: var(--sidenav-width);
+    border-radius: 25px 0 0 0;
+    overflow: hidden;
+    background: var(--light);
+    height: 100vh;
 }
 
 footer {
-    margin-left: 50px;
+    margin-left: var(--sidenav-width);
+    padding: 16px;
+    background: var(--light);
+    border-radius: 0 0 0 25px;
 }
