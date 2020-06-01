@@ -3,34 +3,42 @@
     --light: #F8F8F8;
     --dark: #2A303B;
     --dark-alt: #3C4D5D;
-    --accent: #4CC4E5;
-    --accent-light: #87f7ff;
-    --accent-dark: #0093b3;
+    --accent: #085ff3;
+    --accent-light: #4688fa;
+    --accent-dark: #0037bf;
 }
 
 body {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    background: var(--dark);
+    background: var(--accent);
 }
 
 .sidenav {
     height: 100vh;
     width: 50px;
     position: fixed;
-    z-index: -1;
     top: 0;
     left: 0;
-    background: var(--dark-alt);
+    background: var(--accent);
     overflow-x: hidden;
     text-align: center;
 }
 
 .sidenav a {
     text-decoration: none;
+    margin: 5px;
+    padding: 8px 4px;
+    border-radius: 8px;
     display: block;
-    color: black;
+    color: var(--light);
+    background: var(--accent-light);
+}
+
+.sidenav a:hover {
+    background: var(--light);
+    color: var(--accent);
 }
 
 main {
