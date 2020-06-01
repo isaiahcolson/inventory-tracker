@@ -122,7 +122,7 @@ This <!-- TODO insert title instead of 'This' --> is an invetory tool for mythic
 
 - [ ] - jonathan - CRUD for items model
 - [ ] - jonathan - 
-- [ ] - isaiah - create home page
+- [ ] - isaiah - style lists/index as a dashboard
 - [ ] - isaiah - 
 <!-- TODO sidenav link should have popup with delete form -->
 

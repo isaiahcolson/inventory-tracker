@@ -1,30 +1,19 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/styles/main.css">
-    <title>Inventories List</title>
-</head>
-<body>
-    <header>
-        <h1>Welcome to the Mythical Creature's Inventory Tool</h1>
-        <nav>
-            <ul>
-                <li><a href="/">Home</a></li>
-                <li><a href="/lists/new">Add a new inventory</a></li>
-            </ul>
-        </nav>
-    </header>
-        <main>
-            <h2>List of Inventories</h2>
-            <ul>
-                <% lists.forEach(list => { %>
-                 <li>
-                     <a href="/lists/<%= list._id %>"><%= list.name %> </a>
-                 </li>
-                <% }) %>
-            </ul>
-        </main>
-</body>
-</html>
+<header>
+    <nav>
+        <ul>
+            <li><a href="/logout" title="Log Out"><i class="fas fa-sign-out-alt"></i></a></li>
+        </ul>
+    </nav>
+</header>
+<main>
+    <h1>Hello User</h1>
+    <p>Select a list below to continue working, or start a new one.</p>
+    <ul>
+        <% lists.forEach(list => { %>
+            <li class="dashboard-block">
+                <a href="/lists/<%= list._id %>"><%= list.name %> </a>
+            </li>
+        <% }) %>
+        <li class="dashboard-block"><a href="/lists/new"><i class="fas fa-plus-circle"></i></a></li>
+    </ul>
+</main>
