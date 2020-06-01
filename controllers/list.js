@@ -65,12 +65,17 @@ router.get('/:id/edit', (req,res) => {
 
 // Update route
 router.put('/:id', (req,res) => {
-    db.List.findByIdAndUpdate(req.params.id,req.body,{new:true}, function(err, foundList) {
+    const listsData = {
+        $set:{
+          name: req.body.name,
+        }
+    }
+    db.List.findByIdAndUpdate(req.params.id,req.body,{new:true}, function(err, updatedList) {
         if (err) {
             console.log(err);
             res.send({message: 'Internal server error.'});
         } else {
-            res.redirect(`/lists/${updatedList._id})`);
+            res.redirect(`/lists/${updatedList._id}`);
         }
     })
 })
