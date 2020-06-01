@@ -30,7 +30,11 @@ app.get('/create', (req,res) => {
     res.render('create');
 });
 
-// 
+// TODO show
+// TODO update
+// TODO delete
+
+
 
 // Bind server to PORT
 app.listen(PORT, function(){
