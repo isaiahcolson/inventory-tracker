@@ -102,11 +102,13 @@ This <!-- TODO insert title instead of 'This' --> is an invetory tool for mythic
 
 ### Monday - 5/31:
 - [ ] - jonathan - organize views folder
-- [ ] -  - users can see navigation
+- [x] - jonathan - users can see navigation
 - [ ] -  - users can see items in inventory
 - [ ] -  - users can add items
 - [ ] -  - users can sign up for an account
 - [ ] - isaiah - account sign up page styled
+- [ ] - isaiah - sidenav styling
+- [ ] - isaiah - styling reference sheet
 
 ### Tuesday - 6/1:
 - [ ] -  - full CRUD & MPV
