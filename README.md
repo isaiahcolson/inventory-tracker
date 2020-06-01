@@ -117,11 +117,13 @@ This <!-- TODO insert title instead of 'This' --> is an invetory tool for mythic
 - [x] - isaiah - sidenav styling
 - [x] - jonathan - add items controller
 - [x] - jonathan - added items ref to models
+- [x] - isaiah - fix main styling color issue
 
 
 - [ ] - jonathan - CRUD for items model
-- [ ] - isaiah - fix main styling color issue
+- [ ] - jonathan - 
 - [ ] - isaiah - create home page
+- [ ] - isaiah - 
 <!-- TODO sidenav link should have popup with delete form -->
 
 
