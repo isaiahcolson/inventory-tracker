@@ -29,7 +29,7 @@ app.get('/', (req,res) =>{
 
 // Lists route
 app.use('/lists', controllers.list);
-
+app.use('/items', controllers.item);
 
 // Bind server to PORT
 app.listen(PORT, function(){
