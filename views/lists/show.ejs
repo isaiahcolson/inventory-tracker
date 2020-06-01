@@ -5,12 +5,12 @@
 </header>
 <main>
 
+    <div id="underlay"></div>
+
     <%= list.name %>
-    <a href="/lists/<%=list._id%>/edit">Edit</a>
-    <form action="/lists/<%= list._id %>?_method=DELETE" method="POST">
-        <input type="submit" value="Delete">
+    <form action="/lists/<%= list._id %>?_method=DELETE" method="POST" id="list-delete">
+        <button type="submit" form="list-delete"><i class="fas fa-trash"></i></button>
+        <!-- <input type="submit" value="Delete"> -->
     </form>
 
-    
-    
 </main>
