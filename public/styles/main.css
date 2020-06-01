@@ -18,7 +18,7 @@ body {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    background: var(--accent);
+    background: var(--light);
     font-family: var(--font);
 }
 
@@ -73,6 +73,18 @@ main {
     overflow: hidden;
     background: var(--light);
     height: 100vh;
+    z-index: 1;
+}
+
+#underlay {
+    position: fixed;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: var(--accent);
+    z-index: -2;
 }
 
 footer {
