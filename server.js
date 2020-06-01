@@ -27,15 +27,8 @@ app.get('/', (req,res) =>{
     res.render('index');
 });
 
-// Create route
-app.get('/create', (req,res) => {
-    res.render('create');
-});
-
-// TODO show
-// TODO update
-// TODO delete
-
+// Lists route
+app.use('/lists', controllers.list);
 
 
 // Bind server to PORT

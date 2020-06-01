@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/styles/main.css">
+    <title>Inventory Page</title>
+</head>
+<body>
+    <header>
+        <h1>Welcome to the Mythical Creature's Inventory Tool</h1>
+        <nav>
+            <ul>
+                <li><a href="/">Home</a></li>
+                <li><a href="/lists/new">Inventory</a></li>
+            </ul>
+        </nav>
+    </header>
+
+        <main>
+            <h2>List of Inventories</h2>
+            <ul>
+                <% lists.forEach(list => { %>
+                 <li>
+                     <a href="/lists/<%= list._id %>"><%= list.name %> </a>
+                 </li>
+                <% }) %>
+            </ul>
+        </main>
+</body>
+</html>
