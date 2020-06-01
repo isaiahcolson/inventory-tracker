@@ -12,10 +12,20 @@
         <nav>
             <ul>
                 <li><a href="/">Home</a></li>
-                <li><a href="/lists">Inventory</a></li>
+                <li><a href="/lists/new">Inventory</a></li>
             </ul>
         </nav>
     </header>
-            
+
+        <main>
+            <h2>List of Inventories</h2>
+            <ul>
+                <% lists.forEach(list => { %>
+                 <li>
+                     <a href="/lists/<%= list._id %>"><%= list.name %> </a>
+                 </li>
+                <% }) %>
+            </ul>
+        </main>
 </body>
 </html>
