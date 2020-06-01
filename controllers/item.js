@@ -4,7 +4,7 @@ const router = express.Router();
 const db = require('../models');
 
 
-// index route
+// Index route
 // this route grabs item info and displays it on the lists/index.ejs page
 router.get('/', (req,res) => {
     db.Item.find({}, function(err, allItems) {
@@ -17,6 +17,14 @@ router.get('/', (req,res) => {
         }
     });
 });
+
+
+// Create new Item route
+router.get('/new', (req,res) =>{
+    res.render('items/new');
+})
+
+
 
 
 
