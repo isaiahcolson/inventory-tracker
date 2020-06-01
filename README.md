@@ -111,17 +111,21 @@ This <!-- TODO insert title instead of 'This' --> is an invetory tool for mythic
 - [x] - isaiah - styling reference sheet
 - [x] - jonathan - CRUD for lists
 - [x] - isaiah - transfer work from index.ejs to partials/header.ejs
+- [X] - jonathan - add items model
 - [x] - isaiah - google font chosen and added
+- [x] - jonathan - add items folder in views
+- [x] - isaiah - sidenav styling
+- [x] - jonathan - add items controller
+- [x] - jonathan - added items ref to models
 
-- [ ] - jonathan - add items model
-- [ ] - jonathan - add items folder in views
-- [ ] - jonathan - add items controller
 
-- [ ] - isaiah - sidenav styling
+- [ ] - jonathan - CRUD for items model
+- [ ] - isaiah - fix main styling color issue
 - [ ] - isaiah - create home page
+<!-- TODO sidenav link should have popup with delete form -->
+
 
 - [ ] - isaiah - account sign up page styled
-- [ ] - jonathan - users can remove items
 - [ ] -  - users can see items in inventory
 - [ ] -  - routes for sign up and log in pages
 - [ ] -  - users can add items
