@@ -1,12 +1,18 @@
 :root {
-    --background: #FFF;
+    /* colors */
+    --light: #F8F8F8;
+    --dark: #2A303B;
+    --dark-alt: #3C4D5D;
+    --accent: #4CC4E5;
+    --accent-light: #87f7ff;
+    --accent-dark: #0093b3;
 }
 
 body {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    background: var(--background);
+    background: var(--light);
 }
 
 .sidenav {
