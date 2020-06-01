@@ -26,10 +26,15 @@ This <!-- TODO insert title instead of 'This' --> is an invetory tool for mythic
 
 
 ## Wireframe/ Design
+
+### Wireframes
 ![Wireframe Image 1](/assets/images/inv-wireframe-1.png)
 ![Wireframe Image 2](/assets/images/inv-wireframe-2.png)
 ![Wireframe Image 3](/assets/images/inv-wireframe-3.png)
 ![Wireframe Image 4](/assets/images/inv-wireframe-4.png)
+
+### Color Scheme/ Styling
+![Color Collection](/assets/images/inv-color-collection.jpg)
 
 
 
