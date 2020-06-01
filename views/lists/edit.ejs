@@ -9,22 +9,23 @@
 <body>
     <header>
         <h1>Welcome to the Mythical Creature's Inventory Tool</h1>
+        <nav>
+            <ul>
+                <li><a href="/">Home</a></li>
+                <li><a href="/lists">Inventories List</a></li>
+                <li><a href="/logout">Logout</a></li>
+            </ul>       
+        </nav>
     </header>
-            <div class="sidenav">
-                <a href="/">Home</a>
-                <a href="/create">Create</a>
-                <a href="/show">Show</a>
-                <a href="/logout">Logout</a>
-            </div>
         <main>
-            <form action="/index/" method="POST">
-                <ul style="list-style: none;">
+            <form action="/lists/" method="POST">
+                <ul>
                     <li>Name: <input type="text" name="name"></li>     
                     <li>Category: <input type="text" name="category"></li>   
                     <li>Price: <input type="number" name="price"></li>    
                     <li>Description:<input type="text" name="description"></li>
                     <input type="submit" value="Submit to update this info">
-                <ul>	
+                </ul>	
             </form>
         </main>
 </body>

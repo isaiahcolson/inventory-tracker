@@ -4,18 +4,19 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/styles/main.css">
-    <title>Create New Inventory Page</title>
+    <title>Add New Inventory Page</title>
 </head>
 <body>
     <header>
         <h1>Welcome to the Mythical Creature's Inventory Tool</h1>
+        <nav>
+            <ul>
+                <li><a href="/">Home</a></li>
+                <li><a href="/lists">Inventories List</a></li>
+                <li><a href="/logout">Logout</a></li>
+            </ul>        
+        </nav>
     </header>
-            <div class="sidenav">
-                <a href="/">Home</a>
-                <a href="/create">Create new list</a>
-                <a href="/show">Show</a>
-                <a href="/logout">Logout</a>
-            </div>
         <main>
             <h2>Add your new inventory here</h2>
             <form action="/lists" method="POST">
