@@ -2,6 +2,7 @@
 const express = require('express');
 const bodyParser = require('body-parser');
 const methodOverride = require('method-override');
+const expressLayouts = require('express-ejs-layouts');
 
 // Internal Module
 const controllers = require('./controllers');
@@ -19,6 +20,7 @@ app.set('view engine', 'ejs');
 app.use(bodyParser.urlencoded({extended:false}));
 app.use(methodOverride('_method'));
 app.use(express.static('public'));  //for public and styles folder access
+app.use(expressLayouts);
 
 // Root route
 app.get('/', (req,res) =>{

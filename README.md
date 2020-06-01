@@ -85,6 +85,9 @@ This <!-- TODO insert title instead of 'This' --> is an invetory tool for mythic
 * quantity: {type:Number, required:true},
 * reorderLevel: {type:Number, required:true}
 
+### ERD
+![ERD Diagram](/assets/images/inv-erd.png)
+
 
 
 ## Development Timeline
@@ -98,10 +101,12 @@ This <!-- TODO insert title instead of 'This' --> is an invetory tool for mythic
 - [x] - isaiah - css design starts
 
 ### Monday - 5/31:
+- [ ] - jonathan - organize views folder
 - [ ] -  - users can see navigation
 - [ ] -  - users can see items in inventory
 - [ ] -  - users can add items
-- [ ] -  - users can log item
+- [ ] -  - users can sign up for an account
+- [ ] - isaiah - account sign up page styled
 
 ### Tuesday - 6/1:
 - [ ] -  - full CRUD & MPV
