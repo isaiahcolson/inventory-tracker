@@ -1,11 +1,11 @@
-<mxfile host="" modified="2020-05-30T01:14:04.368Z" agent="5.0 (Macintosh; Intel Mac OS X 10_15_4) AppleWebKit/537.36 (KHTML, like Gecko) Code/1.45.1 Chrome/78.0.3904.130 Electron/7.2.4 Safari/537.36" etag="NNlFEClfMe0UPYc9Oz6e" version="13.1.3">
+<mxfile host="" modified="2020-05-31T23:17:07.033Z" agent="5.0 (Macintosh; Intel Mac OS X 10_15_4) AppleWebKit/537.36 (KHTML, like Gecko) Code/1.45.1 Chrome/78.0.3904.130 Electron/7.2.4 Safari/537.36" etag="dR7T154WKKMbwQLlQjNQ" version="13.1.3">
     <diagram id="6hGFLwfOUW9BJ-s0fimq" name="Page-1">
-        <mxGraphModel dx="888" dy="679" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+        <mxGraphModel dx="543" dy="679" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
             <root>
                 <mxCell id="0"/>
                 <mxCell id="1" parent="0"/>
-                <mxCell id="2" value="Username: String&lt;br&gt;Password: String&lt;br&gt;Email: String&lt;br&gt;Lists: [ ref ObjectId ]" style="whiteSpace=wrap;html=1;aspect=fixed;align=left;" parent="1" vertex="1">
-                    <mxGeometry x="30" y="30" width="160" height="160" as="geometry"/>
+                <mxCell id="2" value="Username: String&lt;br&gt;Password: String&lt;br&gt;Email: String&lt;br&gt;Lists: ref ObjectId" style="whiteSpace=wrap;html=1;aspect=fixed;align=left;" parent="1" vertex="1">
+                    <mxGeometry x="31" y="30" width="160" height="160" as="geometry"/>
                 </mxCell>
                 <mxCell id="7" value="User" style="shape=ext;double=1;rounded=0;whiteSpace=wrap;html=1;fontSize=16;" parent="1" vertex="1">
                     <mxGeometry x="30" y="30" width="160" height="40" as="geometry"/>
@@ -16,10 +16,10 @@
                 <mxCell id="12" value="Name: String&lt;br&gt;Category: String&lt;br&gt;Price: Number&lt;br&gt;Quantity: Number&lt;br&gt;Reorder level: Number" style="whiteSpace=wrap;html=1;aspect=fixed;align=left;" parent="1" vertex="1">
                     <mxGeometry x="490" y="80" width="160" height="160" as="geometry"/>
                 </mxCell>
-                <mxCell id="13" value="Item" style="shape=ext;double=1;rounded=0;whiteSpace=wrap;html=1;fontSize=16;" parent="1" vertex="1">
+                <mxCell id="13" value="Items" style="shape=ext;double=1;rounded=0;whiteSpace=wrap;html=1;fontSize=16;" parent="1" vertex="1">
                     <mxGeometry x="490" y="80" width="160" height="40" as="geometry"/>
                 </mxCell>
-                <mxCell id="14" value="Lists" style="shape=ext;double=1;rounded=0;whiteSpace=wrap;html=1;fontSize=16;" parent="1" vertex="1">
+                <mxCell id="14" value="List" style="shape=ext;double=1;rounded=0;whiteSpace=wrap;html=1;fontSize=16;" parent="1" vertex="1">
                     <mxGeometry x="240" y="220" width="160" height="40" as="geometry"/>
                 </mxCell>
                 <mxCell id="22" value="" style="edgeStyle=entityRelationEdgeStyle;fontSize=12;html=1;endArrow=ERmandOne;startArrow=ERmandOne;exitX=1;exitY=0.617;exitDx=0;exitDy=0;exitPerimeter=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" parent="1" source="2" target="11" edge="1">

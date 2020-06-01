@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/styles/main.css">
-    <title>Create Page</title>
+    <title>Create New Inventory Page</title>
 </head>
 <body>
     <header>
@@ -12,13 +12,16 @@
     </header>
             <div class="sidenav">
                 <a href="/">Home</a>
-                <a href="/create">Create</a>
+                <a href="/create">Create new list</a>
                 <a href="/show">Show</a>
                 <a href="/logout">Logout</a>
             </div>
         <main>
-            <h2>Add your new items here</h2>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit dolorum laborum inventore asperiores qui vitae omnis dicta vel natus, accusantium eos illo, esse voluptate ex harum obcaecati doloremque non in!</p>
+            <h2>Add your new inventory here</h2>
+            <form action="/lists" method="POST">
+                <input type="text" name="name" placeholder="Inventory Name" />
+                <input type="submit" value="Create">
+            </form>
         </main>
 </body>
 </html>

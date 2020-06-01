@@ -9,7 +9,7 @@ mongoose
     useFindAndModify: false,
   })
   .then(function () {
-    console.log("Mongodb connected connection successful.");
+    console.log("Mongodb connection successful.");
   })
   .catch(function (err) {
     console.log("Mongodb connection error", err);
