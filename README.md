@@ -26,10 +26,15 @@ This <!-- TODO insert title instead of 'This' --> is an invetory tool for mythic
 
 
 ## Wireframe/ Design
+
+### Wireframes
 ![Wireframe Image 1](/assets/images/inv-wireframe-1.png)
 ![Wireframe Image 2](/assets/images/inv-wireframe-2.png)
 ![Wireframe Image 3](/assets/images/inv-wireframe-3.png)
 ![Wireframe Image 4](/assets/images/inv-wireframe-4.png)
+
+### Color Scheme/ Styling
+![Color Collection](/assets/images/inv-color-collection.jpg)
 
 
 
@@ -85,6 +90,9 @@ This <!-- TODO insert title instead of 'This' --> is an invetory tool for mythic
 * quantity: {type:Number, required:true},
 * reorderLevel: {type:Number, required:true}
 
+### ERD
+![ERD Diagram](/assets/images/inv-erd.png)
+
 
 
 ## Development Timeline
@@ -98,10 +106,14 @@ This <!-- TODO insert title instead of 'This' --> is an invetory tool for mythic
 - [x] - isaiah - css design starts
 
 ### Monday - 5/31:
-- [ ] -  - users can see navigation
+- [ ] - jonathan - organize views folder
+- [x] - jonathan - users can see navigation
 - [ ] -  - users can see items in inventory
 - [ ] -  - users can add items
-- [ ] -  - users can log item
+- [ ] -  - users can sign up for an account
+- [ ] - isaiah - account sign up page styled
+- [ ] - isaiah - sidenav styling
+- [ ] - isaiah - styling reference sheet
 
 ### Tuesday - 6/1:
 - [ ] -  - full CRUD & MPV

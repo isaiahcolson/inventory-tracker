@@ -1,18 +1,36 @@
+:root {
+    --background: #FFF;
+}
+
 body {
-    background-color: #D5D5D6;
-    color: #2C2C2D;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background: var(--background);
 }
 
-
-a {
-    color: #2C2C2D;
+.sidenav {
+    height: 100vh;
+    width: 50px;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background: #f1f1f1;
+    overflow-x: hidden;
+    text-align: center;
 }
 
-a:hover {
-    border: solid #2C2C2D;
+.sidenav a {
+    text-decoration: none;
+    display: block;
+    color: black;
 }
 
+main {
+    margin-left: 50px;
+}
 
-ul {
-    list-style: none;
+footer {
+    margin-left: 50px;
 }
