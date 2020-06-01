@@ -111,10 +111,12 @@ This <!-- TODO insert title instead of 'This' --> is an invetory tool for mythic
 - [x] - isaiah - styling reference sheet
 - [x] - jonathan - CRUD for lists
 - [x] - isaiah - transfer work from index.ejs to partials/header.ejs
+- [x] - isaiah - google font chosen and added
 
 - [ ] - jonathan - add items model
 - [ ] - jonathan - add items folder in views
 - [ ] - jonathan - add items controller
+
 - [ ] - isaiah - sidenav styling
 - [ ] - isaiah - create home page
 
