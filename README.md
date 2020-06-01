@@ -106,22 +106,37 @@ This <!-- TODO insert title instead of 'This' --> is an invetory tool for mythic
 - [x] - isaiah - css design starts
 
 ### Monday - 5/31:
-- [ ] - jonathan - organize views folder
+- [x] - jonathan - organize views folder
 - [x] - jonathan - users can see navigation
-- [ ] -  - users can see items in inventory
-- [ ] -  - users can add items
-- [ ] -  - users can sign up for an account
-- [ ] - isaiah - account sign up page styled
+- [x] - isaiah - styling reference sheet
+- [x] - jonathan - CRUD for lists
+- [x] - isaiah - transfer work from index.ejs to partials/header.ejs
+- [x] - isaiah - google font chosen and added
+
+- [ ] - jonathan - add items model
+- [ ] - jonathan - add items folder in views
+- [ ] - jonathan - add items controller
+
 - [ ] - isaiah - sidenav styling
-- [ ] - isaiah - styling reference sheet
+- [ ] - isaiah - create home page
+
+- [ ] - isaiah - account sign up page styled
+- [ ] - jonathan - users can remove items
+- [ ] -  - users can see items in inventory
+- [ ] -  - routes for sign up and log in pages
+- [ ] -  - users can add items
+
+
+
 
 ### Tuesday - 6/1:
+- [ ] -  - popup window
 - [ ] -  - full CRUD & MPV
 - [ ] -  - users can edit item
-- [ ] -  - users can remove items
+- [ ] -  - users can sign up for an account
 
 ### Wednesday - 6/2:
-- [ ] -  - add multiple lists
+- [x] - jonathan - add multiple lists
 - [ ] -  - dark theme styling
 
 ### Thursday - 6/3:
