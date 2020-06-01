@@ -63,7 +63,6 @@ router.get('/:id/edit', (req,res) => {
 })
 
 
-
 // Update route
 router.put('/:id', (req,res) => {
     db.List.findByIdAndUpdate(req.params.id,req.body,{new:true}, function(err, foundList) {
@@ -74,6 +73,18 @@ router.put('/:id', (req,res) => {
             res.redirect(`/lists/${updatedList._id})`);
         }
     })
+})
+
+// TODO Delete route
+
+router.delete("/:id", async (req,res) => {
+    try {
+        const deletedList = await db.List.findByIdAndDelete(req.params.id);
+        res.redirect("/lists");
+    } catch (err) {
+        console.log(err);
+        res.send({ message: "Internal Server Error"});
+    }
 })
 
 
