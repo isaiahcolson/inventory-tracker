@@ -79,16 +79,17 @@ router.get('/:id/edit', (req,res) => {
             console.log(err);
             res.send({message: 'Internal server error.'});
         } else {
-            foundItem.populate('items').execPopulate(function() {
+
                 const context = {item: foundItem};
                 res.render('items/edit', context);
-            })
+
         }
     })
 })
 
 
 // Update route for item
+// TODO - modify redirect to lists/object_id page instead of main list page
 
 router.put('/:id', (req,res) => {
     const itemsData = {
@@ -99,12 +100,13 @@ router.put('/:id', (req,res) => {
           quantity: req.body.quantity,
         }
     }
-    db.Item.findByIdAndUpdate(req.params.id,req.body,{new:true}, function(err, updatedList) {
+    db.Item.findByIdAndUpdate(req.params.id,req.body,{new:true}, function(err, updatedItem) {
         if (err) {
             console.log(err);
             res.send({message: 'Internal server error.'});
         } else {
-            res.redirect(`/lists/${updatedList._id}`);
+            console.log(updatedItem);
+            res.redirect('/lists');
         }
     })
 })
