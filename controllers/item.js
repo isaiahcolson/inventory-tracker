@@ -72,5 +72,43 @@ router.get('/:id', (req,res) => {
 });
 
 
+// Edit route
+router.get('/:id/edit', (req,res) => {
+    db.Item.findById(req.params.id, function(err, foundItem) {
+        if (err) {
+            console.log(err);
+            res.send({message: 'Internal server error.'});
+        } else {
+            foundItem.populate('items').execPopulate(function() {
+                const context = {item: foundItem};
+                res.render('items/edit', context);
+            })
+        }
+    })
+})
+
+
+// TODO Update route for item
+
+router.put('/:id', (req,res) => {
+    const itemsData = {
+        $set:{
+          name: req.body.name,
+          category: req.body.category,
+          price: req.body.price,
+          quantity: req.body.quantity,
+        }
+    }
+    db.Item.findByIdAndUpdate(req.params.id,req.body,{new:true}, function(err, updatedList) {
+        if (err) {
+            console.log(err);
+            res.send({message: 'Internal server error.'});
+        } else {
+            res.redirect(`/lists/${updatedList._id}`);
+        }
+    })
+})
+
+// TODO Delete route for item
 
 module.exports = router;
