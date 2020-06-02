@@ -46,14 +46,16 @@ router.post('/', (req,res) => {
             // code block 23-34 produces a list object id after clicking onto Add New Item
             // somehow one of the list object ids is not referenced upon filling in new items details and submitting the form
             // console log shows 'null' for list object id
-            db.List.findById(createdItem.lists,function(err,foundList){
+            // an alternative solution might be to allow users to manually select the 'inventory' during the 'item' creation process
+            // or modify the list/show.ejs 
+            db.List.findById(createdItem.list,function(err,foundList){
                 if (err){
                     console.log(err);
                     res.send({message: 'Internal server error.'});
                 } else {
                     console.log(foundList);
                     foundList.items.push(createdItem); // add item to the found list
-                    foundList.save();  // will save teh info back to the db
+                    foundList.save();  // will save the info back to the db
                     res.redirect('/lists/show');
                 }
             });

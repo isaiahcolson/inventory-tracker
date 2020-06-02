@@ -26,8 +26,16 @@
                     <li>Price: <input type="integer" name="price"></li>   
                     <li>Quanity: <input type="integer" name="quanity"></li>
                     <input type="submit" value="Add Item">
+                    <p>
+                        <select name="list">
+                          <% lists.forEach(list => { %>
+                            <option value="<%= list._id %>"><%= list.name %></option>
+                          <% }) %>
+                        </select>
+                      </p>
                 </ul>
             </form>
+            
         </main>
 </body>
 </html>
