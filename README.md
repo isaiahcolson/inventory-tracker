@@ -131,18 +131,20 @@ This <!-- TODO insert title instead of 'This' --> is an invetory tool for mythic
 - [x] - isaiah - account sign up page styled
 
 
-- [ ] - isaiah - create index page with routes to login pages
+- [ ] - isaiah - create landing page with routes to login pages
 - [ ] - isaiah - account log in page styled
 - [ ] - jonathan - CRUD for items model
 - [ ] - jonathan - routes for sign up and log in pages
 
 
 - [ ] - jonathan - users can sign up for an account
+- [ ] - jonathan - fix redirect for item update
 
 
 <!-- TODO sidenav link should have popup with delete form -->
 <!-- TODO can we limit the characters in a list's title? -->
 <!-- TODO can we auto-populate list items? -->
+<!-- TODO fix welcome block sizing -->
 
 
 
