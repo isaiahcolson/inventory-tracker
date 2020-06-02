@@ -79,16 +79,17 @@ router.get('/:id/edit', (req,res) => {
             console.log(err);
             res.send({message: 'Internal server error.'});
         } else {
-            foundItem.populate('items').execPopulate(function() {
+
                 const context = {item: foundItem};
                 res.render('items/edit', context);
-            })
+
         }
     })
 })
 
 
-// TODO Update route for item
+// Update route for item
+// TODO - modify redirect to lists/object_id page instead of main list page
 
 router.put('/:id', (req,res) => {
     const itemsData = {
@@ -99,16 +100,41 @@ router.put('/:id', (req,res) => {
           quantity: req.body.quantity,
         }
     }
-    db.Item.findByIdAndUpdate(req.params.id,req.body,{new:true}, function(err, updatedList) {
+    db.Item.findByIdAndUpdate(req.params.id,req.body,{new:true}, function(err, updatedItem) {
         if (err) {
             console.log(err);
             res.send({message: 'Internal server error.'});
         } else {
-            res.redirect(`/lists/${updatedList._id}`);
+            console.log(updatedItem);
+            res.redirect('/lists');
         }
     })
 })
 
-// TODO Delete route for item
+// Delete route
+// TODO move the delete route to lists/object_id page
+
+router.delete("/:id", async (req,res) => {
+    db.Item.findByIdAndDelete(req.params.id, function(err, deletedItem){
+        if(err){
+            console.log(err);
+            res.send({ message: "Internal Server Error" });
+          } else {
+            db.List.findById(deletedItem.list, function(err, foundList){
+                if(err){
+                  console.log(err);
+                  res.send({ message: "Internal Server Error" });
+                } else {
+                  foundList.items.remove(deletedItem); 
+                  foundList.save();
+                  res.redirect(`/lists/${foundList._id}`);
+                }
+            });
+        }
+    });
+});
+
+
+
 
 module.exports = router;
