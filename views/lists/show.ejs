@@ -3,9 +3,9 @@
     <%- include('../partials/listsheader.ejs') %> 
     
 </header>
-<main class="lists-main">
+<main>
 
-    <div class="underlay"></div>
+    <div id="underlay"></div>
 
     <%= list.name %>
     <form action="/lists/<%= list._id %>?_method=DELETE" method="POST" id="list-delete">

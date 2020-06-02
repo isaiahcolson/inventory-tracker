@@ -18,4 +18,5 @@ mongoose
 module.exports = {
     List: require('./List'),
     Item: require('./Item'),
+    User: require('./User'),
 };

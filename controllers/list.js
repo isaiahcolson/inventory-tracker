@@ -29,7 +29,8 @@ router.post('/', (req,res) => {
             console.log(err);
             res.send({message: 'Internal server error.'});
         } else {
-            res.redirect('/lists');
+            console.log(createdList);
+            res.redirect(`/lists/${createdList._id}`);
         }
     });
 });
