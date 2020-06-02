@@ -188,3 +188,26 @@ h3 {
 .dashboard-grid-item:hover {
     box-shadow: 0px 20px 25px -10px rgba(0,0,0,0.4);
 }
+
+.register-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 540px;
+}
+
+.register {
+    background: var(--light);
+    width: 540px;
+    height: 540px;
+}
+
+input[type=text], select {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
