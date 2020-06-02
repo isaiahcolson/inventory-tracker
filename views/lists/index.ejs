@@ -1,30 +1,37 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/styles/main.css">
-    <title>Inventories List</title>
-</head>
-<body>
-    <header>
-        <h1>Welcome to the Mythical Creature's Inventory Tool</h1>
-        <nav>
-            <ul>
-                <li><a href="/">Home</a></li>
-                <li><a href="/lists/new">Add a new inventory</a></li>
-            </ul>
-        </nav>
-    </header>
-        <main>
-            <h2>List of Inventories</h2>
-            <ul>
-                <% lists.forEach(list => { %>
-                 <li>
-                     <a href="/lists/<%= list._id %>"><%= list.name %> </a>
-                 </li>
-                <% }) %>
-            </ul>
-        </main>
-</body>
-</html>
+<header>
+    <%- include('../partials/dashheader.ejs') %>  
+</header>
+
+<main class="lists-main">
+
+    <div class="underlay"></div>
+
+    <aside>
+        <h2>Order List</h2>
+        <p>You have no items that need ordered at this time.</p>
+    </aside>
+
+    <div>
+        <div class="welcome">
+            <h2>Welcome Back</h2>
+            <h1>User</h1>
+            <p>Select a list below to continue working, or start a new one.</p>
+        </div>
+        
+        <div class="dashboard-grid">
+            <% lists.forEach(list => { %>
+                <a href="/lists/<%= list._id %>" class="dashboard-block">
+                    <div class="dashboard-grid-item">
+                        <h3><%= list.name %></h3>
+                        
+                    </div>
+                </a>
+            <% }) %>
+            <!-- <div class="dashboard-grid-item">
+                <a href="/lists/new" class="dashboard-block"><i class="fas fa-angle-right fa-lg"></i><i class="fas fa-plus-circle fa-lg"></i></a>
+            </div> -->
+        </div>
+        
+    </div>
+    
+</main>
