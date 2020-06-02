@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/styles/main.css">
-    <title>Items</title>
+    <title>Item Edit Page</title>
 </head>
 <body>
     <header>
@@ -18,16 +18,8 @@
         </nav>
     </header>
         <main>
-            <h2>Item Description</h2>
-            <section>
-                <ul>
-                    <li>Name: <%= item.name %></li>
-                    <li>Category: <%= item.category %></li>
-                    <li>Price: <%= item.price %></li>
-                    <li>Quantity: <%= item.quanity %></li>
-                    <li><a href="/items/<%= item._id %>/edit" title="Edit Current Item">Edit<a></li>
-                </ul>
-            </section>        
+            <h2>Edit route</h2>
+            <p>Test edit page for <%= item.name %></p>
         </main>
 </body>
 </html>
