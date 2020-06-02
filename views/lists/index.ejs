@@ -6,14 +6,22 @@
     </nav>
 </header>
 <main>
-    <h1>Hello User</h1>
-    <p>Select a list below to continue working, or start a new one.</p>
-    <ul>
+    <div class="welcome">
+        <h2>Welcome Back</h2>
+        <h1>User</h1>
+        <p>Select a list below to continue working, or start a new one.</p>
+    </div>
+    
+    <div class="dashboard-grid">
         <% lists.forEach(list => { %>
-            <li class="dashboard-block">
-                <a href="/lists/<%= list._id %>"><%= list.name %> </a>
-            </li>
+            <div class="dashboard-grid-item">
+                <h3><%= list.name %></h3>
+                <a href="/lists/<%= list._id %>" class="dashboard-block"><i class="fas fa-arrow-alt-circle-right fa-lg"></i></a>
+            </div>
         <% }) %>
-        <li class="dashboard-block"><a href="/lists/new"><i class="fas fa-plus-circle"></i></a></li>
-    </ul>
+        <div class="dashboard-grid-item">
+            <a href="/lists/new" class="dashboard-block"><i class="fas fa-plus-circle fa-lg"></i></a>
+        </div>
+    </div>
+    
 </main>
