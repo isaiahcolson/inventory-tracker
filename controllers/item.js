@@ -50,7 +50,7 @@ router.post('/', (req,res) => {
                     console.log(foundList);
                     foundList.items.push(createdItem); // add item to the found list
                     foundList.save();  // will save the info back to the db
-                   
+                    res.redirect(`/lists/${foundList._id}`);
                 }
             });
         }
