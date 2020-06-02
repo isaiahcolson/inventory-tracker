@@ -5,8 +5,8 @@ const listSchema = new mongoose.Schema ({
     user: {type:mongoose.Schema.Types.ObjectID, ref:"User"},
     items: [
         {
-            type:mongoose.Schema.Types.ObjectID, ref:"Item",
-            ref: 'Item',
+            type: mongoose.Schema.Types.ObjectID,  // accept ids only
+            ref: 'Item',  // only accept ids from that's from Item
         },
     ],
 }, {timestamps:true});

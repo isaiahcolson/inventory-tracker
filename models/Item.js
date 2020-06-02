@@ -1,11 +1,11 @@
 const mongoose = require('mongoose');
 
 const itemSchema = new mongoose.Schema ({
-    name: {type:String, required:true},
-    category: {type:String, required:true},
-    price: {type:Number, required:true},
-    quantity: {type:Number, required:true},
-    reorderLevel: {type:Number, required:true},
+    name: {type: String},
+    category: {type: String},
+    price: {type: Number},
+    quantity: {type: Number},
+
     list: {
         type: mongoose.Schema.Types.ObjectId,
         ref: 'List'
