@@ -77,7 +77,7 @@ body {
     z-index: 1;
 }
 
-#underlay {
+.underlay {
     position: fixed;
     height: 100vh;
     top: 0;
