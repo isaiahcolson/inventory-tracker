@@ -119,31 +119,29 @@ This <!-- TODO insert title instead of 'This' --> is an invetory tool for mythic
 - [x] - jonathan - added items ref to models
 - [x] - isaiah - fix main styling color issue
 
-
-- [ ] - jonathan - CRUD for items model
-- [ ] - jonathan - 
-- [ ] - isaiah - style lists/index as a dashboard
-- [ ] - isaiah - 
-<!-- TODO sidenav link should have popup with delete form -->
-
-
-- [ ] - isaiah - account sign up page styled
-- [ ] -  - users can see items in inventory
-- [ ] -  - routes for sign up and log in pages
-- [ ] -  - users can add items
-
-
-
-
 ### Tuesday - 6/1:
-- [ ] -  - popup window
-- [ ] -  - full CRUD & MPV
+- [ ] - jonathan - CRUD for items model
+- [x] - isaiah - update colors
+- [ ] - isaiah - add sidenav to dashboard
+- [ ] - isaiah - split dashboard, add right column list
+- [ ] - isaiah - add welcome block
+- [ ] - isaiah - fix lists view
+
+
+
+<!-- TODO sidenav link should have popup with delete form -->
+- [ ] - isaiah - account sign up page styled
+- [ ] -  - routes for sign up and log in pages
 - [ ] -  - users can edit item
 - [ ] -  - users can sign up for an account
+
+
 
 ### Wednesday - 6/2:
 - [x] - jonathan - add multiple lists
 - [ ] -  - dark theme styling
+- [ ] -  - full CRUD & MPV
+- [ ] -  - popup window
 
 ### Thursday - 6/3:
 - [ ] -  - clean up code
