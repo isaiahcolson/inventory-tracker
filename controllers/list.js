@@ -44,8 +44,10 @@ router.get('/:id', (req,res) => {
             console.log(err);
             res.send({message: 'Internal server error.'});
         } else {
-            const context = {list: foundList};
-            res.render('lists/show', context);
+            foundList.populate('items').execPopulate(function() {
+                const context = {list: foundList};
+                res.render('lists/show', context);
+            })     
         }
     })
 })
