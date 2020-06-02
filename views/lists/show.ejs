@@ -16,7 +16,12 @@
     <section>
         <h2>Items</h2>
         <% list.items.forEach(item => { %>
-            <a href="/items/<%= item._id %>"><%= item.name %></a>
+            <ul>
+                <li>Name: <a href="/items/<%= item._id %>"><%= item.name %></a></li>
+                <li>Category: <%= item.category %></li>
+                <li>Price: <%= item.price %></li>
+                <li>Quantity: <%= item.quanity %></li>
+            </ul>                 
             <% }) %>
         <li><a href="/items/new">Add a new item</a></li>
     </section>
