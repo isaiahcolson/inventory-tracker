@@ -126,10 +126,10 @@ This <!-- TODO insert title instead of 'This' --> is an invetory tool for mythic
 - [x] - isaiah - add welcome block
 - [x] - isaiah - add color to welcome block
 - [x] - isaiah - fix lists view
+- [x] - isaiah - add content to dashboard aside
 
 
 - [ ] - jonathan - CRUD for items model
-- [ ] - isaiah - add content to dashboard aside
 
 
 <!-- TODO fix main height, elements that are too long are cut off -->
