@@ -13,19 +13,53 @@ router.get('/', (req,res) => {
             res.send({message: 'Internal server error.'});
         } else {
             const context = {items: allItems};
-            res.render('lists/index', context);
+            res.render('lists/show', context);
         }
     });
 });
 
 
-// Create new Item route
+// Create new item route
 router.get('/new', (req,res) =>{
-    res.render('items/new');
-})
+    db.List.find({}, function(err, allLists){
+        if (err) {
+            console.log(err);
+            res.send({message: 'Internal server error.'});
+        } else {
+            console.log(allLists);
+            const context = {lists: allLists};
+            res.render('items/new', context);
+        }
+    });
+});
 
-
-
+// Create route that posts the new info
+router.post('/', (req,res) => {
+    db.Item.create(req.body, function(err,createdItem) {
+        if (err) {
+            console.log(err);
+            res.send({message: 'Internal server error.'});
+        } else {
+            console.log(createdItem);
+            // this line of code below might be the root cause of the error message
+            // both Item and List object ids are present when landed at http://localhost:4000/items/new
+            // code block 23-34 produces a list object id after clicking onto Add New Item
+            // somehow one of the list object ids is not referenced upon filling in new items details and submitting the form
+            // console log shows 'null' for list object id
+            db.List.findById(createdItem.lists,function(err,foundList){
+                if (err){
+                    console.log(err);
+                    res.send({message: 'Internal server error.'});
+                } else {
+                    console.log(foundList);
+                    foundList.items.push(createdItem); // add item to the found list
+                    foundList.save();  // will save teh info back to the db
+                    res.redirect('/lists/show');
+                }
+            });
+        }
+    });
+});
 
 
 // Show route
