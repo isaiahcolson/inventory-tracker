@@ -88,7 +88,7 @@ router.get('/:id/edit', (req,res) => {
 })
 
 
-// TODO Update route for item
+// Update route for item
 
 router.put('/:id', (req,res) => {
     const itemsData = {
