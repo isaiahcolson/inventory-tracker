@@ -106,7 +106,7 @@ aside {
     padding-left: .5rem;
     float: right;
     color: Var(--dark);
-    box-shadow: 0px 10px 25px rgba(0,0,0,0.05);
+    box-shadow: 0px 10px 25px rgba(0,0,0,0.075);
 }
 
 .welcome {
@@ -115,12 +115,11 @@ aside {
     margin: 7.5vh 2.5vw;
     padding: 25px;
     border-radius: 15px;
-    /* background: #FA745F; */
     background-image: url(../images/welcome-bg.png);
     background-size: cover;
     background-repeat: no-repeat;
     background-position: bottom right;
-    box-shadow: 0px 10px 25px rgba(0,0,0,0.05);
+    box-shadow: 0px 10px 25px rgba(0,0,0,0.075);
 }
 
 h1 {
@@ -150,7 +149,7 @@ h3 {
 .dashboard-grid {
     display: grid;
     grid-template-columns: 250px 250px;
-    grid-gap: 40px;
+    grid-gap: 30px;
     justify-content: center;
 }
 
@@ -169,10 +168,7 @@ h3 {
     background: var(--light);
     color: var(--accent);
     text-align: center;
-    text-overflow: ellipsis;
-    overflow: hidden;
-    white-space: nowrap;
-    box-shadow: 0px 10px 25px rgba(0,0,0,0.1);
+    box-shadow: 0px 10px 25px rgba(0,0,0,0.075);
 }
 
 .dashboard-grid-item a {

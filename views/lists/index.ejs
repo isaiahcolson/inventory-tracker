@@ -20,15 +20,18 @@
         
         <div class="dashboard-grid">
             <% lists.forEach(list => { %>
-                <div class="dashboard-grid-item">
-                    <h3><%= list.name %></h3>
-                    <a href="/lists/<%= list._id %>" class="dashboard-block"><i class="fas fa-angle-right fa-lg"></i></a>
-                </div>
+                <a href="/lists/<%= list._id %>" class="dashboard-block">
+                    <div class="dashboard-grid-item">
+                        <h3><%= list.name %></h3>
+                        
+                    </div>
+                </a>
             <% }) %>
             <!-- <div class="dashboard-grid-item">
-                <a href="/lists/new" class="dashboard-block"><i class="fas fa-plus-circle fa-lg"></i></a>
+                <a href="/lists/new" class="dashboard-block"><i class="fas fa-angle-right fa-lg"></i><i class="fas fa-plus-circle fa-lg"></i></a>
             </div> -->
         </div>
+        
     </div>
     
 </main>

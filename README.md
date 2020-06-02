@@ -125,14 +125,14 @@ This <!-- TODO insert title instead of 'This' --> is an invetory tool for mythic
 - [x] - isaiah - split dashboard, add right column list
 - [x] - isaiah - add welcome block
 - [x] - isaiah - add color to welcome block
+- [x] - isaiah - fix lists view
 
 
 - [ ] - jonathan - CRUD for items model
-- [ ] - isaiah - fix lists view
 - [ ] - isaiah - add content to dashboard aside
 
 
-
+<!-- TODO fix main height, elements that are too long are cut off -->
 <!-- TODO sidenav link should have popup with delete form -->
 - [ ] - isaiah - account sign up page styled
 - [ ] -  - routes for sign up and log in pages
