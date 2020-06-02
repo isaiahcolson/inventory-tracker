@@ -16,7 +16,7 @@
     <section>
         <h2>Items</h2>
         <% list.items.forEach(item => { %>
-            <ul>
+            <ul style="list-style: none;"></ul>
                 <li>Name: <a href="/items/<%= item._id %>"><%= item.name %></a></li>
                 <li>Category: <%= item.category %></li>
                 <li>Price: <%= item.price %></li>
