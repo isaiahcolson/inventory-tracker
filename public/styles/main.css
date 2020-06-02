@@ -251,3 +251,44 @@ input[type=submit]:hover {
 ::placeholder {
     font-size: 14px;
 }
+
+
+
+
+.landing-main {
+    overflow: hidden;
+    background: var(--light-alt);
+    height: 100vh;
+}
+
+.landing-main img {
+    width: 300px;
+}
+
+.top-nav {
+    /* margin-bottom: 100px; */
+    background: var(--dark);
+    padding: 0 35px;
+}
+
+.top-nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+.top-nav li {
+    /* display: inline; */
+    float: right;
+}
+
+.top-nav a {
+    font-weight: 900;
+    text-decoration: none;
+    color: var(--light);
+    font-size: 1.25em;
+    padding: 20px;
+    text-align: center;
+    display: block;
+}

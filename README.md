@@ -128,21 +128,24 @@ This <!-- TODO insert title instead of 'This' --> is an invetory tool for mythic
 - [x] - isaiah - fix lists view
 - [x] - isaiah - add content to dashboard aside
 - [x] - isaiah - overflow scroll for dashboard list grid/ spacing issues
+- [x] - isaiah - account sign up page styled
+- [x] - jonathan - CRUD for items model
 
 
-- [ ] - isaiah - account sign up page styled
+- [ ] - isaiah - create landing page with routes to login pages
 - [ ] - isaiah - account log in page styled
-- [ ] - jonathan - CRUD for items model
 - [ ] - jonathan - routes for sign up and log in pages
+- [ ] - jonathan - move delete next to the list item
 
 
 - [ ] - jonathan - users can sign up for an account
+- [ ] - jonathan - fix redirect for item update
 
 
-<!-- TODO fix main height, elements that are too long are cut off, maybe figure a way to set a scroll window for individual div -->
 <!-- TODO sidenav link should have popup with delete form -->
 <!-- TODO can we limit the characters in a list's title? -->
 <!-- TODO can we auto-populate list items? -->
+<!-- TODO fix welcome block sizing -->
 
 
 
