@@ -111,6 +111,30 @@ router.put('/:id', (req,res) => {
     })
 })
 
-// TODO Delete route for item
+// Delete route
+// TODO move the delete route to lists/object_id page
+
+router.delete("/:id", async (req,res) => {
+    db.Item.findByIdAndDelete(req.params.id, function(err, deletedItem){
+        if(err){
+            console.log(err);
+            res.send({ message: "Internal Server Error" });
+          } else {
+            db.List.findById(deletedItem.list, function(err, foundList){
+                if(err){
+                  console.log(err);
+                  res.send({ message: "Internal Server Error" });
+                } else {
+                  foundList.items.remove(deletedItem); 
+                  foundList.save();
+                  res.redirect(`/lists/${foundList._id}`);
+                }
+            });
+        }
+    });
+});
+
+
+
 
 module.exports = router;
