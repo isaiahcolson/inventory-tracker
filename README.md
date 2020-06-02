@@ -123,11 +123,14 @@ This <!-- TODO insert title instead of 'This' --> is an invetory tool for mythic
 - [x] - isaiah - update colors
 - [x] - isaiah - add sidenav to dashboard
 - [x] - isaiah - split dashboard, add right column list
+- [x] - isaiah - add welcome block
+- [x] - isaiah - add color to welcome block
 
 
 - [ ] - jonathan - CRUD for items model
-- [ ] - isaiah - add welcome block
 - [ ] - isaiah - fix lists view
+- [ ] - isaiah - add content to dashboard aside
+
 
 
 <!-- TODO sidenav link should have popup with delete form -->
