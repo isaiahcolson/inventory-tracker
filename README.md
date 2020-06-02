@@ -120,13 +120,14 @@ This <!-- TODO insert title instead of 'This' --> is an invetory tool for mythic
 - [x] - isaiah - fix main styling color issue
 
 ### Tuesday - 6/1:
-- [ ] - jonathan - CRUD for items model
 - [x] - isaiah - update colors
-- [ ] - isaiah - add sidenav to dashboard
-- [ ] - isaiah - split dashboard, add right column list
+- [x] - isaiah - add sidenav to dashboard
+- [x] - isaiah - split dashboard, add right column list
+
+
+- [ ] - jonathan - CRUD for items model
 - [ ] - isaiah - add welcome block
 - [ ] - isaiah - fix lists view
-
 
 
 <!-- TODO sidenav link should have popup with delete form -->

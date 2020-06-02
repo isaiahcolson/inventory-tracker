@@ -6,21 +6,28 @@
 
     <div class="underlay"></div>
 
-    <div class="welcome">
-        <h2>Welcome Back</h2>
-        <h1>User</h1>
-        <p>Select a list below to continue working, or start a new one.</p>
-    </div>
-    
-    <div class="dashboard-grid">
-        <% lists.forEach(list => { %>
-            <div class="dashboard-grid-item">
-                <h3><%= list.name %></h3>
-                <a href="/lists/<%= list._id %>" class="dashboard-block"><i class="fas fa-angle-right fa-lg"></i></a>
-            </div>
-        <% }) %>
-        <div class="dashboard-grid-item">
-            <a href="/lists/new" class="dashboard-block"><i class="fas fa-plus-circle fa-lg"></i></a>
+    <aside>
+        <h3>Testing</h3>
+        <p>You have nothing to test here.</p>
+    </aside>
+
+    <div>
+        <div class="welcome">
+            <h2>Welcome Back</h2>
+            <h1>User</h1>
+            <p>Select a list below to continue working, or start a new one.</p>
+        </div>
+        
+        <div class="dashboard-grid">
+            <% lists.forEach(list => { %>
+                <div class="dashboard-grid-item">
+                    <h3><%= list.name %></h3>
+                    <a href="/lists/<%= list._id %>" class="dashboard-block"><i class="fas fa-angle-right fa-lg"></i></a>
+                </div>
+            <% }) %>
+            <!-- <div class="dashboard-grid-item">
+                <a href="/lists/new" class="dashboard-block"><i class="fas fa-plus-circle fa-lg"></i></a>
+            </div> -->
         </div>
     </div>
     
