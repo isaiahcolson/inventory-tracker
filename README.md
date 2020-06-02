@@ -129,27 +129,28 @@ This <!-- TODO insert title instead of 'This' --> is an invetory tool for mythic
 - [x] - isaiah - add content to dashboard aside
 
 
+- [ ] - isaiah - account sign up page styled
+
+
 - [ ] - jonathan - CRUD for items model
+- [ ] - jonathan - routes for sign up and log in pages
+- [ ] - jonathan - users can sign up for an account
 
 
 <!-- TODO fix main height, elements that are too long are cut off -->
 <!-- TODO sidenav link should have popup with delete form -->
-- [ ] - isaiah - account sign up page styled
-- [ ] -  - routes for sign up and log in pages
-- [ ] -  - users can edit item
-- [ ] -  - users can sign up for an account
 
 
 
 ### Wednesday - 6/2:
 - [x] - jonathan - add multiple lists
-- [ ] -  - dark theme styling
 - [ ] -  - full CRUD & MPV
 - [ ] -  - popup window
 
 ### Thursday - 6/3:
 - [ ] -  - clean up code
 - [ ] -  - finalize styling
+- [ ] -  - dark theme styling
 
 
 
