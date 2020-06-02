@@ -106,7 +106,7 @@ aside {
     background: var(--light);
     float: right;
     color: Var(--dark);
-    box-shadow: 0px 10px 25px rgba(0,0,0,0.075);
+    box-shadow: 0px 10px 25px rgba(0,0,0,0.15);
 }
 
 aside > h2 {
@@ -123,7 +123,7 @@ aside > h2 {
     background-size: cover;
     background-repeat: no-repeat;
     background-position: bottom right;
-    box-shadow: 0px 10px 25px rgba(0,0,0,0.075);
+    box-shadow: 0px 10px 25px rgba(0,0,0,0.15);
 }
 
 h1 {
@@ -157,22 +157,14 @@ h3 {
     justify-content: center;
 }
 
-.fa-angle-right {
-    opacity: 1;
-    padding-left: 5px;
-}
-
-/* .fa-angle-right {
-    opacity: 0;
-} */
-
 .dashboard-grid-item {
     padding: 25px;
     border-radius: 10px;
     background: var(--light);
     color: var(--accent);
     text-align: center;
-    box-shadow: 0px 10px 25px rgba(0,0,0,0.075);
+    box-shadow: 0px 10px 25px rgba(0,0,0,0.1);
+    transition: 0.3s ease;
 }
 
 .dashboard-grid-item a {
@@ -183,6 +175,6 @@ h3 {
     
 }
 
-.fa-plus-circle {
-    padding-top: 0px;
+.dashboard-grid-item:hover {
+    box-shadow: 0px 10px 30px rgba(0,0,0,0.4);
 }
