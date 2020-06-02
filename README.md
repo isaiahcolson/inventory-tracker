@@ -127,30 +127,35 @@ This <!-- TODO insert title instead of 'This' --> is an invetory tool for mythic
 - [x] - isaiah - add color to welcome block
 - [x] - isaiah - fix lists view
 - [x] - isaiah - add content to dashboard aside
+- [x] - isaiah - overflow scroll for dashboard list grid/ spacing issues
 
 
 - [ ] - isaiah - account sign up page styled
-
-
+- [ ] - isaiah - account log in page styled
 - [ ] - jonathan - CRUD for items model
 - [ ] - jonathan - routes for sign up and log in pages
+
+
 - [ ] - jonathan - users can sign up for an account
 
 
-<!-- TODO fix main height, elements that are too long are cut off -->
+<!-- TODO fix main height, elements that are too long are cut off, maybe figure a way to set a scroll window for individual div -->
 <!-- TODO sidenav link should have popup with delete form -->
+<!-- TODO can we limit the characters in a list's title? -->
+<!-- TODO can we auto-populate list items? -->
 
 
 
 ### Wednesday - 6/2:
 - [x] - jonathan - add multiple lists
-- [ ] -  - full CRUD & MPV
+- [ ] -  - full CRUD & MVP
 - [ ] -  - popup window
 
 ### Thursday - 6/3:
 - [ ] -  - clean up code
 - [ ] -  - finalize styling
 - [ ] -  - dark theme styling
+<!-- TODO can we set a dark/light theme as a preference for the user? -->
 
 
 
