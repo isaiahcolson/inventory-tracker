@@ -129,12 +129,13 @@ This <!-- TODO insert title instead of 'This' --> is an invetory tool for mythic
 - [x] - isaiah - add content to dashboard aside
 - [x] - isaiah - overflow scroll for dashboard list grid/ spacing issues
 - [x] - isaiah - account sign up page styled
+- [x] - jonathan - CRUD for items model
 
 
 - [ ] - isaiah - create landing page with routes to login pages
 - [ ] - isaiah - account log in page styled
-- [ ] - jonathan - CRUD for items model
 - [ ] - jonathan - routes for sign up and log in pages
+- [ ] - jonathan - move delete next to the list item
 
 
 - [ ] - jonathan - users can sign up for an account
