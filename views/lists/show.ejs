@@ -16,13 +16,22 @@
     <section>
         <h2>Items</h2>
         <% list.items.forEach(item => { %>
-            <ul style="list-style: none;"></ul>
+            <ul style="list-style: none;">
                 <li>Name: <a href="/items/<%= item._id %>"><%= item.name %></a></li>
                 <li>Category: <%= item.category %></li>
                 <li>Price: <%= item.price %></li>
                 <li>Quantity: <%= item.quanity %></li>
+                <li>
+                    <a href="/items/<%= item._id %>/edit" title="Edit Current Item">Edit<a>
+                            
+                    <form action="/items/<%= item._id %>?_method=DELETE" method="POST">
+                    <button type="submit"><i class="fas fa-trash"></i></button>
+                    </form>
+                </li>
             </ul>                 
             <% }) %>
+            <br>
+            <br>
         <li><a href="/items/new">Add a new item</a></li>
     </section>
 </main>

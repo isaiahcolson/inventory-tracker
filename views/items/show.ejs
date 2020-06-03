@@ -25,8 +25,15 @@
                     <li>Category: <%= item.category %></li>
                     <li>Price: <%= item.price %></li>
                     <li>Quantity: <%= item.quanity %></li>
-                    <li><a href="/items/<%= item._id %>/edit" title="Edit Current Item">Edit<a></li>
+                    <li>
+                        <a href="/items/<%= item._id %>/edit" title="Edit Current Item">Edit<a>
+                            
+                        <form action="/items/<%= item._id %>?_method=DELETE" method="POST">
+                        <button type="submit"><i class="fas fa-trash"></i></button>
+                        </form>
+                    </li>
                 </ul>
+                
             </section>        
         </main>
 </body>
