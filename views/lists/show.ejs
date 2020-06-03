@@ -18,7 +18,7 @@
             <a href="/items/new">Add a new item</a>
         </div>
         
-        <section class="items">
+        <div class="items">
             <% list.items.forEach(item => { %>
                 <ul>
                     <li>Name: <a href="/items/<%= item._id %>"><%= item.name %></a></li>
@@ -33,8 +33,8 @@
                         </form>
                     </li>
                 </ul>                 
-                <% }) %>
-        </section>
+            <% }) %>
+        </div>
     </div>
 
 </main>
