@@ -138,13 +138,14 @@ This <!-- TODO insert title instead of 'This' --> is an invetory tool for mythic
 
 
 
-- [ ] - isaiah - reroute items create to modal
+- [ ] -  - reroute items create to modal
+- [ ] - isaiah - event listener for dark theme
 - [ ] - jonathan - users can sign up for an account
 
 
 
+- [ ] - isaiah - animate modal
 - [ ] - isaiah - register form validation with css
-- [ ] - isaiah - event listener for dark theme
 - [ ] - isaiah - add final color palette
 - [ ] - jonathan - lists and items models user specific
 - [ ] - jonathan - change welcome h1 tag from User to user.username

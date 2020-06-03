@@ -72,13 +72,14 @@
     <div class="modal-content">
         <div class="close">+</div>
         <p>Add a new item to this list.</p>
-        <form action="/items" method="POST">
+        <form action="/items/" method="POST">
             <input type="text" name="name" placeholder="Product Name">   
             <input type="text" name="category" placeholder="Category">
             <input type="number" name="price" placeholder="Price">
             <input type="number" name="quantity" placeholder="Quantity">
             <input type="number" name="reorderLevel" placeholder="Reorder Level">
             <input type="submit" value="Add Item">
+            
         </form>
     </div>
     
