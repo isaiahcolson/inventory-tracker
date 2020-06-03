@@ -91,7 +91,7 @@ This <!-- TODO insert title instead of 'This' --> is an invetory tool for mythic
 * reorderLevel: {type:Number, required:true}
 
 ### ERD
-![ERD Diagram](/assets/images/inv-erd.png){:width="50%"}
+![ERD Diagram](/assets/images/inv-erd.png{:width="50%"})
 
 
 
