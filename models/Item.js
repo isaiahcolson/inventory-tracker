@@ -5,7 +5,6 @@ const itemSchema = new mongoose.Schema ({
     category: {type: String},
     price: {type: Number},
     quantity: {type: Number},
-
     list: {
         type: mongoose.Schema.Types.ObjectId,
         ref: 'List'
