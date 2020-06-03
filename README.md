@@ -137,17 +137,17 @@ This <!-- TODO insert title instead of 'This' --> is an invetory tool for mythic
 - [x] - isaiah - account log in page styled
 - [x] - isaiah - fix welcome block sizing
 - [x] - isaiah - split items section
+- [x] - isaiah - fix scroll spacing for items
+- [x] - jonathan - routes for sign up and log in pages
+- [x] - jonathan - move delete next to the list item
 
 
 
 - [ ] - isaiah - style items header
-- [ ] - isaiah - fix scroll spacing for items
 - [ ] - isaiah - show items in a row
 - [ ] - isaiah - visual form validation
 - [ ] - isaiah - add dark theme styling
 - [ ] - isaiah - event listener for dark theme
-- [ ] - jonathan - routes for sign up and log in pages
-- [ ] - jonathan - move delete next to the list item
 
 
 

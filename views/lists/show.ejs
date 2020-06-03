@@ -9,19 +9,28 @@
 
     <div class="items-list">
         <div class="items-header">
-            <h3><%= list.name %></h3>
 
-            <form action="/lists/<%= list._id %>?_method=DELETE" method="POST" id="list-delete">
-                <button type="submit" form="list-delete"><i class="fas fa-trash"></i></button>
-                <!-- <input type="submit" value="Delete"> -->
-            </form>
-            <a href="/items/new">Add a new item</a>
+            <ul>
+                <li style="float:left"><h3><%= list.name %></h3></li>
+                <li>
+                    <form action="/lists/<%= list._id %>?_method=DELETE" method="POST" id="list-delete">
+                    <button type="submit" form="list-delete"><i class="fas fa-trash"></i></button>
+                    <!-- <input type="submit" value="Delete"> -->
+                </form>
+                </li>
+                <li><a href="/items/new">Add Item</a></li>
+            </ul>
+            
+
+            
+            
         </div>
         
         <div class="items">
             <% list.items.forEach(item => { %>
                 <ul>
-                    <li>Name: <a href="/items/<%= item._id %>"><%= item.name %></a></li>
+                    <li>Name: <%= item.name %></li>
+                    <!-- originally for code above <a href="/items/ item._id %>"> -->
                     <li>Category: <%= item.category %></li>
                     <li>Price: <%= item.price %></li>
                     <li>Quantity: <%= item.quanity %></li>

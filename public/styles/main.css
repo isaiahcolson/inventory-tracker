@@ -378,20 +378,43 @@ input[type=submit]:hover {
 }
 
 .items-list {
-    padding: 25px;
+    /* padding: 25px; */
 }
 
 .items-list h3 {
     margin: 0;
+    /* padding: 25px; */
+    /* border-radius: 25px 0 0 0; */
+    /* width: inherit; */
+    /* border-bottom: solid 1px var(--dark-alt); */
 }
 
 .items-header {
     /* height: 15vh; */
-    padding: 25px;
+    /* padding: 25px; */
+    border-radius: 25px 0 0 25px;
     position: fixed;
     background-color: var(--light);
-    width: 100vw;
+    width: 90vw;
     top: 0;
+}
+
+.items-header a {
+    padding: 10px 25px;
+    border-radius: 25px;
+    text-decoration: none;
+    color: var(--light);
+    background: var(--dark-alt);
+}
+
+.items-header ul {
+    list-style: none;
+    padding: ;
+}
+
+.items-header li {
+    margin: 10px;
+    float: right;
 }
 
 .items {
