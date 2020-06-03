@@ -48,7 +48,7 @@
                     <div class="ind-item"><%= item.category %></div>
                     <div class="ind-item"><%= item.price %></div>
                     <div class="ind-item"><%= item.quantity %> </div>
-                    <div class="ind-item">Rollover</div>
+                    <div class="ind-item">Reorder</div>
                     <div class="ind-item">
                         <a href="/items/<%= item._id %>/edit" title="Edit Current Item"><i class="fas fa-edit"></i><a></a>
                         <div class="item-delete">
@@ -78,8 +78,8 @@
             <input type="number" name="price" placeholder="Price">
             <input type="number" name="quantity" placeholder="Quantity">
             <input type="number" name="reorderLevel" placeholder="Reorder Level">
+            <input type="hidden" name="list" value="<%= list._id %>">
             <input type="submit" value="Add Item">
-            
         </form>
     </div>
     

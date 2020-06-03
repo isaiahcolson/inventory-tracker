@@ -9,3 +9,8 @@ $('.close').click(function(){
 $('.modal-bg').click(function(){
     $('.modal-container').toggleClass('hidden');
 });
+
+$('#dark').click(function(){
+    console.log('adjust');
+    $('body').toggleClass('dark');
+});

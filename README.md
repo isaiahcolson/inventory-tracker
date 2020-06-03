@@ -138,21 +138,19 @@ This <!-- TODO insert title instead of 'This' --> is an invetory tool for mythic
 
 
 
+- [ ] - jonathan - item edit modal
+- [ ] - isaiah - dark theme preferences
+
+
+
+
 - [ ] -  - reroute items create to modal
-- [ ] - isaiah - event listener for dark theme
 - [ ] - jonathan - users can sign up for an account
-
-
-
 - [ ] - isaiah - animate modal
 - [ ] - isaiah - register form validation with css
-- [ ] - isaiah - add final color palette
 - [ ] - jonathan - lists and items models user specific
 - [ ] - jonathan - change welcome h1 tag from User to user.username
 - [ ] - jonathan - fix redirect for item update
-
-
-
 <!-- TODO Reorder Level isn't working in items -->
 - [ ] - both - MVP
 - [ ] -  - popup window
@@ -161,6 +159,11 @@ This <!-- TODO insert title instead of 'This' --> is an invetory tool for mythic
 
 
 
+<!-- TODO possible embedding -->
+<!-- TODO logout styling -->
+<!-- TODO maybe an information page/modal -->
+<!-- TODO modal for items edit/update route -->
+<!-- TODO modal for list delete route -->
 <!-- TODO add empty list notification -->
 <!-- TODO some css to apply to items that have a quantity fall below the reorder level -->
 <!-- TODO maybe we should have a form for list create, everything else could pop up? -->
@@ -197,3 +200,6 @@ This <!-- TODO insert title instead of 'This' --> is an invetory tool for mythic
 * item sorting
 * change password
 * forgot password
+* delete item modal/prompt
+* unique items (maybe add quantity fields for new total)
+* inventory edit route doesn't go to new page or modal, the input will appear in the list header
