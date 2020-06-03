@@ -97,8 +97,8 @@ router.put('/:id', (req,res) => {
           name: req.body.name,
           category: req.body.category,
           price: req.body.price,
-          quantity: req.body.quantity,
-        }
+          quantity: req.body.quantity
+        },
     }
     db.Item.findByIdAndUpdate(req.params.id,req.body,{new:true}, function(err, updatedItem) {
         if (err) {
