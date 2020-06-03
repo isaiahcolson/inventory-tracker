@@ -406,6 +406,16 @@ input[type=submit]:hover {
     float: right;
 }
 
+.list-name button {
+    color: var(--dark);
+    background: none;
+    margin: -5px 0;
+    /* padding: -10px 0; */
+    border: none;
+    cursor: pointer;
+    font-size: 1.5em;
+}
+
 .clearfix {
     clear: both;
 }
@@ -467,4 +477,16 @@ input[type=submit]:hover {
 
 .item-delete{
     display: inline-block;
+}
+
+.ind-item a {
+    color: var(--dark);
+}
+
+.ind-item button {
+    font-size: 1em;
+    color: var(--dark);
+    background: none;
+    border: none;
+    cursor: pointer;
 }

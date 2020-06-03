@@ -141,31 +141,16 @@ This <!-- TODO insert title instead of 'This' --> is an invetory tool for mythic
 - [x] - jonathan - routes for sign up and log in pages
 - [x] - jonathan - move delete next to the list item
 - [x] - isaiah - style items header
+- [x] - isaiah - show item fields in a row
 
 
 
-- [ ] - isaiah - show item fields in a row
-- [ ] - isaiah - refister form validation with css
+- [ ] - isaiah - fix styling for edit/ delete in items
+- [ ] - isaiah - register form validation with css
 - [ ] - isaiah - add dark theme styling
 - [ ] - isaiah - event listener for dark theme
 - [ ] - isaiah - add final color palette
 - [ ] - jonathan - users can sign up for an account
-
-
-<ul class="ind-item">
-                    <li><%= item.name %></li>
-                    <!-- originally for code above <a href="/items/ item._id %>"> -->
-                    <li>Category: <%= item.category %></li>
-                    <li>Price: <%= item.price %></li>
-                    <li>Quantity: <%= item.quanity %></li>
-                    <li>
-                        <a href="/items/<%= item._id %>/edit" title="Edit Current Item">Edit<a>
-                                
-                        <form action="/items/<%= item._id %>?_method=DELETE" method="POST">
-                        <button type="submit"><i class="fas fa-trash"></i></button>
-                        </form>
-                    </li>
-                </ul>
 
 
 
@@ -176,6 +161,7 @@ This <!-- TODO insert title instead of 'This' --> is an invetory tool for mythic
 
 
 
+<!-- TODO some css to apply to items that have a quantity fall below the reorder level -->
 <!-- TODO maybe we should have a form form for list create, everything else could pop up? -->
 <!-- TODO sidenav link should have popup with delete form, remove delete form from top of list -->
 <!-- TODO can we limit the characters in a list's title? -->
