@@ -28,20 +28,13 @@ This <!-- TODO insert title instead of 'This' --> is an invetory tool for mythic
 ## Wireframe/ Design
 
 ### Wireframes
-<img src="/assets/images/inv-wireframe-1.png" alt="Wireframe Image 1" style="width:5%;float:left;"/>
-<img src="/assets/images/inv-wireframe-2.png" alt="Wireframe Image 2" style="width:50%;"/>
-<img src="/assets/images/inv-wireframe-3.png" alt="Wireframe Image 3" style="width:50%;float:left;"/>
-<img src="/assets/images/inv-wireframe-4.png" alt="Wireframe Image 4" style="width:50%;"/>
-
-<!-- ![Wireframe Image 1](/assets/images/inv-wireframe-1.png)
+![Wireframe Image 1](/assets/images/inv-wireframe-1.png)
 ![Wireframe Image 2](/assets/images/inv-wireframe-2.png)
 ![Wireframe Image 3](/assets/images/inv-wireframe-3.png)
-![Wireframe Image 4](/assets/images/inv-wireframe-4.png) -->
+![Wireframe Image 4](/assets/images/inv-wireframe-4.png)
 
 ### Color Scheme/ Styling
-<img src="/assets/images/inv-color-collection.png" alt="Color Collection" style="width:50%;"/>
-
-<!-- ![Color Collection](/assets/images/inv-color-collection.jpg) -->
+![Color Collection](/assets/images/inv-color-collection.jpg)
 
 
 
