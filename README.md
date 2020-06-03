@@ -99,38 +99,27 @@ This <!-- TODO insert title instead of 'This' --> is an invetory tool for mythic
 <!-- REVIEW -->
 
 ### Saturday - 5/30:
-- [x] - both - set up base directories/files
-- [x] - both - set up master repo
-- [x] - both - set up submaster branch
-- [x] - both - set up developer branches
-- [x] - isaiah - css design starts
+* set up base directories/files
+* set up master repo
+* set up submaster branch
+* set up developer branches
+* start css design
 
 ### Monday - 5/31:
-- [x] - jonathan - organize views folder
-- [x] - jonathan - users can see navigation
-- [x] - isaiah - styling reference sheet
-- [x] - jonathan - CRUD for lists
-- [x] - isaiah - transfer work from index.ejs to partials/header.ejs
-- [X] - jonathan - add items model
-- [x] - isaiah - google font chosen and added
-- [x] - jonathan - add items folder in views
-- [x] - isaiah - sidenav styling
-- [x] - jonathan - add items controller
-- [x] - jonathan - added items ref to models
-- [x] - isaiah - fix main styling color issue
+* users can see navigation
+* CRUD for lists
+* add items model
+* add items folder in views
+* add sidenav
+* add items controller
+* added items ref to models
 
 ### Tuesday - 6/1:
-- [x] - isaiah - update colors
-- [x] - isaiah - add sidenav to dashboard
-- [x] - isaiah - split dashboard, add right column list
-- [x] - isaiah - add welcome block
-- [x] - isaiah - add color to welcome block
-- [x] - isaiah - fix lists view
-- [x] - isaiah - add content to dashboard aside
-- [x] - isaiah - overflow scroll for dashboard list grid/ spacing issues
-- [x] - isaiah - account sign up page styled
-- [x] - jonathan - CRUD for items model
-- [x] - isaiah - create landing page with routes to login pages
+* create user dashboard
+* create style lists view
+* CRUD for items model
+* create user auth pages
+* create landing page with routes to user auth pages
 
 ### Wednesday - 6/2:
 - [x] - jonathan - add multiple lists
@@ -144,28 +133,40 @@ This <!-- TODO insert title instead of 'This' --> is an invetory tool for mythic
 - [x] - isaiah - show item fields in a row
 - [x] - isaiah - fix styling for edit/ delete in items
 - [x] - isaiah - add dark theme styling
+- [x] - isaiah - remove outline on buttons
+- [x] - isaiah - item create popup window
 
 
 
-- [ ] - isaiah - register form validation with css
+- [ ] -  - reroute items create to modal
 - [ ] - isaiah - event listener for dark theme
-- [ ] - isaiah - add final color palette
 - [ ] - jonathan - users can sign up for an account
 
 
 
+- [ ] - isaiah - animate modal
+- [ ] - isaiah - register form validation with css
+- [ ] - isaiah - add final color palette
+- [ ] - jonathan - lists and items models user specific
+- [ ] - jonathan - change welcome h1 tag from User to user.username
 - [ ] - jonathan - fix redirect for item update
-<!-- TODO Quantity and Reorder Level aren't working in items -->
+
+
+
+<!-- TODO Reorder Level isn't working in items -->
 - [ ] - both - MVP
 - [ ] -  - popup window
+- [ ] -  - add document title and favicon
+- [ ] -  - set values for edit routes
 
 
 
+<!-- TODO add empty list notification -->
 <!-- TODO some css to apply to items that have a quantity fall below the reorder level -->
-<!-- TODO maybe we should have a form form for list create, everything else could pop up? -->
+<!-- TODO maybe we should have a form for list create, everything else could pop up? -->
 <!-- TODO sidenav link should have popup with delete form, remove delete form from top of list -->
 <!-- TODO can we limit the characters in a list's title? -->
-<!-- TODO can we auto-populate list items? -->
+<!-- TODO can we auto-populate list items? maybe even just have one example list for when a user registers for an account -->
 <!-- TODO replace landing page image with "final" version -->
 
 
@@ -176,9 +177,23 @@ This <!-- TODO insert title instead of 'This' --> is an invetory tool for mythic
 - [ ] -  - dark theme styling
 <!-- TODO can we set a dark/light theme as a preference for the user? -->
 
+### Friday - 6/4:
+- [ ] -  - 
+
+### Saturday - 6/5:
+- [ ] -  - 
+
+### Sunday - 6/6:
+- [ ] -  - 
+
 
 
 ### Stretch Goals
 * allow multiple lists to be created and used
 * dark theme styling
-* automatic item generator for creature-specific users
+* automatic list generator
+* user profile page
+* add low reorder level items to dashboard aside list
+* item sorting
+* change password
+* forgot password
