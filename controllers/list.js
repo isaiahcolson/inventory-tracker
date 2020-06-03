@@ -6,7 +6,7 @@ const db = require('../models');
 
 // Index route
 router.get('/', (req,res) => {
-    db.List.find({}, function(err, allLists) {
+    db.List.find({user: req.session.currentUser.id}, function(err, allLists) {
         if (err) {
             console.log(err);
             res.send({message: 'Internal server error.'});
@@ -24,7 +24,11 @@ router.get('/new', (req,res) =>{
 
 // Create route
 router.post('/', (req,res) => {
-    db.List.create(req.body, function(err,createdList) {
+    const list = {
+        name: req.body.name,
+        user: req.session.currentUser.id,
+    };
+    db.List.create(list, function(err,createdList) {
         if (err) {
             console.log(err);
             res.send({message: 'Internal server error.'});
@@ -44,9 +48,10 @@ router.get('/:id', (req,res) => {
             console.log(err);
             res.send({message: 'Internal server error.'});
         } else {
-            foundList.populate('items').execPopulate(function() {
+            foundList.populate('items user').execPopulate(function() {
                 const context = {list: foundList};
                 res.render('lists/show', context);
+                console.log(foundList);
             })     
         }
     })
@@ -83,7 +88,7 @@ router.put('/:id', (req,res) => {
     })
 })
 
-// TODO Delete route
+// Delete route
 
 router.delete("/:id", async (req,res) => {
     try {
