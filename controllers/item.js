@@ -89,7 +89,6 @@ router.get('/:id/edit', (req,res) => {
 
 
 // Update route for item
-// TODO - modify redirect to lists/object_id page instead of main list page
 
 router.put('/:id', (req,res) => {
     const itemsData = {
@@ -112,7 +111,6 @@ router.put('/:id', (req,res) => {
 })
 
 // Delete route
-// TODO move the delete route to lists/object_id page
 
 router.delete("/:id", async (req,res) => {
     db.Item.findByIdAndDelete(req.params.id, function(err, deletedItem){
