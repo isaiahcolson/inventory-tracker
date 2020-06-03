@@ -43,12 +43,12 @@ app.get('/', (req,res) =>{
     res.render('index');
 });
 
+// Auth route
+app.use("/", controllers.auth);
+
 // Lists route
 app.use('/lists', controllers.list);
 app.use('/items', controllers.item);
-
-// Auth route
-app.use("/", controllers.auth);
 
 // Bind server to PORT
 app.listen(PORT, function(){
