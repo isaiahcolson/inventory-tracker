@@ -134,10 +134,11 @@ This <!-- TODO insert title instead of 'This' --> is an invetory tool for mythic
 - [x] - isaiah - fix styling for edit/ delete in items
 - [x] - isaiah - add dark theme styling
 - [x] - isaiah - remove outline on buttons
+- [x] - isaiah - item create popup window
 
 
 
-- [ ] - isaiah - item create popup window
+- [ ] - isaiah - reroute items create to modal
 - [ ] - jonathan - users can sign up for an account
 
 

@@ -1,4 +1,11 @@
 $('#item-create-button').click(function(){
-    console.log('button click');
-    $()
+    $('.modal-container').toggleClass('hidden');
+});
+
+$('.close').click(function(){
+    $('.modal-container').toggleClass('hidden');
+});
+
+$('.modal-bg').click(function(){
+    $('.modal-container').toggleClass('hidden');
 });
