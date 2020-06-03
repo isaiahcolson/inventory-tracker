@@ -60,7 +60,7 @@ router.post('/login', async (req,res) => {
             username: foundUser.username,
         };
         // redirect user to our landing page
-        res.redirect('/');
+        res.redirect('/lists');
     } catch (err) {
         res.send({ message: "Internal Server Error", error: err});
     }
@@ -73,12 +73,15 @@ router.delete('/logout', async (req,res) => {
 });
 
 // Profile
+// TODO - Need to reference user to list 
 router.get('/profile', async (req,res) => {
     try {
         const foundUser = await db.User.findById(req.session.currenUser.id);
         const userLists = await db.List.find({
             user: req.session.currentUser.id,
         });
+        console.log(foundUser);
+        console.log(userLists);
         res.render('auth/profile', { user: foundUser, lists: userLists });
     } catch (err) {
         res.send({message: 'Internal Server Error', error: err});
