@@ -7,31 +7,56 @@
 
     <div class="underlay"></div>
 
-    <%= list.name %>
-    <form action="/lists/<%= list._id %>?_method=DELETE" method="POST" id="list-delete">
-        <button type="submit" form="list-delete"><i class="fas fa-trash"></i></button>
-        <!-- <input type="submit" value="Delete"> -->
-    </form>
+    <div class="items-list">
 
-    <section>
-        <h2>Items</h2>
-        <% list.items.forEach(item => { %>
-            <ul style="list-style: none;">
-                <li>Name: <a href="/items/<%= item._id %>"><%= item.name %></a></li>
-                <li>Category: <%= item.category %></li>
-                <li>Price: <%= item.price %></li>
-                <li>Quantity: <%= item.quanity %></li>
-                <li>
-                    <a href="/items/<%= item._id %>/edit" title="Edit Current Item">Edit<a>
-                            
-                    <form action="/items/<%= item._id %>?_method=DELETE" method="POST">
-                    <button type="submit"><i class="fas fa-trash"></i></button>
+        <div class="items-header">
+            <div class="list-name">
+                <ul>
+                    <li style="float:left"><h3><%= list.name %></h3></li>
+                    <li>
+                        <form action="/lists/<%= list._id %>?_method=DELETE" method="POST" id="list-delete">
+                        <button type="submit" form="list-delete"><i class="fas fa-trash"></i></button>
+                        <!-- <input type="submit" value="Delete"> -->
                     </form>
-                </li>
-            </ul>                 
+                    </li>
+                    <li><a href="/items/new"><i class="fas fa-plus"></i> Add Item</a></li>
+                </ul>
+            </div>
+
+            <div class="clearfix"></div>
+            
+            <div class="field-container">
+                <div class="item-field"><h4>Product Name</h4></div>
+                <div class="item-field"><h4>Category</h4></div>
+                <div class="item-field"><h4>Price</h4></div>
+                <div class="item-field"><h4>Quantity</h4></div>
+                <div class="item-field"><h4>Reorder Level</h4></div>
+                <div class="item-field"><h4>Actions</h4></div>
+            </div>
+
+            <div class="bar-container"><div class="bar"></div></div>
+
+        </div>
+
+        
+        <div class="items">
+            <% list.items.forEach(item => { %>
+                <ul>
+                    <li>Name: <%= item.name %></li>
+                    <!-- originally for code above <a href="/items/ item._id %>"> -->
+                    <li>Category: <%= item.category %></li>
+                    <li>Price: <%= item.price %></li>
+                    <li>Quantity: <%= item.quanity %></li>
+                    <li>
+                        <a href="/items/<%= item._id %>/edit" title="Edit Current Item">Edit<a>
+                                
+                        <form action="/items/<%= item._id %>?_method=DELETE" method="POST">
+                        <button type="submit"><i class="fas fa-trash"></i></button>
+                        </form>
+                    </li>
+                </ul>                 
             <% }) %>
-            <br>
-            <br>
-        <li><a href="/items/new">Add a new item</a></li>
-    </section>
+        </div>
+    </div>
+
 </main>

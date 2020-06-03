@@ -132,28 +132,40 @@ This <!-- TODO insert title instead of 'This' --> is an invetory tool for mythic
 - [x] - jonathan - CRUD for items model
 - [x] - isaiah - create landing page with routes to login pages
 
+### Wednesday - 6/2:
+- [x] - jonathan - add multiple lists
+- [x] - isaiah - account log in page styled
+- [x] - isaiah - fix welcome block sizing
+- [x] - isaiah - split items section
+- [x] - isaiah - fix scroll spacing for items
+- [x] - jonathan - routes for sign up and log in pages
+- [x] - jonathan - move delete next to the list item
+- [x] - isaiah - style items header
 
-- [ ] - isaiah - account log in page styled
-- [ ] - jonathan - routes for sign up and log in pages
-- [ ] - jonathan - move delete next to the list item
 
 
+- [ ] - isaiah - show items in a row
+- [ ] - isaiah - visual form validation
+- [ ] - isaiah - add dark theme styling
+- [ ] - isaiah - event listener for dark theme
 - [ ] - jonathan - users can sign up for an account
+
+
+
 - [ ] - jonathan - fix redirect for item update
+<!-- TODO Quantity and Reorder Level aren't working in items -->
+- [ ] - both - MVP
+- [ ] -  - popup window
 
 
-<!-- TODO sidenav link should have popup with delete form -->
+
+<!-- TODO maybe we should have a form form for list create, everything else could pop up? -->
+<!-- TODO sidenav link should have popup with delete form, remove delete form from top of list -->
 <!-- TODO can we limit the characters in a list's title? -->
 <!-- TODO can we auto-populate list items? -->
-<!-- TODO fix welcome block sizing -->
 <!-- TODO replace landing page image with "final" version -->
 
 
-
-### Wednesday - 6/2:
-- [x] - jonathan - add multiple lists
-- [ ] -  - full CRUD & MVP
-- [ ] -  - popup window
 
 ### Thursday - 6/3:
 - [ ] -  - clean up code
