@@ -140,10 +140,10 @@ This <!-- TODO insert title instead of 'This' --> is an invetory tool for mythic
 - [x] - isaiah - fix scroll spacing for items
 - [x] - jonathan - routes for sign up and log in pages
 - [x] - jonathan - move delete next to the list item
+- [x] - isaiah - style items header
 
 
 
-- [ ] - isaiah - style items header
 - [ ] - isaiah - show items in a row
 - [ ] - isaiah - visual form validation
 - [ ] - isaiah - add dark theme styling
