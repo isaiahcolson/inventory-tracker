@@ -8,15 +8,12 @@
 }
 
 body {
+    
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     background: var(--light-alt);
     font-family: var(--font);
-}
-
-body.light {
-    /* colors */
     --light: #FFFFFF;
     --light-alt: #F1F1F1;
     --dark: #191f28;
@@ -28,6 +25,20 @@ body.light {
     --secondary-alt: #C75C4C;
     --opacity: 0,0,0
 }
+
+/* body.light {
+    colors
+    --light: #FFFFFF;
+    --light-alt: #F1F1F1;
+    --dark: #191f28;
+    --dark-alt: #4a4a4a;
+    --accent: #085ff3;
+    --accent-light: #4688fa;
+    --accent-dark: #0037bf;
+    --secondary: #FA745F;
+    --secondary-alt: #C75C4C;
+    --opacity: 0,0,0
+} */
 
 body.dark {
     /* colors */
