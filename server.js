@@ -40,15 +40,16 @@ app.use(session({
 
 // Root route
 app.get('/', (req,res) =>{
-    res.render('index');
+    console.log(req.session);
+    res.render('index', {user: req.session.currenUser });
 });
 
 // Auth route
 app.use("/", controllers.auth);
 
 // Lists route
-app.use('/lists', controllers.list);
-app.use('/items', controllers.item);
+app.use('/lists', authRequired, controllers.list);
+app.use('/items', authRequired, controllers.item);
 
 // Bind server to PORT
 app.listen(PORT, function(){

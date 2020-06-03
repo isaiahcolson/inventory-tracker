@@ -40,13 +40,14 @@ router.get('/login', (req,res) => {
 
 
 // Login post
+// TODO - will need to change the error messages to 'Invalid usr or psw' eventually
 router.post('/login', async (req,res) => {
     try {
         // verify email existence
         const foundUser = await db.User.findOne({ username: req.body.username });
         // error message displayed if email doesn't exist
         if(!foundUser) {
-            return res.send({ message: "Email is not found"});
+            return res.send({ message: "Username is not found"});
         }
         // let's now compare given password with hashed version
         const match = await bcrypt.compare(req.body.password, foundUser.password);
@@ -59,6 +60,8 @@ router.post('/login', async (req,res) => {
             id: foundUser._id,
             username: foundUser.username,
         };
+        req.session.logged = true;
+        console.log(req.session);
         // redirect user to our landing page
         res.redirect('/lists');
     } catch (err) {
@@ -68,8 +71,9 @@ router.post('/login', async (req,res) => {
 
 // Logout route 
 router.delete('/logout', async (req,res) => {
-    await req.session.destroy();
-    res.redirect('/');
+    await req.session.destroy();   // destroy user session
+    res.redirect('/');  // else, redirect them to the landing page
+    console.log(req.session.destroy);
 });
 
 // Profile
