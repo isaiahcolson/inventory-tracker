@@ -441,14 +441,30 @@ input[type=submit]:hover {
 
 .items {
     margin-top: 150px;
+    /* padding-left: 50px; */
     width: 90vw;
 }
 
 .items ul {
     list-style: none;
-    display: flex;
+    /* display: flex; */
+}
+
+.ind-item-container {
+    display: grid;
+    grid-template-columns: auto 14.5vw 12.5vw 14.3vw 17vw 12vw;
+    padding: 20px 10px;
 }
 
 .ind-item {
-    display: flex;
+    text-align: left;
+    margin-left: 40px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    /* text-overflow: ellipsis; */
+}
+
+.item-delete{
+    display: inline-block;
 }

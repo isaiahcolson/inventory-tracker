@@ -152,6 +152,22 @@ This <!-- TODO insert title instead of 'This' --> is an invetory tool for mythic
 - [ ] - jonathan - users can sign up for an account
 
 
+<ul class="ind-item">
+                    <li><%= item.name %></li>
+                    <!-- originally for code above <a href="/items/ item._id %>"> -->
+                    <li>Category: <%= item.category %></li>
+                    <li>Price: <%= item.price %></li>
+                    <li>Quantity: <%= item.quanity %></li>
+                    <li>
+                        <a href="/items/<%= item._id %>/edit" title="Edit Current Item">Edit<a>
+                                
+                        <form action="/items/<%= item._id %>?_method=DELETE" method="POST">
+                        <button type="submit"><i class="fas fa-trash"></i></button>
+                        </form>
+                    </li>
+                </ul>
+
+
 
 - [ ] - jonathan - fix redirect for item update
 <!-- TODO Quantity and Reorder Level aren't working in items -->
