@@ -91,7 +91,7 @@ This <!-- TODO insert title instead of 'This' --> is an invetory tool for mythic
 * reorderLevel: {type:Number, required:true}
 
 ### ERD
-![ERD Diagram](/assets/images/inv-erd.png)
+![ERD Diagram](/assets/images/inv-erd.png | width=50)
 
 
 
@@ -144,10 +144,12 @@ This <!-- TODO insert title instead of 'This' --> is an invetory tool for mythic
 
 
 
-- [ ] - isaiah - show items in a row
-- [ ] - isaiah - visual form validation
+- [ ] - isaiah - show item fields in a row
+- [ ] - isaiah - refister form validation with css
 - [ ] - isaiah - add dark theme styling
 - [ ] - isaiah - event listener for dark theme
+- [ ] - isaiah - add final color palette
+<!-- TODO can we make README images smaller? -->
 - [ ] - jonathan - users can sign up for an account
 
 
