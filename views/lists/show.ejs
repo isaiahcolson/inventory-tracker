@@ -7,31 +7,34 @@
 
     <div class="underlay"></div>
 
-    <%= list.name %>
-    <form action="/lists/<%= list._id %>?_method=DELETE" method="POST" id="list-delete">
-        <button type="submit" form="list-delete"><i class="fas fa-trash"></i></button>
-        <!-- <input type="submit" value="Delete"> -->
-    </form>
+    <div class="items-list">
+        <div class="items-header">
+            <h3><%= list.name %></h3>
 
-    <section>
-        <h2>Items</h2>
-        <% list.items.forEach(item => { %>
-            <ul style="list-style: none;">
-                <li>Name: <a href="/items/<%= item._id %>"><%= item.name %></a></li>
-                <li>Category: <%= item.category %></li>
-                <li>Price: <%= item.price %></li>
-                <li>Quantity: <%= item.quanity %></li>
-                <li>
-                    <a href="/items/<%= item._id %>/edit" title="Edit Current Item">Edit<a>
-                            
-                    <form action="/items/<%= item._id %>?_method=DELETE" method="POST">
-                    <button type="submit"><i class="fas fa-trash"></i></button>
-                    </form>
-                </li>
-            </ul>                 
-            <% }) %>
-            <br>
-            <br>
-        <li><a href="/items/new">Add a new item</a></li>
-    </section>
+            <form action="/lists/<%= list._id %>?_method=DELETE" method="POST" id="list-delete">
+                <button type="submit" form="list-delete"><i class="fas fa-trash"></i></button>
+                <!-- <input type="submit" value="Delete"> -->
+            </form>
+            <a href="/items/new">Add a new item</a>
+        </div>
+        
+        <section class="items">
+            <% list.items.forEach(item => { %>
+                <ul>
+                    <li>Name: <a href="/items/<%= item._id %>"><%= item.name %></a></li>
+                    <li>Category: <%= item.category %></li>
+                    <li>Price: <%= item.price %></li>
+                    <li>Quantity: <%= item.quanity %></li>
+                    <li>
+                        <a href="/items/<%= item._id %>/edit" title="Edit Current Item">Edit<a>
+                                
+                        <form action="/items/<%= item._id %>?_method=DELETE" method="POST">
+                        <button type="submit"><i class="fas fa-trash"></i></button>
+                        </form>
+                    </li>
+                </ul>                 
+                <% }) %>
+        </section>
+    </div>
+
 </main>

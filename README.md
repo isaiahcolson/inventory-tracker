@@ -136,10 +136,10 @@ This <!-- TODO insert title instead of 'This' --> is an invetory tool for mythic
 - [x] - jonathan - add multiple lists
 - [x] - isaiah - account log in page styled
 - [x] - isaiah - fix welcome block sizing
+- [x] - isaiah - split items section
 
 
 
-- [ ] - isaiah - split items section
 - [ ] - isaiah - style items header
 - [ ] - isaiah - fix scroll spacing for items
 - [ ] - isaiah - show items in a row
@@ -153,6 +153,7 @@ This <!-- TODO insert title instead of 'This' --> is an invetory tool for mythic
 
 - [ ] - jonathan - users can sign up for an account
 - [ ] - jonathan - fix redirect for item update
+<!-- TODO Quantity and Reorder Level aren't working in items -->
 - [ ] -  - full CRUD & MVP
 - [ ] -  - popup window
 

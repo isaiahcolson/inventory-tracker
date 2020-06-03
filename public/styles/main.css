@@ -1,3 +1,4 @@
+/* SECTION root styling */
 :root {
     /* colors */
     --light: #FFFFFF;
@@ -26,6 +27,11 @@ body {
     /* overflow: hidden; */
 }
 
+
+
+
+
+/* SECTION sidenav styling for dashboard and list show pages */
 .sidenav {
     height: 100vh;
     position: fixed;
@@ -71,14 +77,6 @@ body {
     width: 40px;
 }
 
-.lists-main {
-    margin-left: var(--sidenav-width);
-    border-radius: 25px 0 0 25px;
-    /* overflow: hidden; */
-    background: var(--light-alt);
-    height: 100vh;
-}
-
 .underlay {
     position: fixed;
     height: 100vh;
@@ -90,17 +88,11 @@ body {
     z-index: -2;
 }
 
-/* footer {
-    margin-left: var(--sidenav-width);
-    padding: 15px;
-    height: 5vh;
-    position: fixed;
-    bottom: 0;
-    width: 100vw;
-    background: var(--light-alt);
-    border-radius: 0 0 0 25px;
-} */
 
+
+
+
+/* SECTION dashboard styling */
 aside {
     width: 30vw;
     height: 75vh;
@@ -188,6 +180,11 @@ h3 {
     box-shadow: 0px 20px 25px -10px rgba(0,0,0,0.4);
 }
 
+
+
+
+
+/* SECTION auth pages styling */
 .register-container {
     display: flex;
     justify-content: center;
@@ -255,6 +252,8 @@ input[type=submit]:hover {
 
 
 
+
+/* SECTION landing page styling */
 .landing-main {
     padding: 50px 0;
     overflow: hidden;
@@ -369,4 +368,27 @@ input[type=submit]:hover {
     margin-right: -50px;
     padding: 0;
     width: 700px;
+}
+
+
+
+
+/* SECTION items styling in list show page */
+.lists-main {
+    margin-left: var(--sidenav-width);
+    border-radius: 25px 0 0 25px;
+    background: var(--light-alt);
+    height: 100vh;
+}
+
+.items-list {
+    padding: 25px;
+}
+
+.items-list h3 {
+    margin: 0;
+}
+
+.items ul {
+    list-style: none;
 }
