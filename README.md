@@ -130,9 +130,9 @@ This <!-- TODO insert title instead of 'This' --> is an invetory tool for mythic
 - [x] - isaiah - overflow scroll for dashboard list grid/ spacing issues
 - [x] - isaiah - account sign up page styled
 - [x] - jonathan - CRUD for items model
+- [x] - isaiah - create landing page with routes to login pages
 
 
-- [ ] - isaiah - create landing page with routes to login pages
 - [ ] - isaiah - account log in page styled
 - [ ] - jonathan - routes for sign up and log in pages
 - [ ] - jonathan - move delete next to the list item
@@ -146,6 +146,7 @@ This <!-- TODO insert title instead of 'This' --> is an invetory tool for mythic
 <!-- TODO can we limit the characters in a list's title? -->
 <!-- TODO can we auto-populate list items? -->
 <!-- TODO fix welcome block sizing -->
+<!-- TODO replace landing page image with "final" version -->
 
 
 
