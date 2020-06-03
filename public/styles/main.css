@@ -119,7 +119,7 @@ aside > h2 {
 
 .welcome {
     color: var(--light);
-    width: 45vw;
+    width: 80%;
     margin: 7.5vh 2.5vw;
     padding: 25px;
     border-radius: 15px;
