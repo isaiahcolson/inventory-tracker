@@ -377,20 +377,15 @@ input[type=submit]:hover {
     overflow: scroll;
 }
 
-.items-list {
-    /* padding: 25px; */
-}
+/* .items-list {
+    padding: 25px;
+} */
 
 .items-list h3 {
     margin: 0;
-    /* padding: 25px; */
-    /* border-radius: 25px 0 0 0; */
-    /* width: inherit; */
-    /* border-bottom: solid 1px var(--dark-alt); */
 }
 
 .items-header {
-    /* height: 15vh; */
     /* padding: 25px; */
     border-radius: 25px 0 0 25px;
     position: fixed;
@@ -409,13 +404,37 @@ input[type=submit]:hover {
 
 .items-header ul {
     list-style: none;
-    padding: ;
 }
 
-.items-header li {
+.list-name li {
     margin: 10px;
     float: right;
 }
+
+/* .list-name:after {
+    clear: both;
+} */
+
+.item-container {
+    /* overflow: auto; */
+}
+
+.clearfix {
+    clear: both;
+}
+
+.field-container {
+    display: flex;
+    justify-content: space-between;
+}
+
+/* .item-field {
+    display: inline-flex;
+} */
+
+/* .item-field li {
+    display: inline-block;
+} */
 
 .items {
     margin-top: 100px;

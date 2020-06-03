@@ -148,18 +148,19 @@ This <!-- TODO insert title instead of 'This' --> is an invetory tool for mythic
 - [ ] - isaiah - visual form validation
 - [ ] - isaiah - add dark theme styling
 - [ ] - isaiah - event listener for dark theme
-
-
-
 - [ ] - jonathan - users can sign up for an account
+
+
+
 - [ ] - jonathan - fix redirect for item update
 <!-- TODO Quantity and Reorder Level aren't working in items -->
-- [ ] -  - full CRUD & MVP
+- [ ] - both - MVP
 - [ ] -  - popup window
 
 
 
-<!-- TODO sidenav link should have popup with delete form -->
+<!-- TODO maybe we should have a form form for list create, everything else could pop up? -->
+<!-- TODO sidenav link should have popup with delete form, remove delete form from top of list -->
 <!-- TODO can we limit the characters in a list's title? -->
 <!-- TODO can we auto-populate list items? -->
 <!-- TODO replace landing page image with "final" version -->
