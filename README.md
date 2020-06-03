@@ -142,12 +142,12 @@ This <!-- TODO insert title instead of 'This' --> is an invetory tool for mythic
 - [x] - jonathan - move delete next to the list item
 - [x] - isaiah - style items header
 - [x] - isaiah - show item fields in a row
+- [x] - isaiah - fix styling for edit/ delete in items
+- [x] - isaiah - add dark theme styling
 
 
 
-- [ ] - isaiah - fix styling for edit/ delete in items
 - [ ] - isaiah - register form validation with css
-- [ ] - isaiah - add dark theme styling
 - [ ] - isaiah - event listener for dark theme
 - [ ] - isaiah - add final color palette
 - [ ] - jonathan - users can sign up for an account
