@@ -429,6 +429,11 @@ input[type=submit]:hover {
     border-bottom: solid 1px rgba(0,0,0,0.3);
 }
 
+.bar-small {
+    width: 92%;
+    border-bottom: solid 1px rgba(0,0,0,0.3);
+}
+
 .field-container {
     display: flex;
     justify-content: space-around;
@@ -436,8 +441,14 @@ input[type=submit]:hover {
 
 .items {
     margin-top: 150px;
+    width: 90vw;
 }
 
 .items ul {
     list-style: none;
+    display: flex;
+}
+
+.ind-item {
+    display: flex;
 }

@@ -41,8 +41,8 @@
         
         <div class="items">
             <% list.items.forEach(item => { %>
-                <ul>
-                    <li>Name: <%= item.name %></li>
+                <ul class="ind-item">
+                    <li><%= item.name %></li>
                     <!-- originally for code above <a href="/items/ item._id %>"> -->
                     <li>Category: <%= item.category %></li>
                     <li>Price: <%= item.price %></li>
@@ -54,7 +54,8 @@
                         <button type="submit"><i class="fas fa-trash"></i></button>
                         </form>
                     </li>
-                </ul>                 
+                </ul>
+                <div class="bar-container"><div class="bar-small"></div></div>              
             <% }) %>
         </div>
     </div>
