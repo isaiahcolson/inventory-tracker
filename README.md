@@ -146,6 +146,7 @@ This <!-- TODO insert title instead of 'This' --> is an invetory tool for mythic
 <!-- TODO can we limit the characters in a list's title? -->
 <!-- TODO can we auto-populate list items? -->
 <!-- TODO fix welcome block sizing -->
+<!-- TODO replace landing page image with "final" version -->
 
 
 

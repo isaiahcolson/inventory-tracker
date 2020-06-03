@@ -256,17 +256,26 @@ input[type=submit]:hover {
 
 
 .landing-main {
+    padding: 50px 0;
     overflow: hidden;
-    background: var(--light-alt);
-    height: 100vh;
 }
 
-.landing-main img {
-    width: 300px;
+.landing-bg {
+    position: fixed;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: -2;
+    background-image: url('/images/landing-bg.png');
+    background-position: right;
+    background-size: cover;
+    background-repeat: no-repeat;
 }
 
 .top-nav {
-    /* margin-bottom: 100px; */
+    /* margin-bottom: 25px; */
     background: var(--dark);
     padding: 0 35px;
 }
@@ -287,8 +296,77 @@ input[type=submit]:hover {
     font-weight: 900;
     text-decoration: none;
     color: var(--light);
-    font-size: 1.25em;
-    padding: 20px;
+    font-size: 1.1em;
+    margin: 10px;
+    padding: 7.5px 20px;
     text-align: center;
     display: block;
+    border: none;
+    border-radius: 50px;
+    transition: 0.3s ease;
+}
+
+.top-nav ul li:nth-child(3) a {
+    color: var(--accent-light);
+    border: solid 2px var(--accent-light);
+}
+
+.top-nav ul li:nth-child(3) a:hover {
+    color: var(--light);
+    border: solid 2px var(--light);
+}
+
+.top-nav ul li:nth-child(2) a {
+    color: var(--light);
+    background: var(--accent-light);
+}
+
+.top-nav ul li:nth-child(2) a:hover {
+    background: var(--accent);
+}
+
+.landing-content {
+    display: flex;
+    height: 70vh;
+    justify-content: center;
+    align-items: center;
+}
+
+.landing-content__cta {
+    margin: 0;
+    margin-left: 50px;
+    margin-right: -100px;
+    text-align: left;
+    /* align-items: right; */
+    width: 35vw;
+}
+
+.landing-content__cta h3 {
+    font-size: 2.5em;
+    font-weight: 700;
+    margin: 0 0 25px 0;
+    display: block;
+}
+
+.landing-content__cta a {
+    color: var(--light);
+    background: var(--accent);
+    /* margin-top: 25px; */
+    padding: 15px 25px;
+    border: none;
+    border-radius: 25px;
+    font-size: 1.3em;
+    font-weight: 700;
+    text-decoration: none;
+    transition: 0.3s ease;
+}
+
+.landing-content__cta a:hover {
+    background: var(--accent-dark);
+}
+
+.landing-content img {
+    margin-right: -50px;
+    padding: 0;
+    width: 700px;
 }
