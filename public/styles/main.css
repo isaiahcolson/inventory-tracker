@@ -59,8 +59,7 @@ body {
     --opacity: 0,0,0
 } */
 
-/* body.light {
-    colors
+body.light {
     --light: #FFFFFF;
     --light-alt: #F1F1F1;
     --dark: #191f28;
@@ -71,9 +70,9 @@ body {
     --secondary: #FA745F;
     --secondary-alt: #C75C4C;
     --opacity: 0,0,0
-} */
+}
 
-/* body.dark {
+body.dark {
     --light: #191f28;
     --light-alt: #0e131a;
     --dark: #FFFFFF;
@@ -84,7 +83,7 @@ body {
     --secondary: #FA745F;
     --secondary-alt: #C75C4C;
     --opacity: 255,255,255
-} */
+}
 
 button {
     outline: none;
@@ -163,7 +162,7 @@ button {
 .dash-main {
     margin-left: var(--sidenav-width);
     border-radius: 25px 0 0 25px;
-    background: var(--light-alt);
+    background-color: var(--light-alt);
     height: 100vh;
 }
 
