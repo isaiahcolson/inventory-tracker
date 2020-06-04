@@ -13,12 +13,6 @@
             <div class="list-name">
                 <ul>
                     <li style="float:left"><h3><%= list.name %></h3></li>
-                    <li>
-                        <form action="/lists/<%= list._id %>?_method=DELETE" method="POST" id="list-delete">
-                        <button type="submit" form="list-delete"><i class="fas fa-trash"></i></button>
-                        <!-- <input type="submit" value="Delete"> -->
-                        </form>
-                    </li>
                     <li><button id="item-create-button"><i class="fas fa-plus"></i> Add Item</button></li>
                 </ul>
             </div>
