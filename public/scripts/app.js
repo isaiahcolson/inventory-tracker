@@ -1,3 +1,4 @@
+/* item modal events */
 $('#item-create-button').click(function(){
     $('.create-modal').toggleClass('hidden');
 });
@@ -10,6 +11,9 @@ $('.create-modal-bg').click(function(){
     $('.create-modal').toggleClass('hidden');
 });
 
+
+
+/* item edit events */
 $('.item-edit-button').click(function(){
     $('.edit-items-modal').toggleClass('hidden');
 });
@@ -22,6 +26,24 @@ $('.edit-modal-bg').click(function(){
     $('.edit-items-modal').toggleClass('hidden');
 });
 
+
+
+/* delete list events */
+$('#list-delete-prompt').click(function(){
+    $('.delete-list-modal').toggleClass('hidden');
+});
+
+$('.delete-close').click(function(){
+    $('.delete-list-modal').toggleClass('hidden');
+});
+
+$('.delete-modal-bg').click(function(){
+    $('.delete-list-modal').toggleClass('hidden');
+});
+
+
+
+/* dark theme events */
 const color = $('.dash-main').css('background-color');
 // let currentColor = 
 

@@ -140,29 +140,35 @@ This <!-- TODO insert title instead of 'This' --> is an invetory tool for mythic
 
 ### Thursday - 6/3:
 - [x] - isaiah - item edit modal
+- [x] - isaiah - delete list modal
 
 
 
-
-- [ ] -  - fix item edit route and values
-- [ ] - isaiah - delete list modal
 - [ ] - isaiah - dark theme preferences
 
 
 
-- [ ] - isaiah - animate modal
-- [ ] - isaiah - register form validation with css
-- [ ] - jonathan - lists and items models user specific
-- [ ] - jonathan - change welcome h1 tag from User to user.username
-- [ ] - jonathan - fix redirect for item update
-<!-- TODO Reorder Level isn't working in items -->
-- [ ] - both - MVP
+- [ ] -  - fix item edit route and values
 - [ ] -  - add document title and favicon
+
+
+
+- [ ] -  - register form validation with css
+- [ ] -  - lists and items models user specific
+- [ ] -  - add reorder level to items model
+- [ ] -  - MVP
 - [ ] -  - set values for edit routes
+- [ ] -  - 404 page and routes
 
 
 
-<!-- TODO 404 -->
+- [ ] -  - animate modal
+- [ ] -  - change welcome h1 tag from User to user.username
+- [ ] -  - fix redirect for item update
+
+
+
+
 <!-- TODO maybe an information page/modal -->
 <!-- TODO modal for items edit/update route -->
 <!-- TODO modal for item delete route from sidenav -->
