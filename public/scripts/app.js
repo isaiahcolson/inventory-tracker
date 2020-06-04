@@ -45,14 +45,13 @@ $('.delete-modal-bg').click(function(){
 
 /* dark theme events */
 const color = $('.dash-main').css('background-color');
-// let currentColor = 
+const secondColor = $('.lists-main').css('background-color');
 
 const initTheme = () => {
-    if (color == 'rgb(14, 19, 26)') {
+    if (color == 'rgb(14, 19, 26)' || secondColor == 'rgb(25, 31, 40)') {
         localStorage.removeItem('theme');
         localStorage.setItem('theme', 'dark');
-    } else if (color == 'rgb(241, 241, 241)') {
-<<<<<<< HEAD
+    } else if (color == 'rgb(241, 241, 241)' || secondColor == 'rgb(255, 255, 255)') {
         localStorage.removeItem('theme');
         localStorage.setItem('theme', 'light');
     } else {
@@ -60,71 +59,84 @@ const initTheme = () => {
     }
 }
 
-const themeTracking = () => {
-    if ($('body').hasClass('light')) {
-=======
->>>>>>> submaster
-        localStorage.removeItem('theme');
-        localStorage.setItem('theme', 'light');
+const themeIsChecked = () => {
+    const storageTheme = localStorage.getItem('theme');
+    if (storageTheme === 'light') {
+        localStorage.removeItem('isChecked');
+        localStorage.setItem('isChecked', 'false');
+    } else if (storageTheme === 'dark') {
+        localStorage.removeItem('isChecked');
+        localStorage.setItem('isChecked', 'true');
     } else {
-        console.log('not-working');
+        console.log('Theme Error');
     }
 }
 
-<<<<<<< HEAD
-const themeSwitch = $('#themeSwitch');
 
-        // $('body').toggleClass('light');
-        // $('body').toggleClass('dark');
-        // $('body').toggleClass('dark');
-        // $('body').toggleClass('light');
-
-
-
-const lightThemeSelected = (localStorage.getItem('theme') !== null && localStorage.getItem('theme') === 'light');
-const darkThemeSelected = (localStorage.getItem('theme') !== null && localStorage.getItem('theme') === 'dark');
-
-const testSomething = () => {
-    console.log(localStorage);
-    // console.log(lightThemeSelected);
-    // console.log(darkThemeSelected);
-=======
-// const themeTracking = () => {
-//     if ($('body').hasClass('light')) {
-//         localStorage.removeItem('theme');
-//         localStorage.setItem('theme', 'light');
-//     } else if ($('body').hasClass('dark')) {
-//         localStorage.removeItem('theme');
-//         localStorage.setItem('theme', 'dark');
-//     } else {
-//         console.log('not-working');
-//     }
-// }
-
-
-        // $('body').toggleClass('light');
-        // $('body').toggleClass('dark');
-        // $('body').toggleClass('dark');
-        // $('body').toggleClass('light');
-
-
-
-// const lightThemeSelected = (localStorage.getItem('theme') !== null && localStorage.getItem('theme') === 'light');
-// const darkThemeSelected = (localStorage.getItem('theme') !== null && localStorage.getItem('theme') === 'dark');
-
-const testSomething = () => {
-    console.log(localStorage);
->>>>>>> submaster
+const themeCheck = () => {
+    const storageTheme = localStorage.getItem('theme');
+    if (storageTheme === 'light') {
+        $('#themeSwitch').prop({checked:false});
+        // console.log('light theme selected');
+    } else if (storageTheme === 'dark') {
+        $('#themeSwitch').prop({checked:true});
+        // console.log('dark theme selected');
+    } else {
+        console.log('not working');
+    }
 }
 
-initTheme();
-testSomething();
+const testSomething = () => {
+    console.log(localStorage);
+}
 
-<<<<<<< HEAD
-=======
-$('#themeSwitch').checked
+const themeSwitch = () => {
+    themeCheck();
+    $('#themeSwitch').click(function(){
+        initTheme();
+        if ($('#themeSwitch').is(':checked')) {
+            // console.log('checked');
+            // $('body').removeClass();
+            // $('body').addClass('dark');
+            localStorage.removeItem('theme');
+            localStorage.setItem('theme', 'dark');
+        } else if ($('#themeSwitch').is(':not(:checked)')) {
+            // console.log('not checked');
+            // $('body').removeClass();
+            // $('body').addClass('light');
+            localStorage.removeItem('theme');
+            localStorage.setItem('theme', 'light');
+        } else {
+            console.log('not working');
+        }
+        themeIsChecked();
+        setTheme();
+    });
+}
 
->>>>>>> submaster
-$('#dark').click(function(){
-    // themeTracking();
-});
+const setTheme = () => {
+    console.log(localStorage);
+    const storageTheme = localStorage.getItem('theme');
+    if (storageTheme === 'light') {
+        $('body').removeClass();
+        $('body').addClass('light');
+        // storageTheme = 'light';
+        // console.log('light theme selected');
+    } else if (storageTheme === 'dark') {
+        $('body').removeClass();
+        $('body').addClass('dark');
+        // storageTheme = 'dark';
+        // console.log('dark theme selected');
+    } else {
+        console.log('not working');
+    }
+}
+
+
+// $('body').toggleClass('dark');
+// $('body').toggleClass('light');
+
+themeIsChecked();
+// testSomething();
+themeSwitch();
+setTheme();
