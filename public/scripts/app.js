@@ -47,20 +47,15 @@ $('.delete-modal-bg').click(function(){
 const color = $('.dash-main').css('background-color');
 // let currentColor = 
 
-const themeSwitch = () => {
+const initTheme = () => {
     if (color == 'rgb(14, 19, 26)') {
-        $('body').toggleClass('light');
-        // $('body').toggleClass('dark');
-        // localStorage.removeItem('theme');
-        // localStorage.setItem('theme', 'light');
+        localStorage.removeItem('theme');
+        localStorage.setItem('theme', 'dark');
     } else if (color == 'rgb(241, 241, 241)') {
-        $('body').toggleClass('dark');
-        // $('body').toggleClass('light');
-        // localStorage.removeItem('theme');
-        // localStorage.setItem('theme', 'dark');
+        localStorage.removeItem('theme');
+        localStorage.setItem('theme', 'light');
     } else {
         console.log('not-working');
-        // $('body').removeClass();
     }
 }
 
@@ -76,17 +71,27 @@ const themeTracking = () => {
     }
 }
 
+const themeSwitch = $('#themeSwitch');
+
+        // $('body').toggleClass('light');
+        // $('body').toggleClass('dark');
+        // $('body').toggleClass('dark');
+        // $('body').toggleClass('light');
+
+
+
 const lightThemeSelected = (localStorage.getItem('theme') !== null && localStorage.getItem('theme') === 'light');
 const darkThemeSelected = (localStorage.getItem('theme') !== null && localStorage.getItem('theme') === 'dark');
 
-const initTheme = () => {
+const testSomething = () => {
     console.log(localStorage);
-    console.log(lightThemeSelected);
-    console.log(darkThemeSelected);
+    // console.log(lightThemeSelected);
+    // console.log(darkThemeSelected);
 }
 
+initTheme();
+testSomething();
+
 $('#dark').click(function(){
-    themeSwitch();
     // themeTracking();
-    // initTheme();
 });
