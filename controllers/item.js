@@ -73,7 +73,7 @@ router.get('/:id', (req,res) => {
 
 
 // Edit route
-router.get('/:id/edit', (req,res) => {
+router.get('/:id', (req,res) => {
     db.Item.findById(req.params.id, function(err, foundItem) {
         if (err) {
             console.log(err);
@@ -99,7 +99,7 @@ router.put('/:id', (req,res) => {
           quantity: req.body.quantity
         },
     }
-    db.Item.findByIdAndUpdate(req.params.id,req.body,{new:true}, function(err, updatedItem) {
+    db.Item.findByIdAndUpdate(req.params.id,itemsData,{new:true}, function(err, updatedItem) {
         if (err) {
             console.log(err);
             res.send({message: 'Internal server error.'});
