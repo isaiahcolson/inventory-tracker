@@ -50,7 +50,7 @@
                     <div class="ind-item"><%= item.quantity %> </div>
                     <div class="ind-item">Reorder</div>
                     <div class="ind-item">
-                        <a href="/items/<%= item._id %>/edit" title="Edit Current Item"><i class="fas fa-edit"></i><a></a>
+                        <a title="Edit Current Item" class="item-edit-button"><i class="fas fa-edit"></i><a></a>
                         <div class="item-delete">
                             <form action="/items/<%= item._id %>?_method=DELETE" method="POST">
                                 <button type="submit"><i class="fas fa-trash"></i></button>
@@ -67,10 +67,10 @@
 
 </main>
 
-<div class="modal-container hidden">
-    <div class="modal-bg"></div>
+<div class="create-modal hidden">
+    <div class="create-modal-bg"></div>
     <div class="modal-content">
-        <div class="close">+</div>
+        <div class="create-close">+</div>
         <p>Add a new item to this list.</p>
         <form action="/items/" method="POST">
             <input type="text" name="name" placeholder="Product Name">   
@@ -82,5 +82,21 @@
             <input type="submit" value="Add Item">
         </form>
     </div>
-    
+</div>
+
+<div class="edit-items-modal hidden">
+    <div class="edit-modal-bg"></div>
+    <div class="modal-content">
+        <div class="edit-close">+</div>
+        <p>Edit </p>
+        <form action="/items/?_method=PUT" method="POST">
+            <input type="text" name="name" placeholder="Product Name">   
+            <input type="text" name="category" placeholder="Category">
+            <input type="number" name="price" placeholder="Price">
+            <input type="number" name="quantity" placeholder="Quantity">
+            <input type="number" name="reorderLevel" placeholder="Reorder Level">
+            <input type="hidden" name="list" value="<%= list._id %>">
+            <input type="submit" value="Update">
+        </form>
+    </div>
 </div>

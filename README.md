@@ -138,9 +138,14 @@ This <!-- TODO insert title instead of 'This' --> is an invetory tool for mythic
 - [x] - jonathan - users can sign up for an account
 - [x] - isaiah - logout styling
 
+### Thursday - 6/3:
+- [x] - isaiah - item edit modal
 
 
-- [ ] - jonathan - item edit modal
+
+
+- [ ] -  - fix item edit route and values
+- [ ] - isaiah - delete list modal
 - [ ] - isaiah - dark theme preferences
 
 
@@ -170,7 +175,7 @@ This <!-- TODO insert title instead of 'This' --> is an invetory tool for mythic
 
 
 
-### Thursday - 6/3:
+
 - [ ] -  - clean up code
 - [ ] -  - finalize styling
 

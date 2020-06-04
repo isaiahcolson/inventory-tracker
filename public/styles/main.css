@@ -18,7 +18,7 @@
     --opacity: 0,0,0
 }
 
-@media (prefers-color-scheme: dark) {
+/* @media (prefers-color-scheme: dark) {
     :root {
         --light: #191f28;
         --light-alt: #0e131a;
@@ -31,7 +31,7 @@
         --secondary-alt: #C75C4C;
         --opacity: 255,255,255
     }
-}
+} */
 
 body {
     margin: 0;
@@ -556,6 +556,7 @@ input[type=submit]:hover {
 
 .ind-item a {
     color: var(--dark);
+    cursor: pointer;
 }
 
 .ind-item button {
@@ -571,7 +572,7 @@ input[type=submit]:hover {
 
 
 /* SECTION modals */
-.modal-container {
+.create-modal, .edit-items-modal {
     width: 100vw;
     height: 100vh;
     background-color: rgba(0,0,0,0.5);
@@ -583,7 +584,7 @@ input[type=submit]:hover {
     text-align: center;
 }
 
-.modal-bg {
+.create-modal-bg, .edit-modal-bg {
     width: 100vw;
     height: 100vh;
     background-color: rgba(0,0,0,0.5);
@@ -596,7 +597,7 @@ input[type=submit]:hover {
     display: none;
 }
 
-.bg-modal p {
+.modal-content p {
     font-size: 1.2em;
 }
 
@@ -612,7 +613,7 @@ input[type=submit]:hover {
     position: relative;
 }
 
-.close {
+.create-close, .edit-close {
     position: absolute;
     top: 0;
     right: 14px;
