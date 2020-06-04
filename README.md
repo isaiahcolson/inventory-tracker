@@ -146,12 +146,12 @@ This <!-- TODO insert title instead of 'This' --> is an invetory tool for mythic
 - [x] - jonathan - lists and items models user specific
 - [x] - both - limit the characters in a list's title
 - [x] - isaiah - set values for edit routes
+- [x] - isaiah - dark mode styling fixes
+- [x] - jonathan - add reorder level to items model
+- [x] - jonathan - fix redirect for item update
 
 
 
-- [ ] - jonathan - add reorder level to items model
-- [ ] - jonathan - fix redirect for item update
-- [ ] - isaiah - dark mode styling fixes
 - [ ] - isaiah - add document title and favicon
 
 
