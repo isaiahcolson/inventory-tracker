@@ -52,7 +52,6 @@ const initTheme = () => {
         localStorage.removeItem('theme');
         localStorage.setItem('theme', 'dark');
     } else if (color == 'rgb(241, 241, 241)') {
-<<<<<<< HEAD
         localStorage.removeItem('theme');
         localStorage.setItem('theme', 'light');
     } else {
@@ -62,8 +61,6 @@ const initTheme = () => {
 
 const themeTracking = () => {
     if ($('body').hasClass('light')) {
-=======
->>>>>>> submaster
         localStorage.removeItem('theme');
         localStorage.setItem('theme', 'light');
     } else {
@@ -71,7 +68,6 @@ const themeTracking = () => {
     }
 }
 
-<<<<<<< HEAD
 const themeSwitch = $('#themeSwitch');
 
         // $('body').toggleClass('light');
@@ -88,43 +84,11 @@ const testSomething = () => {
     console.log(localStorage);
     // console.log(lightThemeSelected);
     // console.log(darkThemeSelected);
-=======
-// const themeTracking = () => {
-//     if ($('body').hasClass('light')) {
-//         localStorage.removeItem('theme');
-//         localStorage.setItem('theme', 'light');
-//     } else if ($('body').hasClass('dark')) {
-//         localStorage.removeItem('theme');
-//         localStorage.setItem('theme', 'dark');
-//     } else {
-//         console.log('not-working');
-//     }
-// }
-
-
-        // $('body').toggleClass('light');
-        // $('body').toggleClass('dark');
-        // $('body').toggleClass('dark');
-        // $('body').toggleClass('light');
-
-
-
-// const lightThemeSelected = (localStorage.getItem('theme') !== null && localStorage.getItem('theme') === 'light');
-// const darkThemeSelected = (localStorage.getItem('theme') !== null && localStorage.getItem('theme') === 'dark');
-
-const testSomething = () => {
-    console.log(localStorage);
->>>>>>> submaster
 }
 
 initTheme();
 testSomething();
 
-<<<<<<< HEAD
-=======
-$('#themeSwitch').checked
-
->>>>>>> submaster
 $('#dark').click(function(){
     // themeTracking();
 });
