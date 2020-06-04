@@ -159,6 +159,7 @@ This <!-- TODO insert title instead of 'This' --> is an invetory tool for mythic
 - [ ] -  - MVP
 - [ ] -  - set values for edit routes
 - [ ] -  - 404 page and routes
+- [ ] -  - test dark theme pages
 
 
 
