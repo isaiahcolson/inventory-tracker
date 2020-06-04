@@ -4,6 +4,11 @@
         <li id="dark"><a title="Toggle Dark & Light Mode" style="cursor: pointer;"><i class="fas fa-adjust"></i></a></li>
         <li><input type="checkbox" id="themeSwitch"></li>
         <li><a href="" title="FAQ"><i class="fas fa-question"></i></a></li>
-        <li><a href="/logout" title="Log Out"><i class="fas fa-sign-out-alt"></i></a></li>
+        <li>
+            <form action="/logout?_method=DELETE" method="POST">
+                <button type="submit"><i class="fas fa-sign-out-alt"></i></button>
+            </form>
+        </li>
+        <!-- <li><a href="/logout" title="Log Out"><i class="fas fa-sign-out-alt"></i></a></li> -->
     </ul>   
 </nav>
