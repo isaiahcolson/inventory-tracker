@@ -17,7 +17,7 @@
                         <form action="/lists/<%= list._id %>?_method=DELETE" method="POST" id="list-delete">
                         <button type="submit" form="list-delete"><i class="fas fa-trash"></i></button>
                         <!-- <input type="submit" value="Delete"> -->
-                    </form>
+                        </form>
                     </li>
                     <li><button id="item-create-button"><i class="fas fa-plus"></i> Add Item</button></li>
                     <!-- <li><a href="/items/new"><i class="fas fa-plus"></i> Add Item</a></li> -->
@@ -72,12 +72,13 @@
     <div class="modal-content">
         <div class="close">+</div>
         <p>Add a new item to this list.</p>
-        <form action="/items/" method="POST">
+        <form action="/items" method="POST">
             <input type="text" name="name" placeholder="Product Name">   
             <input type="text" name="category" placeholder="Category">
             <input type="number" name="price" placeholder="Price">
             <input type="number" name="quantity" placeholder="Quantity">
             <input type="number" name="reorderLevel" placeholder="Reorder Level">
+            <input type="hidden" name="list" value="<%= list._id %>">
             <input type="submit" value="Add Item">
             
         </form>
