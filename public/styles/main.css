@@ -8,7 +8,6 @@
 
     --light: #FFFFFF;
     --light-alt: #F1F1F1;
-    --light-secondary: #e3e3e3;
     --dark: #191f28;
     --dark-alt: #4a4a4a;
     --accent: #085ff3;
@@ -23,7 +22,6 @@
     :root {
         --light: #191f28;
         --light-alt: #0e131a;
-        --light-secondary: #222f40;
         --dark: #FFFFFF;
         --dark-alt: #F1F1F1;
         --accent: #085ff3;
@@ -64,6 +62,7 @@ body {
 body.light {
     --light: #FFFFFF;
     --light-alt: #F1F1F1;
+    --light-secondary: #e3e3e3;
     --dark: #191f28;
     --dark-alt: #4a4a4a;
     --accent: #085ff3;
@@ -77,6 +76,7 @@ body.light {
 body.dark {
     --light: #191f28;
     --light-alt: #0e131a;
+    --light-secondary: #222f40;
     --dark: #FFFFFF;
     --dark-alt: #F1F1F1;
     --accent: #085ff3;
@@ -288,6 +288,7 @@ input {
     display: inline-block;
     border: none;
     border-bottom: 2px solid var(--dark-alt);
+    color: var(--dark);
     background: var(--light-alt);
     box-sizing: border-box;
     outline: none;
@@ -577,6 +578,7 @@ input[type=submit]:hover {
 .create-modal, .edit-items-modal, .delete-list-modal {
     width: 100vw;
     height: 100vh;
+    color: var(--dark);
     background-color: rgba(0,0,0,0.5);
     position: absolute;
     top: 0;

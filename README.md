@@ -143,49 +143,32 @@ This <!-- TODO insert title instead of 'This' --> is an invetory tool for mythic
 - [x] - isaiah - delete list modal
 - [x] - jonathan - fix item edit route and values
 - [x] - isaiah - dark theme preferences
+- [x] - jonathan - lists and items models user specific
+- [x] - both - limit the characters in a list's title
+- [x] - isaiah - set values for edit routes
 
 
 
-- [ ] -  - 
+- [ ] - jonathan - add reorder level to items model
+- [ ] - jonathan - fix redirect for item update
+- [ ] - isaiah - dark mode styling fixes
+- [ ] - isaiah - add document title and favicon
 
 
 
-- [ ] -  - add document title and favicon
+- [ ] -  - MVP
+- [ ] -  - list create page/modal
+- [ ] -  - list update (can we change the list title to input)
 
 
 
 - [ ] -  - register form validation with css
-- [ ] -  - lists and items models user specific
-- [ ] -  - add reorder level to items model
-- [ ] -  - MVP
-- [ ] -  - set values for edit routes
 - [ ] -  - 404 page and routes
-- [ ] -  - test dark theme pages
+- [ ] - jonathan - user should not see whether username or pass fails
+- [ ] -  - add empty list notification
+- [ ] -  - replace landing page image with "final" version
 
 
-
-- [ ] -  - animate modal
-- [ ] -  - change welcome h1 tag from User to user.username
-- [ ] -  - fix redirect for item update
-
-
-
-
-<!-- TODO maybe an information page/modal -->
-<!-- TODO modal for items edit/update route -->
-<!-- TODO modal for item delete route from sidenav -->
-<!-- TODO modal for list create -->
-<!-- TODO add empty list notification -->
-<!-- TODO some css to apply to items that have a quantity fall below the reorder level -->
-<!-- TODO can we limit the characters in a list's title? -->
-<!-- TODO can we auto-populate list items? maybe even just have one example list for when a user registers for an account -->
-<!-- TODO replace landing page image with "final" version -->
-
-
-
-
-- [ ] -  - clean up code
-- [ ] -  - finalize styling
 
 ### Friday - 6/4:
 - [ ] -  - 
@@ -211,6 +194,11 @@ This <!-- TODO insert title instead of 'This' --> is an invetory tool for mythic
 * unique items (maybe add quantity fields for new total)
 * inventory edit route doesn't go to new page or modal, the input will appear in the list header
 * object embedding
+- [ ] -  - change welcome h1 tag from User to user.username
+- [ ] -  - animate modal
+- [ ] -  - information page/modal
+- [ ] -  - some css to apply to items that have a quantity fall below the reorder level
+
 
 
 
