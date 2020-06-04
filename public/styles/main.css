@@ -5,10 +5,43 @@
 
     /* fonts */
     --font: 'Roboto', sans-serif;
+
+    --light: #FFFFFF;
+    --light-alt: #F1F1F1;
+    --dark: #191f28;
+    --dark-alt: #4a4a4a;
+    --accent: #085ff3;
+    --accent-light: #4688fa;
+    --accent-dark: #0037bf;
+    --secondary: #FA745F;
+    --secondary-alt: #C75C4C;
+    --opacity: 0,0,0
+}
+
+@media (prefers-color-scheme: dark) {
+    :root {
+        --light: #191f28;
+        --light-alt: #0e131a;
+        --dark: #FFFFFF;
+        --dark-alt: #F1F1F1;
+        --accent: #085ff3;
+        --accent-light: #4688fa;
+        --accent-dark: #0037bf;
+        --secondary: #FA745F;
+        --secondary-alt: #C75C4C;
+        --opacity: 255,255,255
+    }
 }
 
 body {
-    
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background: var(--light-alt);
+    font-family: var(--font);
+}
+
+/* body {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -24,7 +57,7 @@ body {
     --secondary: #FA745F;
     --secondary-alt: #C75C4C;
     --opacity: 0,0,0
-}
+} */
 
 /* body.light {
     colors
@@ -40,8 +73,7 @@ body {
     --opacity: 0,0,0
 } */
 
-body.dark {
-    /* colors */
+/* body.dark {
     --light: #191f28;
     --light-alt: #0e131a;
     --dark: #FFFFFF;
@@ -52,7 +84,7 @@ body.dark {
     --secondary: #FA745F;
     --secondary-alt: #C75C4C;
     --opacity: 255,255,255
-}
+} */
 
 button {
     outline: none;
@@ -86,18 +118,22 @@ button {
     margin: 15px;
 }
 
-.sidenav a {
+.sidenav a, .sidenav button {
+    font-size: 1em;
     text-decoration: none;
-    /* padding: 5px; */
+    padding: 0;
     height: 40px;
+    width: 40px;
     border-radius: 8px;
+    border: none;
     display: block;
     color: #FFFFFF;
     background: var(--accent-light);
     line-height: 40px;
+    cursor: pointer;
 }
 
-.sidenav a:hover {
+.sidenav a:hover, .sidenav button:hover {
     background: #FFFFFF;
     color: var(--accent);
 }
