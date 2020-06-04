@@ -141,14 +141,15 @@ This <!-- TODO insert title instead of 'This' --> is an invetory tool for mythic
 ### Thursday - 6/3:
 - [x] - isaiah - item edit modal
 - [x] - isaiah - delete list modal
+- [x] - jonathan - fix item edit route and values
+- [x] - isaiah - dark theme preferences
 
 
 
-- [ ] - isaiah - dark theme preferences
+- [ ] -  - 
 
 
 
-- [ ] -  - fix item edit route and values
 - [ ] -  - add document title and favicon
 
 
@@ -210,3 +211,13 @@ This <!-- TODO insert title instead of 'This' --> is an invetory tool for mythic
 * unique items (maybe add quantity fields for new total)
 * inventory edit route doesn't go to new page or modal, the input will appear in the list header
 * object embedding
+
+
+
+<!-- Sources -->
+<!-- checkbox styling - https://www.w3schools.com/howto/howto_css_switch.asp -->
+<!-- dark theme coloring - https://www.behance.net/gallery/48666853/Engine-Dashboard-Personal-Account-Redesign-Concept -->
+<!-- primary coloring - https://www.pinterest.com/pin/800444533761655082/ -->
+<!-- layout styling - https://www.behance.net/gallery/90858523/Data-table-design-for-product-inventory-management -->
+<!-- landing page styling - https://www.soundstripe.com/ -->
+<!-- user reg styling - https://twitter.com/i/flow/signup -->
