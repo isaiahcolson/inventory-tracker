@@ -8,7 +8,6 @@
 
     --light: #FFFFFF;
     --light-alt: #F1F1F1;
-    --light-secondary: #e3e3e3;
     --dark: #191f28;
     --dark-alt: #4a4a4a;
     --accent: #085ff3;
@@ -19,11 +18,10 @@
     --opacity: 0,0,0
 }
 
-@media (prefers-color-scheme: dark) {
+/* @media (prefers-color-scheme: dark) {
     :root {
         --light: #191f28;
         --light-alt: #0e131a;
-        --light-secondary: #222f40;
         --dark: #FFFFFF;
         --dark-alt: #F1F1F1;
         --accent: #085ff3;
@@ -33,7 +31,7 @@
         --secondary-alt: #C75C4C;
         --opacity: 255,255,255
     }
-}
+} */
 
 body {
     margin: 0;
@@ -64,6 +62,7 @@ body {
 body.light {
     --light: #FFFFFF;
     --light-alt: #F1F1F1;
+    --light-secondary: #e3e3e3;
     --dark: #191f28;
     --dark-alt: #4a4a4a;
     --accent: #085ff3;
@@ -77,6 +76,7 @@ body.light {
 body.dark {
     --light: #191f28;
     --light-alt: #0e131a;
+    --light-secondary: #222f40;
     --dark: #FFFFFF;
     --dark-alt: #F1F1F1;
     --accent: #085ff3;
@@ -154,6 +154,55 @@ button {
     bottom: 0;
     background: var(--accent);
     z-index: -2;
+}
+
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 30px;
+    height: 50px;
+}
+  
+.switch input { 
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+  
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #CCC;
+    -webkit-transition: .3s;
+    transition: .3s;
+    border-radius: 34px;
+}
+  
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 22px;
+    width: 22px;
+    left: 4px;
+    bottom: 4px;
+    background-color: #FFFFFF;
+    -webkit-transition: .3s;
+    transition: .3s;
+    border-radius: 50%;
+}
+  
+input:checked + .slider {
+    background-color: var(--accent-light);
+}
+  
+input:checked + .slider:before {
+    -webkit-transform: translateY(-20px);
+    -ms-transform: translateY(-20px);
+    transform: translateY(-20px);
 }
 
 
@@ -288,6 +337,7 @@ input {
     display: inline-block;
     border: none;
     border-bottom: 2px solid var(--dark-alt);
+    color: var(--dark);
     background: var(--light-alt);
     box-sizing: border-box;
     outline: none;
@@ -577,6 +627,7 @@ input[type=submit]:hover {
 .create-modal, .edit-items-modal, .delete-list-modal {
     width: 100vw;
     height: 100vh;
+    color: var(--dark);
     background-color: rgba(0,0,0,0.5);
     position: absolute;
     top: 0;

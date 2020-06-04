@@ -85,10 +85,10 @@
             <div class="edit-close">+</div>
             <p>Edit </p>
             <form action="/items/<%= item._id %>?_method=PUT" method="POST">
-                <input type="text" name="name" placeholder="Product Name">   
-                <input type="text" name="category" placeholder="Category">
-                <input type="number" name="price" placeholder="Price">
-                <input type="number" name="quantity" placeholder="Quantity">
+                <input type="text" name="name" placeholder="Product Name" value="<%= item.name %>" />   
+                <input type="text" name="category" placeholder="Category" value="<%= item.category %>" />
+                <input type="number" name="price" placeholder="Price" value="<%= item.price %>" />
+                <input type="number" name="quantity" placeholder="Quantity" value="<%= item.quantity %>" />
                 <input type="number" name="reorderLevel" placeholder="Reorder Level">
                 <input type="hidden" name="list" value="<%= item._id %>">
                 <input type="submit" value="Update">

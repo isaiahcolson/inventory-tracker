@@ -74,15 +74,16 @@ const themeIsChecked = () => {
     }
 }
 
+<<<<<<< HEAD
+=======
 
+>>>>>>> submaster
 const themeCheck = () => {
     const storageTheme = localStorage.getItem('theme');
     if (storageTheme === 'light') {
         $('#themeSwitch').prop({checked:false});
-        // console.log('light theme selected');
     } else if (storageTheme === 'dark') {
         $('#themeSwitch').prop({checked:true});
-        // console.log('dark theme selected');
     } else {
         console.log('not working');
     }
@@ -97,15 +98,9 @@ const themeSwitch = () => {
     $('#themeSwitch').click(function(){
         initTheme();
         if ($('#themeSwitch').is(':checked')) {
-            // console.log('checked');
-            // $('body').removeClass();
-            // $('body').addClass('dark');
             localStorage.removeItem('theme');
             localStorage.setItem('theme', 'dark');
         } else if ($('#themeSwitch').is(':not(:checked)')) {
-            // console.log('not checked');
-            // $('body').removeClass();
-            // $('body').addClass('light');
             localStorage.removeItem('theme');
             localStorage.setItem('theme', 'light');
         } else {
@@ -122,13 +117,9 @@ const setTheme = () => {
     if (storageTheme === 'light') {
         $('body').removeClass();
         $('body').addClass('light');
-        // storageTheme = 'light';
-        // console.log('light theme selected');
     } else if (storageTheme === 'dark') {
         $('body').removeClass();
         $('body').addClass('dark');
-        // storageTheme = 'dark';
-        // console.log('dark theme selected');
     } else {
         console.log('not working');
     }
@@ -136,6 +127,5 @@ const setTheme = () => {
 
 
 themeIsChecked();
-// testSomething();
 themeSwitch();
 setTheme();

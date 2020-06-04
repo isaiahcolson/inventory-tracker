@@ -122,21 +122,11 @@ This <!-- TODO insert title instead of 'This' --> is an invetory tool for mythic
 * create landing page with routes to user auth pages
 
 ### Wednesday - 6/2:
-- [x] - jonathan - add multiple lists
-- [x] - isaiah - account log in page styled
-- [x] - isaiah - fix welcome block sizing
-- [x] - isaiah - split items section
-- [x] - isaiah - fix scroll spacing for items
-- [x] - jonathan - routes for sign up and log in pages
-- [x] - jonathan - move delete next to the list item
-- [x] - isaiah - style items header
-- [x] - isaiah - show item fields in a row
-- [x] - isaiah - fix styling for edit/ delete in items
-- [x] - isaiah - add dark theme styling
-- [x] - isaiah - remove outline on buttons
-- [x] - isaiah - item create popup window
-- [x] - jonathan - users can sign up for an account
-- [x] - isaiah - logout styling
+* add lists model
+* user reg and auth
+* styling for list page
+* dark theme styling
+* modal windows
 
 ### Thursday - 6/3:
 - [x] - isaiah - item edit modal
@@ -145,6 +135,30 @@ This <!-- TODO insert title instead of 'This' --> is an invetory tool for mythic
 - [x] - isaiah - dark theme preferences
 - [x] - jonathan - lists and items models user specific
 - [x] - both - limit the characters in a list's title
+<<<<<<< HEAD
+- [x] - isaiah - set values for edit routes
+- [x] - isaiah - dark mode styling fixes
+- [x] - jonathan - add reorder level to items model
+- [x] - jonathan - fix redirect for item update
+
+
+
+- [ ] - isaiah - list create modal
+- [ ] - isaiah - list update (can we change the list title to input)
+	hidden input
+- [ ] - jonathan - populate dashboard aside section with reorder items
+	mongoose vampire, comparisons
+
+
+
+- [ ] - isaiah - add document title and favicon
+- [ ] - isaiah - replace landing page image with "final" version
+- [ ] - isaiah - register form validation with css
+- [ ] - jonathan - 404 page and routes
+- [ ] - isaiah - 404 styling
+- [ ] - jonathan - user should not see whether username or pass fails
+- [ ] -  - add empty list notification
+=======
 - [ ] - jonathan - add reorder level to items model
 - [ ] - isaiah - set values for edit routes
 - [ ] - jonathan - fix redirect for item update
@@ -160,25 +174,9 @@ This <!-- TODO insert title instead of 'This' --> is an invetory tool for mythic
 - [ ] -  - replace landing page image with "final" version
 
 
+>>>>>>> submaster
 
 
-
-
-<!-- TODO maybe an information page/modal -->
-<!-- TODO modal for items edit/update route -->
-<!-- TODO modal for item delete route from sidenav -->
-<!-- TODO modal for list create -->
-<!-- TODO add empty list notification -->
-<!-- TODO some css to apply to items that have a quantity fall below the reorder level -->
-<!-- TODO can we limit the characters in a list's title? -->
-<!-- TODO can we auto-populate list items? maybe even just have one example list for when a user registers for an account -->
-<!-- TODO replace landing page image with "final" version -->
-
-
-
-
-- [ ] -  - clean up code
-- [ ] -  - finalize styling
 
 ### Friday - 6/4:
 - [ ] -  - 
@@ -204,6 +202,11 @@ This <!-- TODO insert title instead of 'This' --> is an invetory tool for mythic
 * unique items (maybe add quantity fields for new total)
 * inventory edit route doesn't go to new page or modal, the input will appear in the list header
 * object embedding
+- [ ] -  - change welcome h1 tag from User to user.username
+- [ ] -  - animate modal
+- [ ] -  - information page/modal
+- [ ] -  - some css to apply to items that have a quantity fall below the reorder level
+
 
 
 
