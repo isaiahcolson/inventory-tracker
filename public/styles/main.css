@@ -19,7 +19,7 @@
     --opacity: 0,0,0
 }
 
-/* @media (prefers-color-scheme: dark) {
+@media (prefers-color-scheme: dark) {
     :root {
         --light: #191f28;
         --light-alt: #0e131a;
@@ -33,7 +33,7 @@
         --secondary-alt: #C75C4C;
         --opacity: 255,255,255
     }
-} */
+}
 
 body {
     margin: 0;
