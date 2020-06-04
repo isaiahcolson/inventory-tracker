@@ -14,16 +14,18 @@ $('.create-modal-bg').click(function(){
 
 
 /* item edit events */
-$('.item-edit-button').click(function(){
-    $('.edit-items-modal').toggleClass('hidden');
+$('.item-edit-button').click(function(events){
+    const target = event.target.dataset.id;
+    console.log(target);
+    $(`#${target}`).toggleClass('hidden');
 });
 
 $('.edit-close').click(function(){
-    $('.edit-items-modal').toggleClass('hidden');
+    $('.edit-items-modal').addClass('hidden');
 });
 
 $('.edit-modal-bg').click(function(){
-    $('.edit-items-modal').toggleClass('hidden');
+    $('.edit-items-modal').addClass('hidden');
 });
 
 
