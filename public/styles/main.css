@@ -5,10 +5,45 @@
 
     /* fonts */
     --font: 'Roboto', sans-serif;
+
+    --light: #FFFFFF;
+    --light-alt: #F1F1F1;
+    --light-secondary: #e3e3e3;
+    --dark: #191f28;
+    --dark-alt: #4a4a4a;
+    --accent: #085ff3;
+    --accent-light: #4688fa;
+    --accent-dark: #0037bf;
+    --secondary: #FA745F;
+    --secondary-alt: #C75C4C;
+    --opacity: 0,0,0
 }
 
+/* @media (prefers-color-scheme: dark) {
+    :root {
+        --light: #191f28;
+        --light-alt: #0e131a;
+        --light-secondary: #222f40;
+        --dark: #FFFFFF;
+        --dark-alt: #F1F1F1;
+        --accent: #085ff3;
+        --accent-light: #4688fa;
+        --accent-dark: #0037bf;
+        --secondary: #FA745F;
+        --secondary-alt: #C75C4C;
+        --opacity: 255,255,255
+    }
+} */
+
 body {
-    
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background: var(--light-alt);
+    font-family: var(--font);
+}
+
+/* body {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -24,10 +59,9 @@ body {
     --secondary: #FA745F;
     --secondary-alt: #C75C4C;
     --opacity: 0,0,0
-}
+} */
 
-/* body.light {
-    colors
+body.light {
     --light: #FFFFFF;
     --light-alt: #F1F1F1;
     --dark: #191f28;
@@ -38,10 +72,9 @@ body {
     --secondary: #FA745F;
     --secondary-alt: #C75C4C;
     --opacity: 0,0,0
-} */
+}
 
 body.dark {
-    /* colors */
     --light: #191f28;
     --light-alt: #0e131a;
     --dark: #FFFFFF;
@@ -86,18 +119,22 @@ button {
     margin: 15px;
 }
 
-.sidenav a {
+.sidenav a, .sidenav button {
+    font-size: 1em;
     text-decoration: none;
-    /* padding: 5px; */
+    padding: 0;
     height: 40px;
+    width: 40px;
     border-radius: 8px;
+    border: none;
     display: block;
     color: #FFFFFF;
     background: var(--accent-light);
     line-height: 40px;
+    cursor: pointer;
 }
 
-.sidenav a:hover {
+.sidenav a:hover, .sidenav button:hover {
     background: #FFFFFF;
     color: var(--accent);
 }
@@ -127,7 +164,7 @@ button {
 .dash-main {
     margin-left: var(--sidenav-width);
     border-radius: 25px 0 0 25px;
-    background: var(--light-alt);
+    background-color: var(--light-alt);
     height: 100vh;
 }
 
@@ -521,6 +558,7 @@ input[type=submit]:hover {
 
 .ind-item a {
     color: var(--dark);
+    cursor: pointer;
 }
 
 .ind-item button {
@@ -536,7 +574,7 @@ input[type=submit]:hover {
 
 
 /* SECTION modals */
-.modal-container {
+.create-modal, .edit-items-modal, .delete-list-modal {
     width: 100vw;
     height: 100vh;
     background-color: rgba(0,0,0,0.5);
@@ -548,7 +586,7 @@ input[type=submit]:hover {
     text-align: center;
 }
 
-.modal-bg {
+.create-modal-bg, .edit-modal-bg, .delete-modal-bg {
     width: 100vw;
     height: 100vh;
     background-color: rgba(0,0,0,0.5);
@@ -561,8 +599,12 @@ input[type=submit]:hover {
     display: none;
 }
 
-.bg-modal p {
+.modal-content p {
     font-size: 1.2em;
+}
+
+.modal-content h2 {
+    font-size: 1.4em;
 }
 
 .modal-content {
@@ -577,11 +619,49 @@ input[type=submit]:hover {
     position: relative;
 }
 
-.close {
+.create-close, .edit-close {
     position: absolute;
     top: 0;
     right: 14px;
     font-size: 2em;
     transform: rotate(45deg);
     cursor: pointer;
+}
+
+.modal-buttons {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+}
+
+.modal-content button {
+    width: 100px;
+    margin: 10px;
+    padding: 25px;
+    border: none;
+    border-radius: 10px;
+    font-size: 1em;
+    cursor: pointer;
+}
+
+.modal-buttons > .delete-close > button {
+    background: var(--light-alt);
+    color: var(--dark-alt);
+    transition: 0.3s ease;
+}
+
+.modal-buttons > .delete-close > button:hover {
+    background: var(--light-secondary);
+    color: var(--dark-alt);
+}
+
+.modal-buttons > form > button {
+    background: var(--secondary);
+    color: #FFFFFF;
+    transition: 0.3s ease;
+}
+
+.modal-buttons > form > button:hover {
+    background: var(--secondary-alt);
+    color: #FFFFFF;
 }

@@ -135,50 +135,55 @@ This <!-- TODO insert title instead of 'This' --> is an invetory tool for mythic
 - [x] - isaiah - add dark theme styling
 - [x] - isaiah - remove outline on buttons
 - [x] - isaiah - item create popup window
+- [x] - jonathan - users can sign up for an account
+- [x] - isaiah - logout styling
+
+### Thursday - 6/3:
+- [x] - isaiah - item edit modal
+- [x] - isaiah - delete list modal
 
 
 
-- [ ] - jonathan - item edit modal
 - [ ] - isaiah - dark theme preferences
 
 
 
-
-- [ ] -  - reroute items create to modal
-- [ ] - jonathan - users can sign up for an account
-- [ ] - isaiah - animate modal
-- [ ] - isaiah - register form validation with css
-- [ ] - jonathan - lists and items models user specific
-- [ ] - jonathan - change welcome h1 tag from User to user.username
-- [ ] - jonathan - fix redirect for item update
-<!-- TODO Reorder Level isn't working in items -->
-- [ ] - both - MVP
-- [ ] -  - popup window
+- [ ] -  - fix item edit route and values
 - [ ] -  - add document title and favicon
+
+
+
+- [ ] -  - register form validation with css
+- [ ] -  - lists and items models user specific
+- [ ] -  - add reorder level to items model
+- [ ] -  - MVP
 - [ ] -  - set values for edit routes
+- [ ] -  - 404 page and routes
 
 
 
-<!-- TODO possible embedding -->
-<!-- TODO logout styling -->
+- [ ] -  - animate modal
+- [ ] -  - change welcome h1 tag from User to user.username
+- [ ] -  - fix redirect for item update
+
+
+
+
 <!-- TODO maybe an information page/modal -->
 <!-- TODO modal for items edit/update route -->
-<!-- TODO modal for list delete route -->
+<!-- TODO modal for item delete route from sidenav -->
+<!-- TODO modal for list create -->
 <!-- TODO add empty list notification -->
 <!-- TODO some css to apply to items that have a quantity fall below the reorder level -->
-<!-- TODO maybe we should have a form for list create, everything else could pop up? -->
-<!-- TODO sidenav link should have popup with delete form, remove delete form from top of list -->
 <!-- TODO can we limit the characters in a list's title? -->
 <!-- TODO can we auto-populate list items? maybe even just have one example list for when a user registers for an account -->
 <!-- TODO replace landing page image with "final" version -->
 
 
 
-### Thursday - 6/3:
+
 - [ ] -  - clean up code
 - [ ] -  - finalize styling
-- [ ] -  - dark theme styling
-<!-- TODO can we set a dark/light theme as a preference for the user? -->
 
 ### Friday - 6/4:
 - [ ] -  - 
@@ -203,3 +208,4 @@ This <!-- TODO insert title instead of 'This' --> is an invetory tool for mythic
 * delete item modal/prompt
 * unique items (maybe add quantity fields for new total)
 * inventory edit route doesn't go to new page or modal, the input will appear in the list header
+* object embedding
