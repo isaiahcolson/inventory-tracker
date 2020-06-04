@@ -96,7 +96,8 @@ router.put('/:id', (req,res) => {
           name: req.body.name,
           category: req.body.category,
           price: req.body.price,
-          quantity: req.body.quantity
+          quantity: req.body.quantity,
+          reorderLevel: req.body.reorderLevel,
         },
     }
     db.Item.findByIdAndUpdate(req.params.id,itemsData,{new:true}, function(err, updatedItem) {
@@ -105,10 +106,22 @@ router.put('/:id', (req,res) => {
             res.send({message: 'Internal server error.'});
         } else {
             console.log(updatedItem);
-            res.redirect('/lists');
+            db.List.findById(updatedItem.list, function(err, updatedList){
+                if (err) {
+                    console.log(err);
+                    res.send({message: 'Cant find list for updated item'});
+                } else {
+                    console.log(updatedList);
+                    res.redirect(`/lists/${updatedList._id}`);
+                }
+            })
         }
     })
 })
+
+
+
+
 
 // Delete route
 
