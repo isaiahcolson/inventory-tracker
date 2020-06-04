@@ -72,6 +72,7 @@ const themeIsChecked = () => {
     }
 }
 
+const themeSwitch = $('#themeSwitch');
 
 const themeCheck = () => {
     const storageTheme = localStorage.getItem('theme');
@@ -132,9 +133,6 @@ const setTheme = () => {
     }
 }
 
-
-// $('body').toggleClass('dark');
-// $('body').toggleClass('light');
 
 themeIsChecked();
 // testSomething();

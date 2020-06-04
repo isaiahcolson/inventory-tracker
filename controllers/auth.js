@@ -69,27 +69,12 @@ router.post('/login', async (req,res) => {
     }
 });
 
+
 // Logout route 
 router.delete('/logout', async (req,res) => {
     await req.session.destroy();   // destroy user session
     res.redirect('/');  // else, redirect them to the landing page
     console.log(req.session.destroy);
-});
-
-// Profile
-// TODO - Need to reference user to list 
-router.get('/profile', async (req,res) => {
-    try {
-        const foundUser = await db.User.findById(req.session.currenUser.id);
-        const userLists = await db.List.find({
-            user: req.session.currentUser.id,
-        });
-        console.log(foundUser);
-        console.log(userLists);
-        res.render('auth/profile', { user: foundUser, lists: userLists });
-    } catch (err) {
-        res.send({message: 'Internal Server Error', error: err});
-    }
 });
 
 

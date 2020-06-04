@@ -120,12 +120,14 @@ router.delete("/:id", async (req,res) => {
           } else {
             db.List.findById(deletedItem.list, function(err, foundList){
                 if(err){
-                  console.log(err);
-                  res.send({ message: "Internal Server Error" });
+                    console.log(err);
+                    res.send({ message: "Internal Server Error" });
                 } else {
-                  foundList.items.remove(deletedItem); 
-                  foundList.save();
-                  res.redirect(`/lists/${foundList._id}`);
+                    console.log(foundList.items.remove);
+                    console.log(deletedItem);
+                    foundList.items.remove(deletedItem); 
+                    foundList.save();
+                    res.redirect(`/lists/${foundList._id}`);
                 }
             });
         }

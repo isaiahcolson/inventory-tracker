@@ -52,6 +52,7 @@ router.get('/:id', (req,res) => {
                 const context = {list: foundList};
                 res.render('lists/show', context);
                 console.log(foundList);
+                console.log('show route log');
             })     
         }
     })
