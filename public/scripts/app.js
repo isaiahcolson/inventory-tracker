@@ -74,7 +74,6 @@ const themeIsChecked = () => {
     }
 }
 
-const themeSwitch = $('#themeSwitch');
 
 const themeCheck = () => {
     const storageTheme = localStorage.getItem('theme');

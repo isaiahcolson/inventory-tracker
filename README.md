@@ -143,30 +143,23 @@ This <!-- TODO insert title instead of 'This' --> is an invetory tool for mythic
 - [x] - isaiah - delete list modal
 - [x] - jonathan - fix item edit route and values
 - [x] - isaiah - dark theme preferences
-
-
-
-- [ ] -  - 
-
-
-
-- [ ] -  - add document title and favicon
-
-
-
-- [ ] -  - register form validation with css
-- [ ] -  - lists and items models user specific
-- [ ] -  - add reorder level to items model
+- [x] - jonathan - lists and items models user specific
+- [x] - both - limit the characters in a list's title
+- [ ] - jonathan - add reorder level to items model
+- [ ] - isaiah - set values for edit routes
+- [ ] - jonathan - fix redirect for item update
+- [ ] - isaiah - dark mode styling fixes
+- [ ] - isaiah - add document title and favicon
 - [ ] -  - MVP
-- [ ] -  - set values for edit routes
+- [ ] -  - list create page/modal
+- [ ] -  - list update (can we change the list title to input)
+- [ ] -  - register form validation with css
 - [ ] -  - 404 page and routes
-- [ ] -  - test dark theme pages
+- [ ] - jonathan - user should not see whether username or pass fails
+- [ ] -  - add empty list notification
+- [ ] -  - replace landing page image with "final" version
 
 
-
-- [ ] -  - animate modal
-- [ ] -  - change welcome h1 tag from User to user.username
-- [ ] -  - fix redirect for item update
 
 
 
