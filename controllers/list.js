@@ -16,14 +16,16 @@ router.get('/', (req,res) => {
                     console.log(err);
                     res.send({message: 'compared item error'});
                 } else {
-                    db.User.find({user: req.session.currentUser.id}, function(err, foundUser){
+                    db.User.findById(req.session.currentUser.id)
+                    .populate('user')
+                    .exec(function(err, foundUser){
                         if (err) {
                             console.log(err);
                             res.send({message: 'cant find user'});
                         } else {
                             console.log("index route log");
                             console.log({comparedItem});
-                            console.log({foundUser});
+                            console.log(foundUser);
                             // const context = {lists: allLists};
                             // const context2 = {items: comparedItem};
                             res.render('lists/index', {"lists": allLists, "items": comparedItem, "users": foundUser});
