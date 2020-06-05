@@ -545,12 +545,14 @@ input[type=submit]:hover {
 }
 
 .list-name input {
-    width: 150px;
-    padding: 15px;
-    margin: 12px 0;
+    width: 200px;
+    padding: 10px;
+    margin: -5px 10px -10px 0;
     /* display: inline-block; */
     border: none;
     border-bottom: 2px solid var(--dark-alt);
+    font-size: 1em;
+    /* font-weight: 900; */
     color: var(--dark);
     background: var(--light-alt);
     box-sizing: border-box;
@@ -559,10 +561,11 @@ input[type=submit]:hover {
 }
 
 .list-name input[type=submit] {
-    width: 50%;
-    margin: 25px;
+    width: 100px;
+    padding: 10px;
     border: none;
     border-radius: 5px;
+    font-weight: 500;
     color: #FFFFFF;
     font-size: 1em;
     background: var(--accent);

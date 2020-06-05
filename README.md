@@ -136,23 +136,47 @@ This <!-- TODO insert title instead of 'This' --> is an invetory tool for mythic
 
 ### Friday - 6/4:
 - [x] - isaiah - add document title and favicon
+- [x] - isaiah - inventory edit route replaces list name in header
 
 
 
-- [ ] - isaiah - list update (can we change the list title to input)
+
+MVP
 - [ ] - jonathan - populate dashboard aside section with reorder items
 	mongoose vampire, comparisons
 
 
 
-- [ ] - isaiah - replace landing page image with "final" version
+Stretch
 - [ ] - isaiah - register form validation with css
+- [ ] - isaiah - html required for all fields ever
+
+
+
+- [ ] - isaiah - replace landing page image with "final" version
 - [ ] - jonathan - 404 page and routes
 - [ ] - isaiah - 404 styling
 - [ ] - jonathan - user should not see whether username or pass fails
 - [ ] -  - add empty list notification
-- [ ] -  - html required for all fields ever
-- [ ] -  - remove console
+- [ ] -  - remove console.log throughout code
+
+
+Extra Stretch
+- [ ] -  - user profile page
+- [ ] -  - object embedding
+- [ ] -  - change welcome h1 tag from User to user.username
+- [ ] -  - animate modal
+- [ ] -  - information page/modal
+- [ ] -  - css to apply to items that have a quantity fall below the reorder level
+
+
+
+Extra Extra Stretch
+- [ ] -  - item sorting
+- [ ] -  - change password
+- [ ] -  - forgot password
+- [ ] -  - delete item modal/prompt
+- [ ] -  - unique items (maybe add quantity fields for new total)
 
 ### Saturday - 6/5:
 - [ ] -  - 
@@ -163,22 +187,6 @@ This <!-- TODO insert title instead of 'This' --> is an invetory tool for mythic
 
 
 ### Stretch Goals
-* allow multiple lists to be created and used
-* dark theme styling
-* automatic list generator
-* user profile page
-* add low reorder level items to dashboard aside list
-* item sorting
-* change password
-* forgot password
-* delete item modal/prompt
-* unique items (maybe add quantity fields for new total)
-* inventory edit route doesn't go to new page or modal, the input will appear in the list header
-* object embedding
-- [ ] -  - change welcome h1 tag from User to user.username
-- [ ] -  - animate modal
-- [ ] -  - information page/modal
-- [ ] -  - some css to apply to items that have a quantity fall below the reorder level
 
 
 

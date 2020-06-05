@@ -60,6 +60,19 @@ $('.create-list-bg').click(function(){
 
 
 
+/* list edit events */
+$('#list-edit').click(function(){
+    $('#list-edit-form').toggleClass('hidden');
+    $('#list-name').toggleClass('hidden');
+});
+
+$('#list-edit-submit').click(function(){
+    $('#list-edit-form').toggleClass('hidden');
+    $('#list-name').toggleClass('hidden');
+});
+
+
+
 /* dark theme events */
 const color = $('.dash-main').css('background-color');
 const secondColor = $('.lists-main').css('background-color');

@@ -12,11 +12,13 @@
         <div class="items-header">
             <div class="list-name">
                 <ul>
-                    <li class=""><h3><%= list.name %></h3></li>
-                    <form action="/lists/<%= list._id %>?_method=PUT" method="POST">
-                        <input type="text" name="name" class="hidden" value="<%= list.name %>">  
-                        <input type="submit" value="Update" class="hidden">
-                    </form>
+                    <li class="" id="list-name"><h3><%= list.name %></h3></li>
+                    <li id="list-edit-form" class="hidden">
+                        <form action="/lists/<%= list._id %>?_method=PUT" method="POST">
+                            <input type="text" name="name" value="<%= list.name %>" minlength="5" maxlength="20"/>  
+                            <input type="submit" value="Update" id="list-edit-submit" />
+                        </form>
+                    </li>
                     <li style="float:right" ><button id="item-create-button"><i class="fas fa-plus"></i> Add Item</button></li>
                 </ul>
             </div>
