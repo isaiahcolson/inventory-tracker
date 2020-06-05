@@ -1,4 +1,4 @@
-/* item modal events */
+/* item create events */
 $('#item-create-button').click(function(){
     $('.create-modal').toggleClass('hidden');
 });
@@ -45,6 +45,34 @@ $('.delete-modal-bg').click(function(){
 
 
 
+/* list create events */
+$('.create-list-modal').click(function(){
+    $('.create-list').toggleClass('hidden');
+});
+
+$('.list-close').click(function(){
+    $('.create-list').toggleClass('hidden');
+});
+
+$('.create-list-bg').click(function(){
+    $('.create-list').toggleClass('hidden');
+});
+
+
+
+/* list edit events */
+$('#list-edit').click(function(){
+    $('#list-edit-form').toggleClass('hidden');
+    $('#list-name').toggleClass('hidden');
+});
+
+$('#list-edit-submit').click(function(){
+    $('#list-edit-form').toggleClass('hidden');
+    $('#list-name').toggleClass('hidden');
+});
+
+
+
 /* dark theme events */
 const color = $('.dash-main').css('background-color');
 const secondColor = $('.lists-main').css('background-color');
@@ -74,10 +102,6 @@ const themeIsChecked = () => {
     }
 }
 
-<<<<<<< HEAD
-=======
-
->>>>>>> submaster
 const themeCheck = () => {
     const storageTheme = localStorage.getItem('theme');
     if (storageTheme === 'light') {
