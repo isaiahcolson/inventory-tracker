@@ -129,6 +129,24 @@ This <!-- TODO insert title instead of 'This' --> is an invetory tool for mythic
 * modal windows
 
 ### Thursday - 6/3:
+<<<<<<< HEAD
+- [x] - isaiah - item edit modal
+- [x] - isaiah - delete list modal
+- [x] - jonathan - fix item edit route and values
+- [x] - isaiah - dark theme preferences
+- [x] - jonathan - lists and items models user specific
+- [x] - both - limit the characters in a list's title
+- [x] - isaiah - set values for edit routes
+- [x] - isaiah - dark mode styling fixes
+- [x] - jonathan - add reorder level to items model
+- [x] - jonathan - fix redirect for item update
+
+
+
+- [ ] - isaiah - list create modal
+- [ ] - isaiah - list update (can we change the list title to input)
+	hidden input
+=======
 * all modals added
 * dark theme switch
 * lists and items models user specific
@@ -142,6 +160,7 @@ This <!-- TODO insert title instead of 'This' --> is an invetory tool for mythic
 
 
 MVP
+>>>>>>> submaster
 - [ ] - jonathan - populate dashboard aside section with reorder items
 	mongoose vampire, comparisons
 
@@ -158,6 +177,8 @@ Stretch
 - [ ] - isaiah - 404 styling
 - [ ] - jonathan - user should not see whether username or pass fails
 - [ ] -  - add empty list notification
+<<<<<<< HEAD
+=======
 - [ ] -  - remove console.log throughout code
 
 
@@ -168,6 +189,7 @@ Extra Stretch
 - [ ] -  - animate modal
 - [ ] -  - information page/modal
 - [ ] -  - css to apply to items that have a quantity fall below the reorder level
+>>>>>>> submaster
 
 
 
