@@ -373,7 +373,7 @@ form div {
     position: relative;
 }
 
-form div[data-error]::after, .error-message {
+.error-message {
     content: attr(data-error);
     font-size: .75em;
     display: none;
@@ -388,7 +388,7 @@ form .input-error ~ .error-message {
     display: block;
 }
 
-label {
+.register form label {
     position: absolute;
     top: 32.5px;
     left: 32.5px;

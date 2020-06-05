@@ -141,11 +141,11 @@ This <!-- TODO insert title instead of 'This' --> is an invetory tool for mythic
 - [x] - isaiah - html required for all fields ever
 - [x] - jonathan - add empty list notification for aside
 - [x] - jonathan - 404 page and routes
+- [x] - isaiah - register form validation with css
 
 
 
 Stretch
-- [ ] - isaiah - register form validation with css
 - [ ] - isaiah - fix dark theme switch styling
 
 
