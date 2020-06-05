@@ -4,18 +4,21 @@ const router = express.Router();
 const db = require('../models');
 
 
-// Index route
+// Index route - the app's Dashboard
 router.get('/', (req,res) => {
+    // retrieves the user's list of inventories and display on Dashboard
     db.List.find({user: req.session.currentUser.id}, function(err, allLists) {
         if (err) {
             console.log(err);
             res.redirect('/500');
-        } else {
+        } else {  
+            // compares the quantity & reorder level and displays it in the aside nav 'Order List' section
             db.Item.find({$expr : {$lt : ['$quantity', '$reorderLevel'] }}, function(err, comparedItem){
                 if (err) {
                     console.log(err);
                     res.redirect('/500');
                 } else {
+                    // find session ID for user and display the username information on the 'Welcome Back' section
                     db.User.findById(req.session.currentUser.id)
                     .populate('user')
                     .exec(function(err, foundUser){
@@ -23,11 +26,6 @@ router.get('/', (req,res) => {
                             console.log(err);
                             res.send({message: 'cant find user'});
                         } else {
-                            console.log("index route log");
-                            console.log({comparedItem});
-                            console.log(foundUser);
-                            // const context = {lists: allLists};
-                            // const context2 = {items: comparedItem};
                             res.render('lists/index', {"lists": allLists, "items": comparedItem, "users": foundUser});
                         }
                     })                    
@@ -38,31 +36,12 @@ router.get('/', (req,res) => {
 });
 
 
-
-
-// router.get('/index', (req,res) => {
-//     db.Item.find({ }, function(err, allItems){
-//         if (err) {
-//             console.log(err);
-//             res.send({message: 'compared item error'});
-//         } else {
-//             const filterItems = allItems.filter(function(item){
-//                 return item.quantity < item.reorderLevel 
-//             })
-//             // res.json({filterItems});
-//             console.log({filterItems});
-//         }
-//     });
-// })
-
-
-
 // Create new list route
 router.get('/new', (req,res) =>{
     res.render('lists/new');
 })
 
-// Create route
+// Create route - post new item data to the db collection
 router.post('/', (req,res) => {
     const list = {
         name: req.body.name,
@@ -73,12 +52,10 @@ router.post('/', (req,res) => {
             console.log(err);
             res.redirect('/500');
         } else {
-            console.log(createdList);
             res.redirect(`/lists/${createdList._id}`);
         }
     });
 });
-
 
 
 // Show route
@@ -91,12 +68,11 @@ router.get('/:id', (req,res) => {
             foundList.populate('items user').execPopulate(function() {
                 const context = {list: foundList};
                 res.render('lists/show', context);
-                console.log(foundList);
-                console.log('show route log');
             })     
         }
     })
 })
+
 
 // Edit route
 router.get('/:id/edit', (req,res) => {
@@ -129,8 +105,8 @@ router.put('/:id', (req,res) => {
     })
 })
 
-// Delete route
 
+// Delete route
 router.delete("/:id", async (req,res) => {
     try {
         const deletedList = await db.List.findByIdAndDelete(req.params.id);
@@ -142,5 +118,5 @@ router.delete("/:id", async (req,res) => {
 })
 
 
-// export router
+// Export router
 module.exports = router;
