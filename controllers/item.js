@@ -10,7 +10,7 @@ router.get('/', (req,res) => {
     db.Item.find({}, function(err, allItems) {
         if (err) {
             console.log(err);
-            res.send({message: 'Internal server error.'});
+            res.redirect('/500');
         } else {
             const context = {items: allItems};
             res.render('lists/show', context);
@@ -24,7 +24,7 @@ router.get('/new', (req,res) =>{
     db.List.find({}, function(err, allLists){
         if (err) {
             console.log(err);
-            res.send({message: 'Internal server error.'});
+            res.redirect('/500');
         } else {
             console.log(allLists);
             const context = {lists: allLists};
@@ -39,13 +39,13 @@ router.post('/', (req,res) => {
     db.Item.create(req.body, function(err,createdItem) {
         if (err) {
             console.log(err);
-            res.send({message: 'Internal server error.'});
+            res.redirect('/500');
         } else {
             console.log(createdItem);
             db.List.findById(createdItem.list,function(err,foundList){
                 if (err){
                     console.log(err);
-                    res.send({message: 'Internal server error.'});
+                    res.redirect('/500');
                 } else {
                     console.log(foundList);
                     foundList.items.push(createdItem); // add item to the found list
@@ -63,7 +63,7 @@ router.get('/:id', (req,res) => {
     db.Item.findById(req.params.id, function(err, foundItem) {
         if (err) {
             console.log(err);
-            res.send({message: 'Internal server error.'});
+            res.redirect('/500');
         } else {
             const context = {item: foundItem};
             res.render('items/show', context);
@@ -77,7 +77,7 @@ router.get('/:id', (req,res) => {
     db.Item.findById(req.params.id, function(err, foundItem) {
         if (err) {
             console.log(err);
-            res.send({message: 'Internal server error.'});
+            res.redirect('/500');
         } else {
 
                 const context = {item: foundItem};
@@ -103,13 +103,13 @@ router.put('/:id', (req,res) => {
     db.Item.findByIdAndUpdate(req.params.id,itemsData,{new:true}, function(err, updatedItem) {
         if (err) {
             console.log(err);
-            res.send({message: 'Internal server error.'});
+            res.redirect('/500');
         } else {
             console.log(updatedItem);
             db.List.findById(updatedItem.list, function(err, updatedList){
                 if (err) {
                     console.log(err);
-                    res.send({message: 'Cant find list for updated item'});
+                    res.redirect('/500');
                 } else {
                     console.log(updatedList);
                     res.redirect(`/lists/${updatedList._id}`);
@@ -129,12 +129,12 @@ router.delete("/:id", async (req,res) => {
     db.Item.findByIdAndDelete(req.params.id, function(err, deletedItem){
         if(err){
             console.log(err);
-            res.send({ message: "Internal Server Error" });
+            res.redirect('/500');
           } else {
             db.List.findById(deletedItem.list, function(err, foundList){
                 if(err){
                     console.log(err);
-                    res.send({ message: "Internal Server Error" });
+                    res.redirect('/500');
                 } else {
                     console.log(foundList.items.remove);
                     console.log(deletedItem);
