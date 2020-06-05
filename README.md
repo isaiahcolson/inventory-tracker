@@ -159,6 +159,7 @@ Stretch
 - [ ] - jonathan - user should not see whether username or pass fails
 - [ ] -  - add empty list notification
 - [ ] -  - remove console.log throughout code
+- [ ] -  - remove or hide unused pages
 
 
 Extra Stretch
