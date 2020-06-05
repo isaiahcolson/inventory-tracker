@@ -12,8 +12,12 @@
         <div class="items-header">
             <div class="list-name">
                 <ul>
-                    <li style="float:left"><h3><%= list.name %></h3></li>
-                    <li><button id="item-create-button"><i class="fas fa-plus"></i> Add Item</button></li>
+                    <li class=""><h3><%= list.name %></h3></li>
+                    <form action="/lists/<%= list._id %>?_method=PUT" method="POST">
+                        <input type="text" name="name" class="hidden" value="<%= list.name %>">  
+                        <input type="submit" value="Update" class="hidden">
+                    </form>
+                    <li style="float:right" ><button id="item-create-button"><i class="fas fa-plus"></i> Add Item</button></li>
                 </ul>
             </div>
 
@@ -89,7 +93,7 @@
                 <input type="text" name="category" placeholder="Category" value="<%= item.category %>" />
                 <input type="number" name="price" placeholder="Price" value="<%= item.price %>" />
                 <input type="number" name="quantity" placeholder="Quantity" value="<%= item.quantity %>" />
-                <input type="number" name="reorderLevel" placeholder="Reorder Level">
+                <input type="number" name="reorderLevel" placeholder="Reorder Level" value="<%= item.reorderLevel %>" />
                 <input type="hidden" name="list" value="<%= item._id %>">
                 <input type="submit" value="Update">
             </form>

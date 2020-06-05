@@ -3,7 +3,7 @@
         <li><a href="/lists" title="Dashboard"><i class="fas fa-tachometer-alt"></i></a></li>
         <li><a href="/lists/<%=list._id%>/edit" title="Edit Current List"><i class="fas fa-edit"></i></a></li>
         <li><a title="Delete Current List" id="list-delete-prompt"><i class="fas fa-trash"></i></a></li>
-        <li><a href="/lists/new" title="Add New List"><i class="fas fa-plus"></i></a></li>
+        <li><a title="Add New List" class="create-list-modal"><i class="fas fa-plus"></i></a></li>
         <li>
             <form action="/logout?_method=DELETE" method="POST">
                 <button type="submit"><i class="fas fa-sign-out-alt"></i></button>
@@ -11,3 +11,15 @@
         </li>
     </ul>   
 </nav>
+
+<div class="create-list hidden">
+    <div class="create-list-bg"></div>
+    <div class="modal-content">
+        <div class="list-close">+</div>
+        <p>Create a new inventory list.</p>
+        <form action="/lists" method="POST">
+            <input type="text" name="name" placeholder="Inventory Name" minlength="5" maxlength="16"/>
+            <input type="submit" value="Create">
+        </form>
+    </div>
+</div>

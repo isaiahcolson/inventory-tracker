@@ -135,7 +135,6 @@ This <!-- TODO insert title instead of 'This' --> is an invetory tool for mythic
 - [x] - isaiah - dark theme preferences
 - [x] - jonathan - lists and items models user specific
 - [x] - both - limit the characters in a list's title
-<<<<<<< HEAD
 - [x] - isaiah - set values for edit routes
 - [x] - isaiah - dark mode styling fixes
 - [x] - jonathan - add reorder level to items model
@@ -144,6 +143,7 @@ This <!-- TODO insert title instead of 'This' --> is an invetory tool for mythic
 
 
 - [ ] - isaiah - list create modal
+	why does my fixed element have weird styling with opacity?
 - [ ] - isaiah - list update (can we change the list title to input)
 	hidden input
 - [ ] - jonathan - populate dashboard aside section with reorder items
@@ -158,23 +158,8 @@ This <!-- TODO insert title instead of 'This' --> is an invetory tool for mythic
 - [ ] - isaiah - 404 styling
 - [ ] - jonathan - user should not see whether username or pass fails
 - [ ] -  - add empty list notification
-=======
-- [ ] - jonathan - add reorder level to items model
-- [ ] - isaiah - set values for edit routes
-- [ ] - jonathan - fix redirect for item update
-- [ ] - isaiah - dark mode styling fixes
-- [ ] - isaiah - add document title and favicon
-- [ ] -  - MVP
-- [ ] -  - list create page/modal
-- [ ] -  - list update (can we change the list title to input)
-- [ ] -  - register form validation with css
-- [ ] -  - 404 page and routes
-- [ ] - jonathan - user should not see whether username or pass fails
-- [ ] -  - add empty list notification
-- [ ] -  - replace landing page image with "final" version
-
-
->>>>>>> submaster
+- [ ] -  - html required for all fields ever
+- [ ] -  - remove console
 
 
 
