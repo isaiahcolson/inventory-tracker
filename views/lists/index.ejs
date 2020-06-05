@@ -8,13 +8,21 @@
 
     <aside>
         <h2>Order List</h2>
-        <p>You have no items that need ordered at this time.</p>
+        <% if( items.length === 0) { %>
+            <p>You have no items that need ordered at this time.</p>
+        <% } else { %>
+        <ul>
+        <% items.forEach(item =>  { %>
+            <li><%= item.name %></li>
+            <% }) %>
+        </ul>
+        <% } %>
     </aside>
 
     <div class="dash-lists">
         <div class="welcome">
             <h2>Welcome Back</h2>
-            <!-- <h1>User</h1> -->
+            <h1><%= users.username %></h1>
             <p>Select a list below to continue working, or start a new one.</p>
         </div>
         
