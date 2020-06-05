@@ -158,10 +158,6 @@ Stretch
 - [ ] - isaiah - 404 styling
 - [ ] - jonathan - user should not see whether username or pass fails
 - [ ] -  - add empty list notification
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
 - [ ] -  - remove console.log throughout code
 
 
@@ -172,8 +168,6 @@ Extra Stretch
 - [ ] -  - animate modal
 - [ ] -  - information page/modal
 - [ ] -  - css to apply to items that have a quantity fall below the reorder level
->>>>>>> submaster
->>>>>>> 164699751391223de41f531bf8eb4f7aeb89d30f
 
 
 
