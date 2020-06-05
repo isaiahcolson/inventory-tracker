@@ -158,7 +158,9 @@ Stretch
 - [ ] - jonathan - user should not see whether username or pass fails
 - [ ] -  - add empty list notification
 - [ ] -  - remove console.log throughout code
+- [ ] -  - async await on callbacks
 - [ ] -  - remove or hide unused pages
+- [ ] -  - add labels for inputs
 
 
 Extra Stretch
