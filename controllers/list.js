@@ -11,11 +11,49 @@ router.get('/', (req,res) => {
             console.log(err);
             res.send({message: 'Internal server error.'});
         } else {
-            const context = {lists: allLists};
-            res.render('lists/index', context);
+            db.Item.find({$expr : {$lt : ['$quantity', '$reorderLevel'] }}, function(err, comparedItem){
+                if (err) {
+                    console.log(err);
+                    res.send({message: 'compared item error'});
+                } else {
+                    db.User.find({user: req.session.currentUser.id}, function(err, foundUser){
+                        if (err) {
+                            console.log(err);
+                            res.send({message: 'cant find user'});
+                        } else {
+                            console.log("index route log");
+                            console.log({comparedItem});
+                            console.log({foundUser});
+                            // const context = {lists: allLists};
+                            // const context2 = {items: comparedItem};
+                            res.render('lists/index', {"lists": allLists, "items": comparedItem, "users": foundUser});
+                        }
+                    })                    
+                }
+            });           
         }
     });
 });
+
+
+
+
+// router.get('/index', (req,res) => {
+//     db.Item.find({ }, function(err, allItems){
+//         if (err) {
+//             console.log(err);
+//             res.send({message: 'compared item error'});
+//         } else {
+//             const filterItems = allItems.filter(function(item){
+//                 return item.quantity < item.reorderLevel 
+//             })
+//             // res.json({filterItems});
+//             console.log({filterItems});
+//         }
+//     });
+// })
+
+
 
 // Create new list route
 router.get('/new', (req,res) =>{
