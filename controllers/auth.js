@@ -10,6 +10,7 @@ router.get('/signup', (req,res) => {
 });
 
 
+
 // Signup route
 router.post('/signup', async (req,res) => {
     try {
@@ -29,7 +30,7 @@ router.post('/signup', async (req,res) => {
         // redirect user to login page
         res.redirect('/login');
     }   catch (err) {
-        res.send({message: 'Internal Server Error', error: err});
+        res.redirect('/500');
     }
 });
 
@@ -47,13 +48,13 @@ router.post('/login', async (req,res) => {
         const foundUser = await db.User.findOne({ username: req.body.username });
         // error message displayed if email doesn't exist
         if(!foundUser) {
-            return res.send({ message: "Username is not found"});
+            return res.send({ message: "Invalid Username or Password"});
         }
         // let's now compare given password with hashed version
         const match = await bcrypt.compare(req.body.password, foundUser.password);
         // if no match, display error message
         if (!match) {
-            return res.send({ message: "Password hash not matching"});
+            return res.send({ message: "Invalid Username or Password"});
         }
         // if psw match, create session for authentication
         req.session.currentUser = {
@@ -65,7 +66,7 @@ router.post('/login', async (req,res) => {
         // redirect user to our landing page
         res.redirect('/lists');
     } catch (err) {
-        res.send({ message: "Internal Server Error", error: err});
+        res.redirect('/500');
     }
 });
 
