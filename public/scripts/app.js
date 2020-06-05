@@ -74,10 +74,6 @@ const themeIsChecked = () => {
     }
 }
 
-<<<<<<< HEAD
-=======
-
->>>>>>> submaster
 const themeCheck = () => {
     const storageTheme = localStorage.getItem('theme');
     if (storageTheme === 'light') {
@@ -87,10 +83,6 @@ const themeCheck = () => {
     } else {
         console.log('not working');
     }
-}
-
-const testSomething = () => {
-    console.log(localStorage);
 }
 
 const themeSwitch = () => {
@@ -124,7 +116,6 @@ const setTheme = () => {
         console.log('not working');
     }
 }
-
 
 themeIsChecked();
 themeSwitch();
