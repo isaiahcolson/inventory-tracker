@@ -1,4 +1,4 @@
-/* item modal events */
+/* item create events */
 $('#item-create-button').click(function(){
     $('.create-modal').toggleClass('hidden');
 });
@@ -41,6 +41,34 @@ $('.delete-close').click(function(){
 
 $('.delete-modal-bg').click(function(){
     $('.delete-list-modal').toggleClass('hidden');
+});
+
+
+
+/* list create events */
+$('.create-list-modal').click(function(){
+    $('.create-list').toggleClass('hidden');
+});
+
+$('.list-close').click(function(){
+    $('.create-list').toggleClass('hidden');
+});
+
+$('.create-list-bg').click(function(){
+    $('.create-list').toggleClass('hidden');
+});
+
+
+
+/* list edit events */
+$('#list-edit').click(function(){
+    $('#list-edit-form').toggleClass('hidden');
+    $('#list-name').toggleClass('hidden');
+});
+
+$('#list-edit-submit').click(function(){
+    $('#list-edit-form').toggleClass('hidden');
+    $('#list-name').toggleClass('hidden');
 });
 
 
