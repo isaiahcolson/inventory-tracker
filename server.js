@@ -51,6 +51,17 @@ app.use("/", controllers.auth);
 app.use('/lists', authRequired, controllers.list);
 app.use('/items', authRequired, controllers.item);
 
+// Error route
+app.get('/404', (req,res) =>{
+    console.log(req.session);
+    res.render('404', {user: req.session.currenUser });
+})
+
+app.get('/500', (req,res) =>{
+    console.log(req.session);
+    res.render('500', {user: req.session.currenUser });
+})
+
 // Bind server to PORT
 app.listen(PORT, function(){
     console.log(`Server is live on http://localhost:${PORT}`);

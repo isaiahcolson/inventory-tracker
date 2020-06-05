@@ -9,12 +9,12 @@ router.get('/', (req,res) => {
     db.List.find({user: req.session.currentUser.id}, function(err, allLists) {
         if (err) {
             console.log(err);
-            res.send({message: 'Internal server error.'});
+            res.redirect('/500');
         } else {
             db.Item.find({$expr : {$lt : ['$quantity', '$reorderLevel'] }}, function(err, comparedItem){
                 if (err) {
                     console.log(err);
-                    res.send({message: 'compared item error'});
+                    res.redirect('/500');
                 } else {
                     db.User.findById(req.session.currentUser.id)
                     .populate('user')
@@ -71,7 +71,7 @@ router.post('/', (req,res) => {
     db.List.create(list, function(err,createdList) {
         if (err) {
             console.log(err);
-            res.send({message: 'Internal server error.'});
+            res.redirect('/500');
         } else {
             console.log(createdList);
             res.redirect(`/lists/${createdList._id}`);
@@ -86,7 +86,7 @@ router.get('/:id', (req,res) => {
     db.List.findById(req.params.id, function(err, foundList) {
         if (err) {
             console.log(err);
-            res.send({message: 'Internal server error.'});
+            res.redirect('/500');
         } else {
             foundList.populate('items user').execPopulate(function() {
                 const context = {list: foundList};
@@ -103,7 +103,7 @@ router.get('/:id/edit', (req,res) => {
     db.List.findById(req.params.id, function(err, foundList) {
         if (err) {
             console.log(err);
-            res.send({message: 'Internal server error.'});
+            res.redirect('/500');
         } else {
             const context = {list: foundList};
             res.render('lists/edit', context);
@@ -122,7 +122,7 @@ router.put('/:id', (req,res) => {
     db.List.findByIdAndUpdate(req.params.id,req.body,{new:true}, function(err, updatedList) {
         if (err) {
             console.log(err);
-            res.send({message: 'Internal server error.'});
+            res.redirect('/500');
         } else {
             res.redirect(`/lists/${updatedList._id}`);
         }
@@ -137,10 +137,9 @@ router.delete("/:id", async (req,res) => {
         res.redirect("/lists");
     } catch (err) {
         console.log(err);
-        res.send({ message: "Internal Server Error"});
+        res.redirect('/500');
     }
 })
-
 
 
 // export router
