@@ -373,6 +373,16 @@ form div {
     position: relative;
 }
 
+form div[data-error]::after {
+    content: attr(data-error);
+    font-size: .75em;
+    display: block;
+    position: absolute;
+    /* top: 70px; */
+    bottom: 0;
+    right: 20px;
+}
+
 label {
     position: absolute;
     top: 32.5px;
@@ -383,11 +393,19 @@ label {
     transition: 0.3s ease;
 }
 
-.input-selected ~ label {
+.form-control:focus ~ label, .form-control.valid ~ label {
     top: 0px;
     left: 25px;
     font-size: .75em;
 }
+
+form label::after {
+    content: "";
+}
+
+/* input:invalid ~ label {
+    color: red;
+} */
 
 /* form div input:focus ~ label, form div input:valid ~ label, form div input:invalid ~ label {
     top: 0px;

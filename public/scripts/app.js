@@ -1,15 +1,43 @@
 /* input label animation events */
-$('input[type="email"]').focus(function(){
-    $('input[type="email"]').addClass('input-selected');
-});
+const stateCheck = ($formControl) => {
+    if($formControl.val().length > 0) {
+        $formControl.addClass('valid');
+        console.log('greater than 0');
+    } else {
+        $formControl.removeClass('valid');
+        console.log('not greater than 0');
+    }
+}
 
-$('input[name="username"]').focus(function(){
-    $('input[name="username"]').addClass('input-selected');
-});
+$(function() {
+    $('.form-control').focusout(function() {
+        stateCheck($(this));
+    });
+})
 
-$('input[name="password"]').focus(function(){
-    $('input[name="password"]').addClass('input-selected');
-});
+// $('input[name="username"]').focusout(function(){
+//     stateCheck($(this));
+// });
+
+// $('input[type="email"]').focusout(function(){
+//     stateCheck($(this));
+// });
+
+// $('input[name="password"]').focusout(function(){
+//     stateCheck($(this));
+// });
+
+// $('input[type="email"]').focus(function(){
+//     $('input[type="email"]').addClass('input-selected');
+// });
+
+// $('input[name="username"]').focus(function(){
+//     $('input[name="username"]').addClass('input-selected');
+// });
+
+// $('input[name="password"]').focus(function(){
+//     $('input[name="password"]').addClass('input-selected');
+// });
 
 
 
