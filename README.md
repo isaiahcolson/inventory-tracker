@@ -146,11 +146,13 @@ This <!-- TODO insert title instead of 'This' --> is an invetory tool for mythic
 
 Stretch
 - [ ] - isaiah - register form validation with css
+- [ ] - isaiah - fix dark theme switch styling
 
 
 
 - [ ] - isaiah - replace landing page image with "final" version
 - [ ] - isaiah - 404 styling
+- [ ] - isaiah - 500 styling
 - [ ] - isaiah - add labels for inputs
 - [ ] - isaiah - aside section needs scroll and maybe a link to the list
 

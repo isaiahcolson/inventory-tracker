@@ -373,14 +373,19 @@ form div {
     position: relative;
 }
 
-form div[data-error]::after {
+form div[data-error]::after, .error-message {
     content: attr(data-error);
     font-size: .75em;
-    display: block;
+    display: none;
     position: absolute;
     /* top: 70px; */
     bottom: 0;
     right: 20px;
+    color: #ff7a7a;
+}
+
+form .input-error ~ .error-message {
+    display: block;
 }
 
 label {

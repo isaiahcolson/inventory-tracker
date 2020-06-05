@@ -2,16 +2,26 @@
 const stateCheck = ($formControl) => {
     if($formControl.val().length > 0) {
         $formControl.addClass('valid');
-        console.log('greater than 0');
+        // console.log('greater than 0');
     } else {
         $formControl.removeClass('valid');
-        console.log('not greater than 0');
+        // console.log('not greater than 0');
+    }
+}
+
+const validCheck = (validControl) => {
+    if (validControl.is(':invalid')) {
+        console.log('invalid');
+        validControl.addClass('input-error');
+    } else {
+        validControl.removeClass('input-error');
     }
 }
 
 $(function() {
     $('.form-control').focusout(function() {
         stateCheck($(this));
+        validCheck($(this));
     });
 })
 

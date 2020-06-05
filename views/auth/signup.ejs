@@ -7,23 +7,26 @@
         <p>Sign up to start tracking your inventory.</p>
 
         <form action="/signup" method="POST">
-            <div data-error="This username is already taken.">
+            <div class="">
                 <input type="text" name="username" class="form-control" required autocomplete="off" />
                 <label for="username">
                     <span class="label-name">Username</span>
                 </label>
+                <div class="error-message">Please enter a valid username.</div>
             </div>
-            <div>
+            <div class="">
                 <input type="email" name="email" class="form-control" required autocomplete="off"  />
                 <label for="email">
                     <span class="label-name">Email</span>
                 </label>
+                <div class="error-message">Please enter a valid email.</div>
             </div>
-            <div>
+            <div class="">
                 <input type="password" name="password" class="form-control" required autocomplete="off"  />
                 <label for="password">
                     <span class="label-name">Password</span>
                 </label>
+                <div class="error-message">Please enter a valid password.</div>
             </div>
             <input type="submit" value="Sign Up" />
         </form>
