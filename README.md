@@ -129,29 +129,22 @@ This <!-- TODO insert title instead of 'This' --> is an invetory tool for mythic
 * modal windows
 
 ### Thursday - 6/3:
-- [x] - isaiah - item edit modal
-- [x] - isaiah - delete list modal
-- [x] - jonathan - fix item edit route and values
-- [x] - isaiah - dark theme preferences
-- [x] - jonathan - lists and items models user specific
-- [x] - both - limit the characters in a list's title
-- [x] - isaiah - set values for edit routes
-- [x] - isaiah - dark mode styling fixes
-- [x] - jonathan - add reorder level to items model
-- [x] - jonathan - fix redirect for item update
+* all modals added
+* dark theme switch
+* lists and items models user specific
+* finalize MVP
+
+### Friday - 6/4:
+- [x] - isaiah - add document title and favicon
 
 
 
-- [ ] - isaiah - list create modal
-	why does my fixed element have weird styling with opacity?
 - [ ] - isaiah - list update (can we change the list title to input)
-	hidden input
 - [ ] - jonathan - populate dashboard aside section with reorder items
 	mongoose vampire, comparisons
 
 
 
-- [ ] - isaiah - add document title and favicon
 - [ ] - isaiah - replace landing page image with "final" version
 - [ ] - isaiah - register form validation with css
 - [ ] - jonathan - 404 page and routes
@@ -160,11 +153,6 @@ This <!-- TODO insert title instead of 'This' --> is an invetory tool for mythic
 - [ ] -  - add empty list notification
 - [ ] -  - html required for all fields ever
 - [ ] -  - remove console
-
-
-
-### Friday - 6/4:
-- [ ] -  - 
 
 ### Saturday - 6/5:
 - [ ] -  - 
