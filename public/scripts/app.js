@@ -1,3 +1,18 @@
+/* input label animation events */
+$('input[type="email"]').focus(function(){
+    $('input[type="email"]').addClass('input-selected');
+});
+
+$('input[name="username"]').focus(function(){
+    $('input[name="username"]').addClass('input-selected');
+});
+
+$('input[name="password"]').focus(function(){
+    $('input[name="password"]').addClass('input-selected');
+});
+
+
+
 /* item create events */
 $('#item-create-button').click(function(){
     $('.create-modal').toggleClass('hidden');

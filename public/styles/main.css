@@ -70,7 +70,8 @@ body.light {
     --accent-dark: #0037bf;
     --secondary: #FA745F;
     --secondary-alt: #C75C4C;
-    --opacity: 0,0,0
+    --opacity: 0,0,0;
+    --label-color: #A6A6A6;
 }
 
 body.dark {
@@ -84,7 +85,7 @@ body.dark {
     --accent-dark: #0037bf;
     --secondary: #FA745F;
     --secondary-alt: #C75C4C;
-    --opacity: 255,255,255
+    --opacity: 255,255,255;
 }
 
 button {
@@ -333,7 +334,7 @@ h3 {
 input {
     width: 90%;
     padding: 15px;
-    margin: 12px 0;
+    margin: 17.5px 0;
     display: inline-block;
     border: none;
     border-bottom: 2px solid var(--dark-alt);
@@ -367,6 +368,32 @@ input[type=submit]:hover {
 ::placeholder {
     font-size: 14px;
 }
+
+form div {
+    position: relative;
+}
+
+label {
+    position: absolute;
+    top: 32.5px;
+    left: 32.5px;
+    pointer-events: none;
+    color: var(--label-color);
+    font-size: 1em;
+    transition: 0.3s ease;
+}
+
+.input-selected ~ label {
+    top: 0px;
+    left: 25px;
+    font-size: .75em;
+}
+
+/* form div input:focus ~ label, form div input:valid ~ label, form div input:invalid ~ label {
+    top: 0px;
+    left: 25px;
+    font-size: .75em;
+} */
 
 
 

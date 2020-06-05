@@ -7,9 +7,18 @@
         <p>Sign up to start tracking your inventory.</p>
 
         <form action="/signup" method="POST">
-            <input type="text" name="username" placeholder="Username" required />
-            <input type="email" name="email" placeholder="Email" required />
-            <input type="password" name="password" placeholder="Password" required />
+            <div>
+                <input type="text" name="username" class="" required />
+                <label for="">Username</label>
+            </div>
+            <div>
+                <input type="email" name="email" class="" required />
+                <label for="">Email</label>
+            </div>
+            <div>
+                <input type="password" name="password" class="" required />
+                <label for="">Password</label>
+            </div>
             <input type="submit" value="Sign Up" />
         </form>
     

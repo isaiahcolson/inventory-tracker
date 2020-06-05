@@ -15,7 +15,7 @@
                     <li class="" id="list-name"><h3><%= list.name %></h3></li>
                     <li id="list-edit-form" class="hidden">
                         <form action="/lists/<%= list._id %>?_method=PUT" method="POST">
-                            <input type="text" name="name" value="<%= list.name %>" minlength="5" maxlength="20"/>  
+                            <input type="text" name="name" value="<%= list.name %>" minlength="5" maxlength="20" required />  
                             <input type="submit" value="Update" id="list-edit-submit" />
                         </form>
                     </li>
@@ -44,7 +44,7 @@
                 <div class="ind-item-container">
                     <div class="ind-item"><%= item.name %></div>
                     <div class="ind-item"><%= item.category %></div>
-                    <div class="ind-item"><%= item.price %></div>
+                    <div class="ind-item">$<%= item.price %></div>
                     <div class="ind-item"><%= item.quantity %></div>
                     <div class="ind-item"><%= item.reorderLevel %></div>
                     <div class="ind-item">
@@ -73,11 +73,11 @@
         <div class="create-close">+</div>
         <p>Add a new item to this list.</p>
         <form action="/items" method="POST">
-            <input type="text" name="name" placeholder="Product Name">   
-            <input type="text" name="category" placeholder="Category">
-            <input type="number" name="price" placeholder="Price">
-            <input type="number" name="quantity" placeholder="Quantity">
-            <input type="number" name="reorderLevel" placeholder="Reorder Level">
+            <input type="text" name="name" placeholder="Product Name" required >   
+            <input type="text" name="category" placeholder="Category" required >
+            <input type="number" name="price" placeholder="Price" required >
+            <input type="number" name="quantity" placeholder="Quantity" required >
+            <input type="number" name="reorderLevel" placeholder="Reorder Level" required >
             <input type="hidden" name="list" value="<%= list._id %>">
             <input type="submit" value="Add Item">
         </form>
@@ -91,11 +91,11 @@
             <div class="edit-close">+</div>
             <p>Edit </p>
             <form action="/items/<%= item._id %>?_method=PUT" method="POST">
-                <input type="text" name="name" placeholder="Product Name" value="<%= item.name %>" />   
-                <input type="text" name="category" placeholder="Category" value="<%= item.category %>" />
-                <input type="number" name="price" placeholder="Price" value="<%= item.price %>" />
-                <input type="number" name="quantity" placeholder="Quantity" value="<%= item.quantity %>" />
-                <input type="number" name="reorderLevel" placeholder="Reorder Level" value="<%= item.reorderLevel %>" />
+                <input type="text" name="name" placeholder="Product Name" value="<%= item.name %>" required />   
+                <input type="text" name="category" placeholder="Category" value="<%= item.category %>" required />
+                <input type="number" name="price" placeholder="Price" value="<%= item.price %>" required />
+                <input type="number" name="quantity" placeholder="Quantity" value="<%= item.quantity %>" required />
+                <input type="number" name="reorderLevel" placeholder="Reorder Level" value="<%= item.reorderLevel %>" required />
                 <input type="hidden" name="list" value="<%= item._id %>">
                 <input type="submit" value="Update">
             </form>

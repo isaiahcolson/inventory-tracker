@@ -136,40 +136,40 @@ This <!-- TODO insert title instead of 'This' --> is an invetory tool for mythic
 ### Friday - 6/4:
 - [x] - isaiah - add document title and favicon
 - [x] - isaiah - inventory edit route replaces list name in header
-
-
-
-
-MVP
-- [ ] - jonathan - populate dashboard aside section with reorder items
-	mongoose vampire, comparisons
+- [x] - jonathan - populate dashboard aside section with reorder items
+- [x] - jonathan - change welcome h1 tag from User to user.username
+- [x] - isaiah - html required for all fields ever
+- [x] - jonathan - add empty list notification for aside
+- [x] - jonathan - 404 page and routes
 
 
 
 Stretch
 - [ ] - isaiah - register form validation with css
-- [ ] - isaiah - html required for all fields ever
 
 
 
 - [ ] - isaiah - replace landing page image with "final" version
-- [ ] - jonathan - 404 page and routes
 - [ ] - isaiah - 404 styling
+- [ ] - isaiah - add labels for inputs
+- [ ] - isaiah - aside section needs scroll and maybe a link to the list
+
+
+
 - [ ] - jonathan - user should not see whether username or pass fails
-- [ ] -  - add empty list notification
-- [ ] -  - remove console.log throughout code
-- [ ] -  - async await on callbacks
+- [ ] - jonathan - remove console.log throughout code
+- [ ] - jonathan - async await on callbacks
 - [ ] -  - remove or hide unused pages
-- [ ] -  - add labels for inputs
 
 
 Extra Stretch
 - [ ] -  - user profile page
 - [ ] -  - object embedding
-- [ ] -  - change welcome h1 tag from User to user.username
 - [ ] -  - animate modal
 - [ ] -  - information page/modal
 - [ ] -  - css to apply to items that have a quantity fall below the reorder level
+- [ ] -  - add empty list notification for lists
+- [ ] -  - add empty list notification for items
 
 
 
