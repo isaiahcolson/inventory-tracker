@@ -96,7 +96,6 @@ This <!-- TODO insert title instead of 'This' --> is an invetory tool for mythic
 
 
 ## Development Timeline
-<!-- REVIEW -->
 
 ### Saturday - 5/30:
 * set up base directories/files

@@ -113,10 +113,6 @@ const themeCheck = () => {
     }
 }
 
-const testSomething = () => {
-    console.log(localStorage);
-}
-
 const themeSwitch = () => {
     themeCheck();
     $('#themeSwitch').click(function(){
@@ -148,7 +144,6 @@ const setTheme = () => {
         console.log('not working');
     }
 }
-
 
 themeIsChecked();
 themeSwitch();
