@@ -144,25 +144,20 @@ Inventory tool for businesses.
 ### Saturday - 6/5:
 - [x] - isaiah - login form validation with css
 - [x] - isaiah - add labels for inputs
+- [x] - jonathan - async await on callbacks
+- [x] - jonathan - remove console.log throughout code
+- [x] - jonathan - user should not see whether username or pass fails
+- [x] - isaiah - fix list button overflow
 
 
 
 Stretch
-- [ ] - isaiah - fix list button overflow
-
-
-
 - [ ] - isaiah - replace landing page image with "final" version
 - [ ] - isaiah - 404 styling
 - [ ] - isaiah - 500 styling
 - [ ] - isaiah - aside section needs scroll and maybe a link to the list
-
-
-
-- [ ] - jonathan - user should not see whether username or pass fails
-- [ ] - jonathan - remove console.log throughout code
-- [ ] - jonathan - async await on callbacks
 - [ ] -  - remove or hide unused pages
+
 
 
 Extra Stretch
