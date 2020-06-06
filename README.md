@@ -143,11 +143,12 @@ Inventory tool for businesses.
 
 ### Saturday - 6/5:
 - [x] - isaiah - login form validation with css
+- [x] - isaiah - add labels for inputs
 
 
 
 Stretch
-- [ ] - isaiah - add labels for inputs
+- [ ] - isaiah - fix list button overflow
 
 
 

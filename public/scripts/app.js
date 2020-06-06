@@ -23,31 +23,13 @@ $(function() {
         stateCheck($(this));
         validCheck($(this));
     });
-})
+});
 
-// $('input[name="username"]').focusout(function(){
-//     stateCheck($(this));
-// });
-
-// $('input[type="email"]').focusout(function(){
-//     stateCheck($(this));
-// });
-
-// $('input[name="password"]').focusout(function(){
-//     stateCheck($(this));
-// });
-
-// $('input[type="email"]').focus(function(){
-//     $('input[type="email"]').addClass('input-selected');
-// });
-
-// $('input[name="username"]').focus(function(){
-//     $('input[name="username"]').addClass('input-selected');
-// });
-
-// $('input[name="password"]').focus(function(){
-//     $('input[name="password"]').addClass('input-selected');
-// });
+$(function() {
+    $('.normal-input').focusout(function() {
+        validCheck($(this));
+    });
+});
 
 
 

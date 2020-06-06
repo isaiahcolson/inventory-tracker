@@ -405,21 +405,17 @@ form .input-error ~ .error-message {
     font-size: .75em;
 }
 
-form label::after {
-    content: "";
-}
-
-/* input:invalid ~ label {
-    color: red;
-} */
-
-/* form div input:focus ~ label, form div input:valid ~ label, form div input:invalid ~ label {
+.normal-label label {
+    position: absolute;
     top: 0px;
     left: 25px;
     font-size: .75em;
-} */
+    color: var(--label-color);
+}
 
-
+form label::after {
+    content: "";
+}
 
 
 
