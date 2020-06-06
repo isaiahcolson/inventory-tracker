@@ -86,6 +86,7 @@ body.dark {
     --secondary: #FA745F;
     --secondary-alt: #C75C4C;
     --opacity: 255,255,255;
+    --label-color: #CCC;
 }
 
 button {

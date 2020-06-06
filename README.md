@@ -142,18 +142,20 @@ This <!-- TODO insert title instead of 'This' --> is an invetory tool for mythic
 - [x] - jonathan - add empty list notification for aside
 - [x] - jonathan - 404 page and routes
 - [x] - isaiah - register form validation with css
+- [x] - isaiah - fix dark theme switch styling
 
 
 
 Stretch
-- [ ] - isaiah - fix dark theme switch styling
+- [ ] - isaiah - fix dark theme register colors
+- [ ] - isaiah - login form validation with css
+- [ ] - isaiah - add labels for inputs
 
 
 
 - [ ] - isaiah - replace landing page image with "final" version
 - [ ] - isaiah - 404 styling
 - [ ] - isaiah - 500 styling
-- [ ] - isaiah - add labels for inputs
 - [ ] - isaiah - aside section needs scroll and maybe a link to the list
 
 
