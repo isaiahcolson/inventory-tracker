@@ -777,3 +777,65 @@ form label::after {
     background: var(--secondary-alt);
     color: #FFFFFF;
 }
+
+
+
+/* 500 404 page styling */
+.five-four {
+    height: 100vh;
+    background-color: #FEFEFE;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.five-four-content {
+    height: 40vh;
+    text-align: center;
+}
+
+.five-four img {
+    height: 50vh;
+}
+
+.five-four-content h3 {
+    font-size: 2.5em;
+    margin: 0;
+    padding: 0;
+}
+
+.five-four-content p {
+    font-size: 1.1em;
+    margin: 10px 0 30px 0;
+    padding: 0;
+}
+
+.five-four-content a {
+    text-decoration: none;
+    margin: 10px;
+    padding: 10px;
+    font-size: 1.1em;
+    border: 2px solid var(--accent);
+    border-radius: 5px;
+    transition: 0.3s ease;
+}
+
+.five-four-content a:first-of-type {
+    color: var(--dark);
+    background-color: none;
+}
+
+.five-four-content a:first-of-type:hover {
+    background-color: var(--light-alt);
+}
+
+.five-four-content a:last-of-type {
+    color: #FFF;
+    background-color: var(--accent);
+}
+
+.five-four-content a:last-of-type:hover {
+    background-color: var(--accent-dark);
+    border: 2px solid var(--accent-dark);
+}

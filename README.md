@@ -151,15 +151,16 @@ Inventory tool for businesses.
 - [x] - isaiah - aside section has scroll and link to the list of each item
 - [x] - isaiah - replace landing page image with "final" version
 - [x] - isaiah - add title to landing page
+- [x] - isaiah - 500 styling
+- [x] - isaiah - 404 styling
 
 
 
 Stretch
+- [ ] -  - set 404 route to all unavailable pages
 
 
 
-- [ ] - isaiah - 404 styling
-- [ ] - isaiah - 500 styling
 - [ ] -  - remove or hide unused pages
 
 
