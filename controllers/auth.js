@@ -4,12 +4,10 @@ const bcrypt = require('bcryptjs');
 
 const db = require("../models");
 
-// Signup form
+// Signup form get route
 router.get('/signup', (req,res) => {
     res.render('auth/signup');
 });
-
-
 
 // Signup route
 router.post('/signup', async (req,res) => {
@@ -34,13 +32,13 @@ router.post('/signup', async (req,res) => {
     }
 });
 
-// Login form
+// Login form route
 router.get('/login', (req,res) => {
     res.render('auth/login');
 });
 
 
-// Login post
+// Login post route
 // TODO - will need to change the error messages to 'Invalid usr or psw' eventually
 router.post('/login', async (req,res) => {
     try {
@@ -62,7 +60,6 @@ router.post('/login', async (req,res) => {
             username: foundUser.username,
         };
         req.session.logged = true;
-        console.log(req.session);
         // redirect user to our landing page
         res.redirect('/lists');
     } catch (err) {
@@ -75,7 +72,6 @@ router.post('/login', async (req,res) => {
 router.delete('/logout', async (req,res) => {
     await req.session.destroy();   // destroy user session
     res.redirect('/');  // else, redirect them to the landing page
-    console.log(req.session.destroy);
 });
 
 
