@@ -148,14 +148,18 @@ Inventory tool for businesses.
 - [x] - jonathan - remove console.log throughout code
 - [x] - jonathan - user should not see whether username or pass fails
 - [x] - isaiah - fix list button overflow
+- [x] - isaiah - aside section has scroll and link to the list of each item
 
 
 
 Stretch
+- [ ] - isaiah - add title on landing page
 - [ ] - isaiah - replace landing page image with "final" version
+
+
+
 - [ ] - isaiah - 404 styling
 - [ ] - isaiah - 500 styling
-- [ ] - isaiah - aside section needs scroll and maybe a link to the list
 - [ ] -  - remove or hide unused pages
 
 

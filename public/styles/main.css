@@ -201,6 +201,17 @@ aside {
     float: right;
     color: var(--dark-alt);
     box-shadow: 0px 15px 15px -10px rgba(0,0,0,0.3);
+    overflow: scroll;
+}
+
+aside a {
+    text-decoration: none;
+    color: var(--dark);
+    font-size: 1.25em;
+}
+
+aside a:hover {
+    color: var(--accent-light);
 }
 
 .welcome {

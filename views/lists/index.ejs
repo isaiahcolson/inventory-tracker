@@ -13,7 +13,9 @@
         <% } else { %>
         <ul>
         <% items.forEach(item =>  { %>
-            <li><%= item.name %></li>
+            <a href="/lists/<%= item.list %>">
+                <li><%= item.name %></li>
+            </a>
             <% }) %>
         </ul>
         <% } %>
