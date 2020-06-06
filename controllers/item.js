@@ -18,7 +18,6 @@ router.get('/', (req,res) => {
     });
 });
 
-
 // Create new item route
 router.get('/new', (req,res) =>{
     db.List.find({}, function(err, allLists){
@@ -26,7 +25,6 @@ router.get('/new', (req,res) =>{
             console.log(err);
             res.redirect('/500');
         } else {
-            console.log(allLists);
             const context = {lists: allLists};
             res.render('items/new', context);
         }
@@ -47,7 +45,6 @@ router.post('/', (req,res) => {
                     console.log(err);
                     res.redirect('/500');
                 } else {
-                    console.log(foundList);
                     foundList.items.push(createdItem); // add item to the found list
                     foundList.save();  // will save the info back to the db
                     res.redirect(`/lists/${foundList._id}`);
@@ -79,17 +76,14 @@ router.get('/:id', (req,res) => {
             console.log(err);
             res.redirect('/500');
         } else {
-
                 const context = {item: foundItem};
                 res.render('items/edit', context);
-
         }
     })
 })
 
 
 // Update route for item
-
 router.put('/:id', (req,res) => {
     const itemsData = {
         $set:{
@@ -111,7 +105,6 @@ router.put('/:id', (req,res) => {
                     console.log(err);
                     res.redirect('/500');
                 } else {
-                    console.log(updatedList);
                     res.redirect(`/lists/${updatedList._id}`);
                 }
             })
@@ -120,11 +113,7 @@ router.put('/:id', (req,res) => {
 })
 
 
-
-
-
 // Delete route
-
 router.delete("/:id", async (req,res) => {
     db.Item.findByIdAndDelete(req.params.id, function(err, deletedItem){
         if(err){
@@ -136,8 +125,6 @@ router.delete("/:id", async (req,res) => {
                     console.log(err);
                     res.redirect('/500');
                 } else {
-                    console.log(foundList.items.remove);
-                    console.log(deletedItem);
                     foundList.items.remove(deletedItem); 
                     foundList.save();
                     res.redirect(`/lists/${foundList._id}`);
@@ -146,9 +133,6 @@ router.delete("/:id", async (req,res) => {
         }
     });
 });
-
-
-
 
 
 module.exports = router;
