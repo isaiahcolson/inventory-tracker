@@ -150,11 +150,11 @@ Inventory tool for businesses.
 - [x] - isaiah - fix list button overflow
 - [x] - isaiah - aside section has scroll and link to the list of each item
 - [x] - isaiah - replace landing page image with "final" version
+- [x] - isaiah - add title to landing page
 
 
 
 Stretch
-- [ ] - isaiah - add title on landing page
 
 
 
