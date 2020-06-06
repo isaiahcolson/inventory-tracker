@@ -1,13 +1,12 @@
-# Title
-<!-- TODO add Title -->
-Inventory tool for mythical shop owners.
+# Nut Index
+Inventory tool for businesses.
 <!-- TODO Add Link to Live Project -->
 
 
 
 ## MVP Scope
 
-This <!-- TODO insert title instead of 'This' --> is an invetory tool for mythical shop owners.  As a shop owner(witches, orcs, elves, etc), one must create a profile by providing a username, email, and password to get started.  Once authenticated, they are forwarded to a page to add items to their inventory.  They'll also have the ability to update and remove items within that inventory.  Each user will only have access to their own inventory lists(s). 
+'Nut Index' is an invetory tool for mythical shop owners.  As a shop owner(witches, orcs, elves, etc), one must create a profile by providing a username, email, and password to get started.  Once authenticated, they are forwarded to a page to add items to their inventory.  They'll also have the ability to update and remove items within that inventory.  Each user will only have access to their own inventory lists(s). 
 
 ### Built With
 
@@ -134,21 +133,20 @@ This <!-- TODO insert title instead of 'This' --> is an invetory tool for mythic
 * finalize MVP
 
 ### Friday - 6/4:
-- [x] - isaiah - add document title and favicon
-- [x] - isaiah - inventory edit route replaces list name in header
-- [x] - jonathan - populate dashboard aside section with reorder items
-- [x] - jonathan - change welcome h1 tag from User to user.username
-- [x] - isaiah - html required for all fields ever
-- [x] - jonathan - add empty list notification for aside
-- [x] - jonathan - 404 page and routes
-- [x] - isaiah - register form validation with css
-- [x] - isaiah - fix dark theme switch styling
+* add document title and favicon
+* inventory edit route replaces list name in header
+* populate dashboard aside section with reorder items
+* change welcome h1 tag from User to user.username
+* add empty list notification for aside
+* 404 page and routes
+* register form validation with css
+
+### Saturday - 6/5:
+- [x] - isaiah - login form validation with css
 
 
 
 Stretch
-- [ ] - isaiah - fix dark theme register colors
-- [ ] - isaiah - login form validation with css
 - [ ] - isaiah - add labels for inputs
 
 
@@ -183,9 +181,6 @@ Extra Extra Stretch
 - [ ] -  - forgot password
 - [ ] -  - delete item modal/prompt
 - [ ] -  - unique items (maybe add quantity fields for new total)
-
-### Saturday - 6/5:
-- [ ] -  - 
 
 ### Sunday - 6/6:
 - [ ] -  - 
