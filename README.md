@@ -149,12 +149,12 @@ Inventory tool for businesses.
 - [x] - jonathan - user should not see whether username or pass fails
 - [x] - isaiah - fix list button overflow
 - [x] - isaiah - aside section has scroll and link to the list of each item
+- [x] - isaiah - replace landing page image with "final" version
 
 
 
 Stretch
 - [ ] - isaiah - add title on landing page
-- [ ] - isaiah - replace landing page image with "final" version
 
 
 
@@ -169,6 +169,7 @@ Extra Stretch
 - [ ] -  - object embedding
 - [ ] -  - animate modal
 - [ ] -  - information page/modal
+- [ ] - isaiah - replace landing page image with "final" version if info or profile is added
 - [ ] -  - css to apply to items that have a quantity fall below the reorder level
 - [ ] -  - add empty list notification for lists
 - [ ] -  - add empty list notification for items

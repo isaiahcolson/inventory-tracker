@@ -33,7 +33,7 @@ router.get('/new', (req,res) =>{
 
 // Create route that posts the new info
 router.post('/', (req,res) => {
-    console.log('Beep');
+    // console.log('Beep');
     db.Item.create(req.body, function(err,createdItem) {
         if (err) {
             console.log(err);
