@@ -537,6 +537,15 @@ form label::after {
     overflow: scroll;
 }
 
+.items__empty {
+    display: flex;
+    justify-content: center;
+}
+
+/* .items p {
+    margin: 0 auto;
+} */
+
 .items-list {
     color: var(--dark);
 }

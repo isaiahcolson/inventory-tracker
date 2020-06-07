@@ -29,6 +29,11 @@
         </div>
         
         <div class="dashboard-grid">
+            <% if (lists.length === 0) { %>
+                <div class="items__empty">
+                    <p>You have no inventory lists.</p>
+                </div>
+            <% } %>
             <% lists.forEach(list => { %>
                 <a href="/lists/<%= list._id %>" class="dashboard-block">
                     <div class="dashboard-grid-item">

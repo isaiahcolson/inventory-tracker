@@ -40,30 +40,36 @@
 
         
         <div class="items">
-            <% list.items.forEach(item => { %>
-                <div class="ind-item-container">
-                    <div class="ind-item"><%= item.name %></div>
-                    <div class="ind-item"><%= item.category %></div>
-                    <div class="ind-item">$<%= item.price %></div>
-                    <% if (item.quantity < item.reorderLevel) { %>
-                        <div class="ind-item" style="color:#ff7a7a"><%= item.quantity %></div>
-                    <% } else { %>
-                        <div class="ind-item"><%= item.quantity %></div>
-                    <% } %>
-                    <div class="ind-item"><%= item.reorderLevel %></div>
-                    <div class="ind-item">
-                        <a title="Edit Current Item" class="item-edit-button" >
+            <% if (list.items.length === 0) { %>
+                <div class="items__empty">
+                    <p>You have no items in this list.</p>
+                </div>
+            <% } else { %>
+                <% list.items.forEach(item => { %>
+                    <div class="ind-item-container">
+                        <div class="ind-item"><%= item.name %></div>
+                        <div class="ind-item"><%= item.category %></div>
+                        <div class="ind-item">$<%= item.price %></div>
+                        <% if (item.quantity < item.reorderLevel) { %>
+                            <div class="ind-item" style="color:#ff7a7a"><%= item.quantity %></div>
+                        <% } else { %>
+                            <div class="ind-item"><%= item.quantity %></div>
+                        <% } %>
+                        <div class="ind-item"><%= item.reorderLevel %></div>
+                        <div class="ind-item">
+                            <a title="Edit Current Item" class="item-edit-button" >
 
-                        <i class="fas fa-edit" data-id=<%= item._id %>></i></a>
-                        <div class="item-delete">
-                            <form action="/items/<%= item._id %>?_method=DELETE" method="POST">
-                                <button type="submit"><i class="fas fa-trash"></i></button>
-                            </form>
+                            <i class="fas fa-edit" data-id=<%= item._id %>></i></a>
+                            <div class="item-delete">
+                                <form action="/items/<%= item._id %>?_method=DELETE" method="POST">
+                                    <button type="submit"><i class="fas fa-trash"></i></button>
+                                </form>
+                            </div>
                         </div>
                     </div>
-                </div>
-                <div class="bar-container"><div class="bar-small"></div></div>              
-            <% }) %>
+                    <div class="bar-container"><div class="bar-small"></div></div>              
+                <% }) %>
+            <% } %>
         </div>
         
     </div>
