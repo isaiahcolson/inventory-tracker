@@ -25,6 +25,7 @@ app.use(methodOverride('_method'));
 app.use(express.static('public'));  //for public and styles folder access
 app.use(expressLayouts);
 
+
 // Cookie Session configuration
 app.use(session({
     store: new MongoStore({
@@ -52,15 +53,23 @@ app.use('/lists', authRequired, controllers.list);
 app.use('/items', authRequired, controllers.item);
 
 // Error route
-app.get('/404', (req,res) =>{
-    console.log(req.session);
-    res.render('404', {user: req.session.currenUser });
-})
-
 app.get('/500', (req,res) =>{
-    console.log(req.session);
+    // console.log(req.session);
     res.render('500', {user: req.session.currenUser });
-})
+});
+
+app.get('/404', (req,res) =>{
+    // console.log(req.session);
+    res.render('404', {user: req.session.currentUser });
+});
+
+app.use(function (req, res, next) {
+    res.status(500).render('500');
+});
+
+app.use(function (req, res, next) {
+    res.status(404).render('404');
+});
 
 // Bind server to PORT
 app.listen(PORT, function(){

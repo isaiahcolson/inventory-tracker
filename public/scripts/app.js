@@ -1,3 +1,38 @@
+/* input label animation events */
+const stateCheck = ($formControl) => {
+    if($formControl.val().length > 0) {
+        $formControl.addClass('valid');
+        // console.log('greater than 0');
+    } else {
+        $formControl.removeClass('valid');
+        // console.log('not greater than 0');
+    }
+}
+
+const validCheck = (validControl) => {
+    if (validControl.is(':invalid')) {
+        console.log('invalid');
+        validControl.addClass('input-error');
+    } else {
+        validControl.removeClass('input-error');
+    }
+}
+
+$(function() {
+    $('.form-control').focusout(function() {
+        stateCheck($(this));
+        validCheck($(this));
+    });
+});
+
+$(function() {
+    $('.normal-input').focusout(function() {
+        validCheck($(this));
+    });
+});
+
+
+
 /* item create events */
 $('#item-create-button').click(function(){
     $('.create-modal').toggleClass('hidden');
@@ -16,7 +51,7 @@ $('.create-modal-bg').click(function(){
 /* item edit events */
 $('.item-edit-button').click(function(events){
     const target = event.target.dataset.id;
-    console.log(target);
+    // console.log(target);
     $(`#${target}`).toggleClass('hidden');
 });
 
@@ -113,10 +148,6 @@ const themeCheck = () => {
     }
 }
 
-const testSomething = () => {
-    console.log(localStorage);
-}
-
 const themeSwitch = () => {
     themeCheck();
     $('#themeSwitch').click(function(){
@@ -136,7 +167,7 @@ const themeSwitch = () => {
 }
 
 const setTheme = () => {
-    console.log(localStorage);
+    // console.log(localStorage);
     const storageTheme = localStorage.getItem('theme');
     if (storageTheme === 'light') {
         $('body').removeClass();
@@ -148,7 +179,6 @@ const setTheme = () => {
         console.log('not working');
     }
 }
-
 
 themeIsChecked();
 themeSwitch();

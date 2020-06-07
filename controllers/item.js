@@ -33,13 +33,13 @@ router.get('/new', (req,res) =>{
 
 // Create route that posts the new info
 router.post('/', (req,res) => {
-    console.log('Beep');
+    // console.log('Beep');
     db.Item.create(req.body, function(err,createdItem) {
         if (err) {
             console.log(err);
             res.redirect('/500');
         } else {
-            console.log(createdItem);
+            // console.log(createdItem);
             db.List.findById(createdItem.list,function(err,foundList){
                 if (err){
                     console.log(err);
@@ -99,7 +99,7 @@ router.put('/:id', (req,res) => {
             console.log(err);
             res.redirect('/500');
         } else {
-            console.log(updatedItem);
+            // console.log(updatedItem);
             db.List.findById(updatedItem.list, function(err, updatedList){
                 if (err) {
                     console.log(err);

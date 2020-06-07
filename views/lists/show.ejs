@@ -15,7 +15,7 @@
                     <li class="" id="list-name"><h3><%= list.name %></h3></li>
                     <li id="list-edit-form" class="hidden">
                         <form action="/lists/<%= list._id %>?_method=PUT" method="POST">
-                            <input type="text" name="name" value="<%= list.name %>" minlength="5" maxlength="20"/>  
+                            <input type="text" name="name" value="<%= list.name %>" minlength="5" maxlength="20" required />  
                             <input type="submit" value="Update" id="list-edit-submit" />
                         </form>
                     </li>
@@ -40,26 +40,36 @@
 
         
         <div class="items">
-            <% list.items.forEach(item => { %>
-                <div class="ind-item-container">
-                    <div class="ind-item"><%= item.name %></div>
-                    <div class="ind-item"><%= item.category %></div>
-                    <div class="ind-item"><%= item.price %></div>
-                    <div class="ind-item"><%= item.quantity %></div>
-                    <div class="ind-item"><%= item.reorderLevel %></div>
-                    <div class="ind-item">
-                        <a title="Edit Current Item" class="item-edit-button" >
+            <% if (list.items.length === 0) { %>
+                <div class="items__empty">
+                    <p>You have no items in this list.</p>
+                </div>
+            <% } else { %>
+                <% list.items.forEach(item => { %>
+                    <div class="ind-item-container">
+                        <div class="ind-item"><%= item.name %></div>
+                        <div class="ind-item"><%= item.category %></div>
+                        <div class="ind-item">$<%= item.price %></div>
+                        <% if (item.quantity < item.reorderLevel) { %>
+                            <div class="ind-item" style="color:#ff7a7a"><%= item.quantity %></div>
+                        <% } else { %>
+                            <div class="ind-item"><%= item.quantity %></div>
+                        <% } %>
+                        <div class="ind-item"><%= item.reorderLevel %></div>
+                        <div class="ind-item">
+                            <a title="Edit Current Item" class="item-edit-button" >
 
-                        <i class="fas fa-edit" data-id=<%= item._id %>></i></a>
-                        <div class="item-delete">
-                            <form action="/items/<%= item._id %>?_method=DELETE" method="POST">
-                                <button type="submit"><i class="fas fa-trash"></i></button>
-                            </form>
+                            <i class="fas fa-edit" data-id=<%= item._id %>></i></a>
+                            <div class="item-delete">
+                                <form action="/items/<%= item._id %>?_method=DELETE" method="POST">
+                                    <button type="submit"><i class="fas fa-trash"></i></button>
+                                </form>
+                            </div>
                         </div>
                     </div>
-                </div>
-                <div class="bar-container"><div class="bar-small"></div></div>              
-            <% }) %>
+                    <div class="bar-container"><div class="bar-small"></div></div>              
+                <% }) %>
+            <% } %>
         </div>
         
     </div>
@@ -67,17 +77,32 @@
 
 </main>
 
-<div class="create-modal hidden">
+<div class="create-modal normal-label hidden">
     <div class="create-modal-bg"></div>
     <div class="modal-content">
         <div class="create-close">+</div>
         <p>Add a new item to this list.</p>
         <form action="/items" method="POST">
-            <input type="text" name="name" placeholder="Product Name">   
-            <input type="text" name="category" placeholder="Category">
-            <input type="number" name="price" placeholder="Price">
-            <input type="number" name="quantity" placeholder="Quantity">
-            <input type="number" name="reorderLevel" placeholder="Reorder Level">
+            <div class="">
+                <input type="text" name="name" placeholder="Product Name" required >   
+                <label for="name">Product Name</label>
+            </div>
+            <div class="">
+                <input type="text" name="category" placeholder="Category" required >
+                <label for="category">Category</label>
+            </div>
+            <div class="">
+                <input type="number" name="price" placeholder="Price" required >
+                <label for="price">Price</label>
+            </div>
+            <div class="">
+                <input type="number" name="quantity" placeholder="Quantity" required >
+                <label for="quantity">Quantity</label>
+            </div>
+            <div class="">
+                <input type="number" name="reorderLevel" placeholder="Reorder Level" required >
+                <label for="reorderLevel">Reorder Level</label>
+            </div>
             <input type="hidden" name="list" value="<%= list._id %>">
             <input type="submit" value="Add Item">
         </form>
@@ -85,17 +110,32 @@
 </div>
 
 <% list.items.forEach(item => { %>
-    <div class="edit-items-modal hidden" id="<%= item._id %>">
+    <div class="edit-items-modal normal-label hidden" id="<%= item._id %>">
         <div class="edit-modal-bg"></div>
         <div class="modal-content">
             <div class="edit-close">+</div>
             <p>Edit </p>
             <form action="/items/<%= item._id %>?_method=PUT" method="POST">
-                <input type="text" name="name" placeholder="Product Name" value="<%= item.name %>" />   
-                <input type="text" name="category" placeholder="Category" value="<%= item.category %>" />
-                <input type="number" name="price" placeholder="Price" value="<%= item.price %>" />
-                <input type="number" name="quantity" placeholder="Quantity" value="<%= item.quantity %>" />
-                <input type="number" name="reorderLevel" placeholder="Reorder Level" value="<%= item.reorderLevel %>" />
+                <div class="">
+                    <input type="text" name="name" placeholder="Product Name" value="<%= item.name %>" required />   
+                    <label for="name">Product Name</label>
+                </div>
+                <div class="">
+                    <input type="text" name="category" placeholder="Category" value="<%= item.category %>" required />
+                    <label for="category">Category</label>
+                </div>
+                <div class="">
+                    <input type="number" name="price" placeholder="Price" value="<%= item.price %>" required />
+                    <label for="price">Price</label>
+                </div>
+                <div class="">
+                    <input type="number" name="quantity" placeholder="Quantity" value="<%= item.quantity %>" required />
+                    <label for="quantity">Quantity</label>
+                </div>
+                <div class="">
+                    <input type="number" name="reorderLevel" placeholder="Reorder Level" value="<%= item.reorderLevel %>" required />
+                    <label for="reorderLevel">Reorder Level</label>
+                </div>
                 <input type="hidden" name="list" value="<%= item._id %>">
                 <input type="submit" value="Update">
             </form>

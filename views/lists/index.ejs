@@ -13,7 +13,9 @@
         <% } else { %>
         <ul>
         <% items.forEach(item =>  { %>
-            <li><%= item.name %></li>
+            <a href="/lists/<%= item.list %>">
+                <li><%= item.name %></li>
+            </a>
             <% }) %>
         </ul>
         <% } %>
@@ -27,16 +29,19 @@
         </div>
         
         <div class="dashboard-grid">
-            <% lists.forEach(list => { %>
-                <a href="/lists/<%= list._id %>" class="dashboard-block">
-                    <div class="dashboard-grid-item">
-                        <h3><%= list.name %></h3>                        
-                    </div>
-                </a>
-            <% }) %>
-            <!-- <div class="dashboard-grid-item">
-                <a href="/lists/new" class="dashboard-block"><i class="fas fa-angle-right fa-lg"></i><i class="fas fa-plus-circle fa-lg"></i></a>
-            </div> -->
+            <% if (lists.length === 0) { %>
+                <div class="items__empty">
+                    <p>You have no inventory lists.</p>
+                </div>
+            <% } else { %>
+                <% lists.forEach(list => { %>
+                    <a href="/lists/<%= list._id %>" class="dashboard-block">
+                        <div class="dashboard-grid-item">
+                            <h3><%= list.name %></h3>                        
+                        </div>
+                    </a>
+                <% }) %>
+            <% } %>
         </div>
         
     </div>

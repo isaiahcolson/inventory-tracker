@@ -1,13 +1,12 @@
-# Title
-<!-- TODO add Title -->
-Inventory tool for mythical shop owners.
+# Nut Index
+Inventory tool for businesses.
 <!-- TODO Add Link to Live Project -->
 
 
 
 ## MVP Scope
 
-This <!-- TODO insert title instead of 'This' --> is an invetory tool for mythical shop owners.  As a shop owner(witches, orcs, elves, etc), one must create a profile by providing a username, email, and password to get started.  Once authenticated, they are forwarded to a page to add items to their inventory.  They'll also have the ability to update and remove items within that inventory.  Each user will only have access to their own inventory lists(s). 
+'Nut Index' is an invetory tool for mythical shop owners.  As a shop owner(witches, orcs, elves, etc), one must create a profile by providing a username, email, and password to get started.  Once authenticated, they are forwarded to a page to add items to their inventory.  They'll also have the ability to update and remove items within that inventory.  Each user will only have access to their own inventory lists(s). 
 
 ### Built With
 
@@ -96,7 +95,6 @@ This <!-- TODO insert title instead of 'This' --> is an invetory tool for mythic
 
 
 ## Development Timeline
-<!-- REVIEW -->
 
 ### Saturday - 5/30:
 * set up base directories/files
@@ -129,67 +127,50 @@ This <!-- TODO insert title instead of 'This' --> is an invetory tool for mythic
 * modal windows
 
 ### Thursday - 6/3:
-<<<<<<< HEAD
-- [x] - isaiah - item edit modal
-- [x] - isaiah - delete list modal
-- [x] - jonathan - fix item edit route and values
-- [x] - isaiah - dark theme preferences
-- [x] - jonathan - lists and items models user specific
-- [x] - both - limit the characters in a list's title
-- [x] - isaiah - set values for edit routes
-- [x] - isaiah - dark mode styling fixes
-- [x] - jonathan - add reorder level to items model
-- [x] - jonathan - fix redirect for item update
-
-
-
-- [ ] - isaiah - list create modal
-- [ ] - isaiah - list update (can we change the list title to input)
-	hidden input
-=======
 * all modals added
 * dark theme switch
 * lists and items models user specific
 * finalize MVP
 
 ### Friday - 6/4:
-- [x] - isaiah - add document title and favicon
-- [x] - isaiah - inventory edit route replaces list name in header
+* add document title and favicon
+* inventory edit route replaces list name in header
+* populate dashboard aside section with reorder items
+* change welcome h1 tag from User to user.username
+* add empty list notification for aside
+* 404 page and routes
+* register form validation with css
 
+### Saturday - 6/5:
+- [x] - isaiah - login form validation with css
+- [x] - isaiah - add labels for inputs
+- [x] - jonathan - async await on callbacks
+- [x] - jonathan - remove console.log throughout code
+- [x] - jonathan - user should not see whether username or pass fails
+- [x] - isaiah - fix list button overflow
+- [x] - isaiah - aside section has scroll and link to the list of each item
+- [x] - isaiah - replace landing page image with "final" version
+- [x] - isaiah - add title to landing page
+- [x] - isaiah - 500 styling
+- [x] - isaiah - 404 styling
+- [x] - isaiah - set 404 route to all unavailable pages
+- [x] - isaiah - css applied to items that have a quantity fall below the reorder level
+- [x] - isaiah - add empty list notification for items
+- [x] - isaiah - add empty list notification for lists
 
-
-
-MVP
->>>>>>> submaster
-- [ ] - jonathan - populate dashboard aside section with reorder items
-	mongoose vampire, comparisons
-
-
-
-Stretch
-- [ ] - isaiah - register form validation with css
-- [ ] - isaiah - html required for all fields ever
-
-
-
-- [ ] - isaiah - replace landing page image with "final" version
-- [ ] - jonathan - 404 page and routes
-- [ ] - isaiah - 404 styling
-- [ ] - jonathan - user should not see whether username or pass fails
-- [ ] -  - add empty list notification
-<<<<<<< HEAD
-=======
-- [ ] -  - remove console.log throughout code
-
-
+### Sunday - 6/6:
 Extra Stretch
-- [ ] -  - user profile page
-- [ ] -  - object embedding
-- [ ] -  - change welcome h1 tag from User to user.username
-- [ ] -  - animate modal
-- [ ] -  - information page/modal
-- [ ] -  - css to apply to items that have a quantity fall below the reorder level
->>>>>>> submaster
+- [ ] - TODO BUG - object reorder shows up in other user accounts
+- [ ] - TODO BUG - users can access other users pages through these links
+- [ ] - jonathan - remove or hide unused pages
+- [ ] - jonathan - user profile page
+- [ ] - jonathan - object embedding
+
+
+
+- [ ] - isaiah - information page/modal
+- [ ] - isaiah - replace landing page image with "final" version if info or profile is added
+- [ ] - isaiaha - animate modal
 
 
 
@@ -199,12 +180,6 @@ Extra Extra Stretch
 - [ ] -  - forgot password
 - [ ] -  - delete item modal/prompt
 - [ ] -  - unique items (maybe add quantity fields for new total)
-
-### Saturday - 6/5:
-- [ ] -  - 
-
-### Sunday - 6/6:
-- [ ] -  - 
 
 
 
