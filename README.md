@@ -158,8 +158,7 @@ Inventory tool for businesses.
 - [x] - isaiah - add empty list notification for items
 - [x] - isaiah - add empty list notification for lists
 
-
-
+### Sunday - 6/6:
 Extra Stretch
 - [ ] - TODO BUG - object reorder shows up in other user accounts
 - [ ] - TODO BUG - users can access other users pages through these links
@@ -181,9 +180,6 @@ Extra Extra Stretch
 - [ ] -  - forgot password
 - [ ] -  - delete item modal/prompt
 - [ ] -  - unique items (maybe add quantity fields for new total)
-
-### Sunday - 6/6:
-- [ ] -  - 
 
 
 
