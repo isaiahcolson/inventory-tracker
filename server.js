@@ -64,8 +64,12 @@ app.get('/404', (req,res) =>{
 });
 
 app.use(function (req, res, next) {
+    res.status(500).render('500');
+});
+
+app.use(function (req, res, next) {
     res.status(404).render('404');
-  })
+});
 
 // Bind server to PORT
 app.listen(PORT, function(){

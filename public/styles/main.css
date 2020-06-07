@@ -542,9 +542,9 @@ form label::after {
     justify-content: center;
 }
 
-/* .items p {
-    margin: 0 auto;
-} */
+.items__empty p {
+    color: var(--dark);
+}
 
 .items-list {
     color: var(--dark);
@@ -789,7 +789,7 @@ form label::after {
 
 
 
-/* 500 404 page styling */
+/* SECTION 500 404 page styling */
 .five-four {
     height: 100vh;
     background-color: #FEFEFE;
@@ -831,12 +831,12 @@ form label::after {
 }
 
 .five-four-content a:first-of-type {
-    color: var(--dark);
+    color: #191f28;
     background-color: none;
 }
 
 .five-four-content a:first-of-type:hover {
-    background-color: var(--light-alt);
+    background-color: #F1F1F1;
 }
 
 .five-four-content a:last-of-type {

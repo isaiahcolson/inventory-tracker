@@ -156,10 +156,13 @@ Inventory tool for businesses.
 - [x] - isaiah - set 404 route to all unavailable pages
 - [x] - isaiah - css applied to items that have a quantity fall below the reorder level
 - [x] - isaiah - add empty list notification for items
+- [x] - isaiah - add empty list notification for lists
 
 
 
 Extra Stretch
+- [ ] - TODO BUG - object reorder shows up in other user accounts
+- [ ] - TODO BUG - users can access other users pages through these links
 - [ ] - jonathan - remove or hide unused pages
 - [ ] - jonathan - user profile page
 - [ ] - jonathan - object embedding
@@ -168,7 +171,6 @@ Extra Stretch
 
 - [ ] - isaiah - information page/modal
 - [ ] - isaiah - replace landing page image with "final" version if info or profile is added
-- [ ] - isaiah - add empty list notification for lists
 - [ ] - isaiaha - animate modal
 
 
