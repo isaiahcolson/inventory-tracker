@@ -154,17 +154,17 @@ Inventory tool for businesses.
 - [x] - isaiah - 500 styling
 - [x] - isaiah - 404 styling
 - [x] - isaiah - set 404 route to all unavailable pages
+- [x] - isaiah - css applied to items that have a quantity fall below the reorder level
 
 
 
 Stretch
-- [ ] -  - remove or hide unused pages
+- [ ] - jonathan - remove or hide unused pages
 
 
 
 Extra Stretch
 - [ ] -  - information page/modal
-- [ ] -  - css to apply to items that have a quantity fall below the reorder level
 - [ ] -  - user profile page
 - [ ] - isaiah - replace landing page image with "final" version if info or profile is added
 - [ ] -  - add empty list notification for lists

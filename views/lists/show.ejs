@@ -45,7 +45,11 @@
                     <div class="ind-item"><%= item.name %></div>
                     <div class="ind-item"><%= item.category %></div>
                     <div class="ind-item">$<%= item.price %></div>
-                    <div class="ind-item"><%= item.quantity %></div>
+                    <% if (item.quantity < item.reorderLevel) { %>
+                        <div class="ind-item" style="color:#ff7a7a"><%= item.quantity %></div>
+                    <% } else { %>
+                        <div class="ind-item"><%= item.quantity %></div>
+                    <% } %>
                     <div class="ind-item"><%= item.reorderLevel %></div>
                     <div class="ind-item">
                         <a title="Edit Current Item" class="item-edit-button" >

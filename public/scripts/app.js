@@ -51,7 +51,7 @@ $('.create-modal-bg').click(function(){
 /* item edit events */
 $('.item-edit-button').click(function(events){
     const target = event.target.dataset.id;
-    console.log(target);
+    // console.log(target);
     $(`#${target}`).toggleClass('hidden');
 });
 
@@ -167,7 +167,7 @@ const themeSwitch = () => {
 }
 
 const setTheme = () => {
-    console.log(localStorage);
+    // console.log(localStorage);
     const storageTheme = localStorage.getItem('theme');
     if (storageTheme === 'light') {
         $('body').removeClass();
