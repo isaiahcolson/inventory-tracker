@@ -6,18 +6,18 @@ const db = require('../models');
 
 // Index route - the app's Dashboard
 router.get('/', (req,res) => {
-    // retrieves the user's list of inventories and display on Dashboard
+    // retrieves the user's list of inventories to display on Dashboard
     db.List.find({user: req.session.currentUser.id}, function(err, allLists) {
         if (err) {
             console.log(err);
             res.redirect('/500');
         } else {  
-            // compares the quantity & reorder level and displays it in the aside nav 'Order List' section
+            // finds session ID for user and display the username information on the 'Welcome Back' section
             db.User.findById(req.session.currentUser.id).populate('user').exec(function(err, foundUser){
                 if (err) {
                     console.log(err);
                 } else {
-                    // find session ID for user and display the username information on the 'Welcome Back' section
+                    // finds the quantity & reorder level and displays it in the aside nav 'Order List' section
                     console.log(foundUser);
                     db.Item.find({list: allLists}).populate('item').exec(function(err, comparedItem){
                         if (err) {
