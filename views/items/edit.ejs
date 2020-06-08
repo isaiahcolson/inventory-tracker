@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/styles/main.css">
+    <title>Item Edit Page</title>
+</head>
+<body>
+    <header>
+        <h1>Welcome to the Mythical Creature's Inventory Tool</h1>
+        <nav>
+            <ul>
+                <li><a href="/">Home</a></li>
+                <li><a href="/lists">Inventories List</a></li>
+                <li><a href="/logout">Logout</a></li>
+            </ul>          
+        </nav>
+    </header>
+        <main>
+            <h2>Edit route</h2>
+            <p>Test edit page for <%= item.name %></p>
+            <form action="/items/<%= item._id %>?_method=PUT" method="POST">
+                <ul style="list-style: none;">
+                    <li>Name: <input type="text" name="name"></li>     
+                    <li>Category: <input type="text" name="category"></li>   
+                    <li>Price: <input type="integer" name="price"></li>   
+                    <li>Quanity: <input type="integer" name="quanity"></li>
+                    <input type="submit" value="Submit to update this info">
+                <ul>	
+            </form>
+        </main>
+</body>
+</html>

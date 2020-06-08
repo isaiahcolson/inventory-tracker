@@ -1,0 +1,59 @@
+<header>
+    <%- include('../partials/dashheader.ejs') %>  
+</header>
+
+<main class="dash-main">
+
+    <div class="underlay"></div>
+
+    <aside>
+        <h2>Order List</h2>
+        <% if( items.length === 0) { %>
+            <p>You have no items that need ordered at this time.</p>
+        <% } else { %>
+        <ul>
+        <% items.forEach(item =>  { %>
+            <% if( item.quantity <= item.reorderLevel ) { %>
+                <a href="/lists/<%= item.list %>">
+                    <li><%= item.name %></li>
+                </a>
+            <% } else { %>
+                <% } %>
+            <% }) %>
+        </ul>
+        <% } %>
+    </aside>
+
+
+    <div class="dash-lists">
+        <div class="welcome">
+            <% if ( lists.length === 0) { %>
+                <h2>Hello</h2>
+                <h1><%= users.username %></h1>
+                <p>Select a list below to continue working, or start a new one.</p>
+            <% } else { %>
+                <h2>Welcome Back</h2>
+                <h1><%= users.username %></h1>
+                <p>Select a list below to continue working, or start a new one.</p>
+            <% } %>
+        </div>
+        
+        <div class="dashboard-grid">
+            <% if (lists.length === 0) { %>
+                <div class="items__empty">
+                    <p>You have no inventory lists.</p>
+                </div>
+            <% } else { %>
+                <% lists.forEach(list => { %>
+                    <a href="/lists/<%= list._id %>" class="dashboard-block">
+                        <div class="dashboard-grid-item">
+                            <h3><%= list.name %></h3>                        
+                        </div>
+                    </a>
+                <% }) %>
+            <% } %>
+        </div>
+        
+    </div>
+    
+</main>

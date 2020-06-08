@@ -1,117 +1,185 @@
-MVP Scope
-
-	This is an invetory tool for shop owners.  As a shop owner (witches, orcs, elves, etc) creates a username/password to get started.  Once authenticated, they are forwarded to a page to add items to their inventory.  They'll also have the ability to update and remove items within that inventory.  Each user will only have access to their own inventory. 
-
-Technologies in play
-
-- bootstrap
-- NodeJs
-- bcrypt
-- body parser
-- express/sessions
-- mongoDB
-- mongoose
+# Nut Index
+Inventory tool for businesses.
+<!-- TODO Add Link to Live Project -->
 
 
-Non-authenticated Users can:
 
+## MVP Scope
+
+'Nut Index' is an invetory tool for businesses.  As a business owner, one must create a profile by providing a username, email, and password to get started.  Once authenticated, they are forwarded to a dashboard to add items to their inventory.  They'll also have the ability to update and remove items within that inventory.  Each user will only have access to their own inventory list(s). 
+
+### Built With
+
+* bcryptjs
+* body-parser
+* connect-mongo
+* ejs
+* express
+* express-ejs-layouts
+* express-session
+* method-override
+* mongoDB
+* mongoose
+* Node.js
+
+
+
+## Wireframe/ Design
+
+### Wireframes
+![Wireframe Image 1](/assets/images/inv-wireframe-1.png)
+![Wireframe Image 2](/assets/images/inv-wireframe-2.png)
+![Wireframe Image 3](/assets/images/inv-wireframe-3.png)
+![Wireframe Image 4](/assets/images/inv-wireframe-4.png)
+
+### Color Scheme/ Styling
+![Color Collection](/assets/images/inv-color-collection.jpg)
+
+
+
+## User Stories
+
+### Non-authenticated Users can:
 1. Register
-- For 1st-time users, they are prompted with a registration page. 
-- Enter username, email address, and password
-- Click 'Confirm' to finalize registration process.  Users are directed to the Inventory page
+	* For 1st-time users, they are prompted with a registration page. 
+	* Enter username, email address, and password
+	* Click 'Confirm' to finalize registration process.  Users are directed to the login page
 
+### Authenticated user can:
+1. Login
+	* Enter username and password
+	* Once authenticated, users are directed to the dashboard. This page the user can see all of their lists, add new lists, and see all items that need to be reordered.
 
-Authenticated user can:
-2. Login
-- Enter email/username and password
-- Once authenticated, users are directed to the Inventory page. This page has all of the create, update, and remove functionality in place. 
+2. Adding List
+	* Click onto the 'Add List' button. A pop up window prompts the user to enter a list name.
+	* After entering the list name, a user hits 'Create' and the list appears in the dashboard and the user is redirected to the new created list's page
 
 3. Adding items
-- Click onto the 'Add item' button. A smaller window pops up with fields to enter item details.
-- Enter item details.
-- Click onto submit.  This puts the new item into their inventory, the 'New item' window dissapears, and they're redirected to the Inventory page.
+	* Click onto the 'Add item' button. A smaller window pops up with fields to enter item details.
+	* Enter item details.
+	* Click onto submit.  This puts the new item into their inventory, the 'New item' window dissapears, and they're redirected to the Inventory page.
 
 4. Update current items
-- Click onto the 'Edit' button.  A smaller window pops up with fields to edit item details.
-- Make necessary changes to the item's details
-- Click onto submit.  The selected item will update, the 'Edit item' window dissapears, and they're redirected to the Inventory page.
+	* Click onto the 'Edit' button.  A smaller window pops up with fields to edit item details.
+	* Make necessary changes to the item's details
+	* Click onto submit.  The selected item will update, the 'Edit item' window dissapears, and they're redirected to the Inventory page.
 
 5. Remove items
-- Click onto the 'Delete' button.  A smaller window pops up asking if they're sure on removing the item
-- Click 'Yes' to confirm or 'No' if they change their mind.  Upon either selection, the inventory will update accordingly, this 'Remove items' window dissapears, and they redirected to the Inventory page.
+	* Click onto the 'Delete' button to remove item with no prompts.
+	* The inventory will update accordingly.
 
 6. Logout
-- Click onto the 'Logout' button.  Users will be redirected to the initial landing page.
-
-
-Database Models and ERD
-
-User
-Username: { type: String, required: true, unique: true },
-Email: { type: String, required: true, unique: true },
-Password: { type: String, required: true },
-List: {
-	type: mongoose.Schema.Types.ObjectID,
-	ref: "Lists",
-	},
-    { timestamps: true }
-);
-
-
-Lists
-Name: { type: String, required: true },
-User: {
-	type: mongoose.Schema.Types.ObjectID,
-	ref: "User",
-	}
-Item: {
-	type: mongoose.Schema.Types.ObjectID,
-	ref: "Item",
-	},
-    { timestamps: true }
-);
-
-Item
-Name: { type: String, required: true },
-Category: { type: String, required: true },
-Price: { type: Number, required: true },
-Quanity: { type: Number, required: true },
-Reorder level: { type: Number, required: true }
+	* Click onto the 'Logout' button.  Users will be redirected to the initial landing page.
 
 
 
+## Data Models and ERD
 
-Development Timeline
+### Users
+* username
+* email
+* password
+* lists
 
-Saturday Sprint:
-- set up base directories/files
-- set up master repo
-- set up submaster branch
-- set up developer branches
-- css design starts
+### Lists
+* name
+* items
+* user
 
-
-Monday Sprint:
-- users can see navigation
-- users can see items in inventory
-- users can add items
-- users can log item
-
-Tuesday Sprint:
-- full CRUD & MPV
-- users can edit item
-- users can remove items
-
-Wednesday Sprint:
-- add multiple lists
-- dark theme styling
-
-Thursday Sprint:
-- clean up code
-- finalize styling
+### Items
+* name
+* category
+* price
+* quantity
+* reorderLevel
+* list
 
 
-Stretch Goals
-- allow multiple lists to be created and used
-- dark theme styling
-- automatic item generator for creature-specific users
+### ERD
+![ERD Diagram](/assets/images/inv-erd.png)
+
+
+
+## Development Timeline
+
+### Saturday - 5/30:
+* set up base directories/files
+* set up master repo
+* set up submaster branch
+* set up developer branches
+* start css design
+
+### Monday - 5/31:
+* users can see navigation
+* CRUD for lists
+* add items model
+* add items folder in views
+* add sidenav
+* add items controller
+* added items ref to models
+
+### Tuesday - 6/1:
+* create user dashboard
+* create style lists view
+* CRUD for items model
+* create user auth pages
+* create landing page with routes to user auth pages
+
+### Wednesday - 6/2:
+* add lists model
+* user reg and auth
+* styling for list page
+* dark theme styling
+* modal windows
+
+### Thursday - 6/3:
+* all modals added
+* dark theme switch
+* lists and items models user specific
+* finalize MVP
+
+### Friday - 6/4:
+* add document title and favicon
+* inventory edit route replaces list name in header
+* populate dashboard aside section with reorder items
+* change welcome h1 tag from User to user.username
+* add empty list notification for aside
+* 404 page and routes
+* register form validation with css
+
+### Saturday - 6/5:
+* login form validation with css
+* add labels for inputs
+* cleanup code
+* add overflow scroll to aside section
+* 500 and 404 styling
+* css applied to items that have a quantity fall below the reorder level
+* add empty list notification for items and lists
+
+### Sunday - 6/6:
+* object reorder shows up in other user accounts
+* users can access other users pages through these links
+* remove or hide unused pages
+
+
+
+### Stretch Goals
+* user profile page
+* object embedding
+* information page/modal
+* animate modal
+* item sorting
+* change password
+* forgot password
+* username not case sensitive
+* unique items (add quantity fields for new total)
+
+
+
+<!-- Sources -->
+<!-- checkbox styling - https://www.w3schools.com/howto/howto_css_switch.asp -->
+<!-- dark theme coloring - https://www.behance.net/gallery/48666853/Engine-Dashboard-Personal-Account-Redesign-Concept -->
+<!-- primary coloring - https://www.pinterest.com/pin/800444533761655082/ -->
+<!-- layout styling - https://www.behance.net/gallery/90858523/Data-table-design-for-product-inventory-management -->
+<!-- landing page styling - https://www.soundstripe.com/ -->
+<!-- user reg styling - https://twitter.com/i/flow/signup -->

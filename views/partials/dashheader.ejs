@@ -1,0 +1,33 @@
+<nav class="sidenav">
+    <ul>
+        <li><a title="Add New List" class="create-list-modal"><i class="fas fa-plus"></i></a></li>
+        <!-- <li><a title="FAQ"><i class="fas fa-question"></i></a></li> -->
+        <li>
+            <label class="switch">
+                <input type="checkbox" id="themeSwitch">
+                <span class="slider"></span>
+            </label>
+        </li>
+        <li>
+            <form action="/logout?_method=DELETE" method="POST">
+                <button type="submit"><i class="fas fa-sign-out-alt"></i></button>
+            </form>
+        </li>
+    </ul>   
+</nav>
+
+<div class="create-list normal-label hidden">
+    <div class="create-list-bg"></div>
+    <div class="modal-content">
+        <div class="list-close">+</div>
+        <p>Create a new inventory list.</p>
+        <form action="/lists" method="POST">
+            <div class="">
+                <input type="text" name="name" placeholder="Inventory Name" minlength="5" maxlength="20" required class="normal-input" />
+                <label for="name">Inventory Name</label>
+                <div class="error-message">List names must be between 5 and 20 characters.</div>
+            </div>
+            <input type="submit" value="Create">
+        </form>
+    </div>
+</div>

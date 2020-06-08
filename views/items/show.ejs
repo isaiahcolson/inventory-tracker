@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/styles/main.css">
+    <title>Items</title>
+</head>
+<body>
+    <header>
+        <h1>Welcome to the Mythical Creature's Inventory Tool</h1>
+        <nav>
+            <ul>
+                <li><a href="/">Home</a></li>
+                <li><a href="/lists">Inventories List</a></li>
+                <li><a href="/logout">Logout</a></li>
+            </ul>          
+        </nav>
+    </header>
+        <main>
+            <h2>Item Description</h2>
+            <section>
+                <ul style="list-style: none;">
+                    <li>Name: <%= item.name %></li>
+                    <li>Category: <%= item.category %></li>
+                    <li>Price: <%= item.price %></li>
+                    <li>Quantity: <%= item.quanity %></li>
+                    <li>
+                        <a href="/items/<%= item._id %>/edit" title="Edit Current Item">Edit<a>
+                            
+                        <form action="/items/<%= item._id %>?_method=DELETE" method="POST">
+                        <button type="submit"><i class="fas fa-trash"></i></button>
+                        </form>
+                    </li>
+                </ul>
+                
+            </section>        
+        </main>
+</body>
+</html>
