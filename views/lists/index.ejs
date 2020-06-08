@@ -13,13 +13,18 @@
         <% } else { %>
         <ul>
         <% items.forEach(item =>  { %>
-            <a href="/lists/<%= item.list %>">
-                <li><%= item.name %></li>
-            </a>
-            <% }) %>
+            <% if( item.quantity <= item.reorderLevel ) { %>
+                <a href="/lists/<%= item.list %>">
+                    <li><%= item.name %></li>
+                </a>
+            <% } else { %>
+                <% } %>
+                <% }) %>
         </ul>
+
         <% } %>
     </aside>
+
 
     <div class="dash-lists">
         <div class="welcome">
