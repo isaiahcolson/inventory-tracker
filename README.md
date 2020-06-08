@@ -6,7 +6,7 @@ Inventory tool for businesses.
 
 ## MVP Scope
 
-'Nut Index' is an invetory tool for mythical shop owners.  As a shop owner(witches, orcs, elves, etc), one must create a profile by providing a username, email, and password to get started.  Once authenticated, they are forwarded to a page to add items to their inventory.  They'll also have the ability to update and remove items within that inventory.  Each user will only have access to their own inventory lists(s). 
+'Nut Index' is an invetory tool for businesses.  As a business owner, one must create a profile by providing a username, email, and password to get started.  Once authenticated, they are forwarded to a dashboard to add items to their inventory.  They'll also have the ability to update and remove items within that inventory.  Each user will only have access to their own inventory list(s). 
 
 ### Built With
 
@@ -43,28 +43,32 @@ Inventory tool for businesses.
 1. Register
 	* For 1st-time users, they are prompted with a registration page. 
 	* Enter username, email address, and password
-	* Click 'Confirm' to finalize registration process.  Users are directed to the Inventory page
+	* Click 'Confirm' to finalize registration process.  Users are directed to the login page
 
 ### Authenticated user can:
 1. Login
-	* Enter email/username and password
-	* Once authenticated, users are directed to the Inventory page. This page has all of the create, update, and remove functionality in place. 
+	* Enter username and password
+	* Once authenticated, users are directed to the dashboard. This page the user can see all of their lists, add new lists, and see all items that need to be reordered.
 
-2. Adding items
+2. Adding List
+	* Click onto the 'Add List' button. A pop up window prompts the user to enter a list name.
+	* After entering the list name, a user hits 'Create' and the list appears in the dashboard and the user is redirected to the new created list's page
+
+3. Adding items
 	* Click onto the 'Add item' button. A smaller window pops up with fields to enter item details.
 	* Enter item details.
 	* Click onto submit.  This puts the new item into their inventory, the 'New item' window dissapears, and they're redirected to the Inventory page.
 
-3. Update current items
+4. Update current items
 	* Click onto the 'Edit' button.  A smaller window pops up with fields to edit item details.
 	* Make necessary changes to the item's details
 	* Click onto submit.  The selected item will update, the 'Edit item' window dissapears, and they're redirected to the Inventory page.
 
-4. Remove items
-	* Click onto the 'Delete' button.  A smaller window pops up asking if they're sure on removing the item
-	* Click 'Yes' to confirm or 'No' if they change their mind.  Upon either selection, the inventory will update accordingly, this 'Remove items' window dissapears, and they redirected to the Inventory page.
+5. Remove items
+	* Click onto the 'Delete' button to remove item with no prompts.
+	* The inventory will update accordingly.
 
-5. Logout
+6. Logout
 	* Click onto the 'Logout' button.  Users will be redirected to the initial landing page.
 
 
@@ -72,22 +76,24 @@ Inventory tool for businesses.
 ## Data Models and ERD
 
 ### Users
-* username: {type:String, required:true, unique:true},
-* email: {type:String, required:true, unique:true},
-* password: {type:String, required:true},
-* lists: {type: mongoose.Schema.Types.ObjectID, ref:"Lists"},{timestamps:true}
+* username
+* email
+* password
+* lists
 
 ### Lists
-* name: {type:String, required:true},
-* user: {type:mongoose.Schema.Types.ObjectID, ref:"User"}
-* item: {type:mongoose.Schema.Types.ObjectID, ref:"Item"},{timestamps:true}
+* name
+* items
+* user
 
 ### Items
-* name: {type:String, required:true},
-* category: {type:String, required:true},
-* price: {type:Number, required:true},
-* quantity: {type:Number, required:true},
-* reorderLevel: {type:Number, required:true}
+* name
+* category
+* price
+* quantity
+* reorderLevel
+* list
+
 
 ### ERD
 ![ERD Diagram](/assets/images/inv-erd.png)
@@ -142,49 +148,31 @@ Inventory tool for businesses.
 * register form validation with css
 
 ### Saturday - 6/5:
-- [x] - isaiah - login form validation with css
-- [x] - isaiah - add labels for inputs
-- [x] - jonathan - async await on callbacks
-- [x] - jonathan - remove console.log throughout code
-- [x] - jonathan - user should not see whether username or pass fails
-- [x] - isaiah - fix list button overflow
-- [x] - isaiah - aside section has scroll and link to the list of each item
-- [x] - isaiah - replace landing page image with "final" version
-- [x] - isaiah - add title to landing page
-- [x] - isaiah - 500 styling
-- [x] - isaiah - 404 styling
-- [x] - isaiah - set 404 route to all unavailable pages
-- [x] - isaiah - css applied to items that have a quantity fall below the reorder level
-- [x] - isaiah - add empty list notification for items
-- [x] - isaiah - add empty list notification for lists
+* login form validation with css
+* add labels for inputs
+* cleanup code
+* add overflow scroll to aside section
+* 500 and 404 styling
+* css applied to items that have a quantity fall below the reorder level
+* add empty list notification for items and lists
 
 ### Sunday - 6/6:
-Extra Stretch
-- [ ] - TODO BUG - object reorder shows up in other user accounts
-- [ ] - TODO BUG - users can access other users pages through these links
-- [ ] - jonathan - remove or hide unused pages
-- [ ] - jonathan - user profile page
-- [ ] - jonathan - object embedding
-
-
-
-- [ ] - isaiah - information page/modal
-- [ ] - isaiah - replace landing page image with "final" version if info or profile is added
-- [ ] - isaiaha - animate modal
-
-
-
-Extra Extra Stretch
-- [ ] -  - item sorting
-- [ ] -  - change password
-- [ ] -  - forgot password
-- [ ] -  - delete item modal/prompt
-- [ ] -  - unique items (maybe add quantity fields for new total)
+* object reorder shows up in other user accounts
+* users can access other users pages through these links
+* remove or hide unused pages
 
 
 
 ### Stretch Goals
-
+* user profile page
+* object embedding
+* information page/modal
+* animate modal
+* item sorting
+* change password
+* forgot password
+* username not case sensitive
+* unique items (add quantity fields for new total)
 
 
 
