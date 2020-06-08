@@ -13,25 +13,17 @@ router.get('/', (req,res) => {
             res.redirect('/500');
         } else {  
             // compares the quantity & reorder level and displays it in the aside nav 'Order List' section
-            console.log('beep 1');
-            console.log(allLists);
             db.User.findById(req.session.currentUser.id).populate('user').exec(function(err, foundUser){
                 if (err) {
                     console.log(err);
                 } else {
                     // find session ID for user and display the username information on the 'Welcome Back' section
-                    console.log('beep 2');
                     console.log(foundUser);
                     db.Item.find({list: allLists}).populate('item').exec(function(err, comparedItem){
                         if (err) {
                             console.log(err);
                             res.redirect('/500');
                         } else {
-                                console.log('beep 3');
-                                console.log(comparedItem);
-                            
-                                console.log('beep 4');
-                                console.log(comparedItem.length);
                                 res.render('lists/index', {"lists": allLists, "users": foundUser, "items": comparedItem});
                             
                         }
@@ -41,6 +33,8 @@ router.get('/', (req,res) => {
         }
     });
 });
+
+
 
 
 // Create new list route
