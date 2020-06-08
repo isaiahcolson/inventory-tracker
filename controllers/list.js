@@ -13,20 +13,19 @@ router.get('/', (req,res) => {
             res.redirect('/500');
         } else {  
             // compares the quantity & reorder level and displays it in the aside nav 'Order List' section
-            db.Item.find({$expr : {$lt : ['$quantity', '$reorderLevel'] }}, function(err, comparedItem){
+            db.User.findById(req.session.currentUser.id).populate('user').exec(function(err, foundUser){
                 if (err) {
                     console.log(err);
-                    res.redirect('/500');
                 } else {
                     // find session ID for user and display the username information on the 'Welcome Back' section
-                    db.User.findById(req.session.currentUser.id)
-                    .populate('user')
-                    .exec(function(err, foundUser){
+                    console.log(foundUser);
+                    db.Item.find({list: allLists}).populate('item').exec(function(err, comparedItem){
                         if (err) {
                             console.log(err);
-                            res.send({message: 'cant find user'});
+                            res.redirect('/500');
                         } else {
-                            res.render('lists/index', {"lists": allLists, "items": comparedItem, "users": foundUser});
+                                res.render('lists/index', {"lists": allLists, "users": foundUser, "items": comparedItem});
+                            
                         }
                     })                    
                 }
@@ -34,6 +33,8 @@ router.get('/', (req,res) => {
         }
     });
 });
+
+
 
 
 // Create new list route

@@ -13,19 +13,29 @@
         <% } else { %>
         <ul>
         <% items.forEach(item =>  { %>
-            <a href="/lists/<%= item.list %>">
-                <li><%= item.name %></li>
-            </a>
+            <% if( item.quantity <= item.reorderLevel ) { %>
+                <a href="/lists/<%= item.list %>">
+                    <li><%= item.name %></li>
+                </a>
+            <% } else { %>
+                <% } %>
             <% }) %>
         </ul>
         <% } %>
     </aside>
 
+
     <div class="dash-lists">
         <div class="welcome">
-            <h2>Welcome Back</h2>
-            <h1><%= users.username %></h1>
-            <p>Select a list below to continue working, or start a new one.</p>
+            <% if ( lists.length === 0) { %>
+                <h2>Hello</h2>
+                <h1><%= users.username %></h1>
+                <p>Select a list below to continue working, or start a new one.</p>
+            <% } else { %>
+                <h2>Welcome Back</h2>
+                <h1><%= users.username %></h1>
+                <p>Select a list below to continue working, or start a new one.</p>
+            <% } %>
         </div>
         
         <div class="dashboard-grid">
