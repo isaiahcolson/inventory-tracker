@@ -34,7 +34,7 @@ router.post('/signup', async (req,res) => {
 
 // Login form route
 router.get('/login', (req,res) => {
-    res.render('auth/login');
+    res.render('auth/login',{message: ""});
 });
 
 
@@ -46,7 +46,8 @@ router.post('/login', async (req,res) => {
         const foundUser = await db.User.findOne({ username: req.body.username });
         // error message displayed if email doesn't exist
         if(!foundUser) {
-            return res.send({ message: "Invalid Username or Password"});
+            // return res.send({ message: "Invalid Username or Password" });
+            return res.render('auth/login', { message: "Invalid Username or Password" });
         }
         // let's now compare given password with hashed version
         const match = await bcrypt.compare(req.body.password, foundUser.password);

@@ -24,6 +24,7 @@ app.use(bodyParser.urlencoded({extended:false}));
 app.use(methodOverride('_method'));
 app.use(express.static('public'));  //for public and styles folder access
 app.use(expressLayouts);
+// app.use(require('express-ejs-layouts')); // so you dont have to label it twice
 
 
 // Cookie Session configuration
@@ -63,12 +64,20 @@ app.get('/404', (req,res) =>{
     res.render('404', {user: req.session.currentUser });
 });
 
-app.use(function (req, res, next) {
+/* app.use(function (req, res, next) {
     res.status(500).render('500');
-});
+}); */
 
-app.use(function (req, res, next) {
+
+
+app.get("/*",function (req, res, next) {
     res.status(404).render('404');
+}); // great way to catch all pages that do not exist
+
+// method not allowed
+app.use("/*", function (req, res, next) {
+    // res.status(405).json({ message: "Method not allowed" });
+    res.sendStatus(405);
 });
 
 // Bind server to PORT

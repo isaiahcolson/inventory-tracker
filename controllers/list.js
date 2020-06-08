@@ -11,21 +11,20 @@ router.get('/', (req,res) => {
         if (err) {
             console.log(err);
             res.redirect('/500');
-        } else {  
-            // compares the quantity & reorder level and displays it in the aside nav 'Order List' section
-            db.User.findById(req.session.currentUser.id).populate('user').exec(function(err, foundUser){
+        } else { 
+            // find session ID for user and display the username information on the 'Welcome Back' section
+            db.User.findById(req.session.currentUser.id).exec(function(err, foundUser){
                 if (err) {
                     console.log(err);
                 } else {
-                    // find session ID for user and display the username information on the 'Welcome Back' section
+                    // compares the quantity & reorder level and displays it in the aside nav 'Order List' section
                     console.log(foundUser);
                     db.Item.find({list: allLists}).populate('item').exec(function(err, comparedItem){
                         if (err) {
                             console.log(err);
                             res.redirect('/500');
                         } else {
-                                res.render('lists/index', {"lists": allLists, "users": foundUser, "items": comparedItem});
-                            
+                            res.render('lists/index', {"lists": allLists, "users": foundUser, "items": comparedItem});
                         }
                     })                    
                 }
@@ -43,11 +42,13 @@ router.get('/new', (req,res) =>{
 })
 
 // Create route - post new item data to the db collection
-router.post('/', (req,res) => {
+router.post('/', (req, res) => {
+    
     const list = {
         name: req.body.name,
         user: req.session.currentUser.id,
     };
+
     db.List.create(list, function(err,createdList) {
         if (err) {
             console.log(err);
@@ -60,8 +61,8 @@ router.post('/', (req,res) => {
 
 
 // Show route
-router.get('/:id', (req,res) => {
-    db.List.findById(req.params.id, function(err, foundList) {
+router.get('/:id', (req, res) => {
+    /* db.List.findById(req.params.id, function(err, foundList) {
         if (err) {
             console.log(err);
             res.redirect('/500');
@@ -71,8 +72,17 @@ router.get('/:id', (req,res) => {
                 res.render('lists/show', context);
             })     
         }
-    })
-})
+    }) */
+    db.List.findById(req.params.id).populate("item user").exec(function (err, foundList) {
+        if (err) {
+            console.log(err);
+            res.redirect('/500');
+        } else {
+            const context = { list: foundList };
+            res.render('lists/show', context);
+        }
+    });
+});
 
 
 // Edit route
