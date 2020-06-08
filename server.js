@@ -6,6 +6,9 @@ const expressLayouts = require('express-ejs-layouts');
 const session = require('express-session');
 const MongoStore = require('connect-mongo')(session);
 
+// using .env
+require("dotenv").config();
+
 // Internal Module
 const controllers = require('./controllers');
 const authRequired = require("./middleware/authRequired");
@@ -14,7 +17,7 @@ const authRequired = require("./middleware/authRequired");
 const app = express();
 
 // System config variable
-const PORT = process.env.PORT || 4000;
+const PORT = process.env.PORT;
 
 // App configuration
 app.set('view engine', 'ejs');
@@ -22,16 +25,16 @@ app.set('view engine', 'ejs');
 // Middleware
 app.use(bodyParser.urlencoded({extended:false}));
 app.use(methodOverride('_method'));
-app.use(express.static('public'));  //for public and styles folder access
+app.use(express.static(__dirname + '/public'));  //for public and styles folder access
 app.use(expressLayouts);
 
 
 // Cookie Session configuration
 app.use(session({
     store: new MongoStore({
-        url: 'mongodb://localhost:27017/inventory',
+        url: process.env.MONGODB_URI,
     }),
-    secret: 'Say friend and enter',
+    secret: process.env.SECRET_KEY,
     resave: false,
     saveUninitialized: false,
     cookie: {
