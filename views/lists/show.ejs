@@ -50,7 +50,7 @@
                         <div class="ind-item"><%= item.name %></div>
                         <div class="ind-item"><%= item.category %></div>
                         <div class="ind-item">$<%= item.price %></div>
-                        <% if (item.quantity < item.reorderLevel) { %>
+                        <% if (item.quantity <= item.reorderLevel) { %>
                             <div class="ind-item" style="color:#ff7a7a"><%= item.quantity %></div>
                         <% } else { %>
                             <div class="ind-item"><%= item.quantity %></div>

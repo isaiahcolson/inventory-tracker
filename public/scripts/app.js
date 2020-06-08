@@ -106,6 +106,11 @@ $('#list-edit-submit').click(function(){
     $('#list-name').toggleClass('hidden');
 });
 
+$('#list-name').click(function(){
+    $('#list-edit-form').toggleClass('hidden');
+    $('#list-name').toggleClass('hidden');
+});
+
 
 
 /* dark theme events */
