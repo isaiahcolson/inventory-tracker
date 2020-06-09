@@ -5,6 +5,8 @@ const methodOverride = require('method-override');
 const expressLayouts = require('express-ejs-layouts');
 const session = require('express-session');
 const MongoStore = require('connect-mongo')(session);
+// using .env
+require("dotenv").config();
 
 // Internal Module
 const controllers = require('./controllers');
@@ -14,7 +16,7 @@ const authRequired = require("./middleware/authRequired");
 const app = express();
 
 // System config variable
-const PORT = process.env.PORT || 4000;
+const PORT = process.env.PORT;
 
 // App configuration
 app.set('view engine', 'ejs');
