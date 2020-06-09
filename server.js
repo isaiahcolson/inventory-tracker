@@ -8,8 +8,6 @@ const MongoStore = require('connect-mongo')(session);
 // using .env
 require("dotenv").config();
 
-require("dotenv").config();
-
 // Internal Module
 const controllers = require('./controllers');
 const authRequired = require("./middleware/authRequired");
@@ -26,7 +24,7 @@ app.set('view engine', 'ejs');
 // Middleware
 app.use(bodyParser.urlencoded({extended:false}));
 app.use(methodOverride('_method'));
-app.use(express.static(__dirname + '/public'));  //for public and styles folder access
+app.use(express.static('public'));  //for public and styles folder access
 app.use(expressLayouts);
 
 
