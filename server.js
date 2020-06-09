@@ -31,9 +31,9 @@ app.use(expressLayouts);
 // Cookie Session configuration
 app.use(session({
     store: new MongoStore({
-        url: process.env.MONGODB_URI || 'mongodb://localhost:27017/inventory',
+        url: process.env.MONGODB_URI,
     }),
-    secret: process.env.SECRET_KEY || 'Speak friend and enter',
+    secret: process.env.SECRET_KEY,
     resave: false,
     saveUninitialized: false,
     cookie: {
