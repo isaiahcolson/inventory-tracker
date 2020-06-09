@@ -6,6 +6,8 @@ const expressLayouts = require('express-ejs-layouts');
 const session = require('express-session');
 const MongoStore = require('connect-mongo')(session);
 
+require("dotenv").config();
+
 // Internal Module
 const controllers = require('./controllers');
 const authRequired = require("./middleware/authRequired");
@@ -29,7 +31,7 @@ app.use(expressLayouts);
 // Cookie Session configuration
 app.use(session({
     store: new MongoStore({
-        url: 'mongodb://localhost:27017/inventory',
+        url: process.env.MONGODB_URI || 'mongodb://localhost:27017/inventory',
     }),
     secret: 'Say friend and enter',
     resave: false,
