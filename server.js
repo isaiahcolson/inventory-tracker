@@ -16,7 +16,7 @@ const authRequired = require("./middleware/authRequired");
 const app = express();
 
 // System config variable
-const PORT = process.env.PORT;
+const PORT = process.env.PORT || 4000;
 
 // App configuration
 app.set('view engine', 'ejs');
@@ -31,9 +31,9 @@ app.use(expressLayouts);
 // Cookie Session configuration
 app.use(session({
     store: new MongoStore({
-        url: process.env.MONGODB_URI,
+        url: process.env.MONGODB_URI || 'mongodb://localhost:27017/inventory',
     }),
-    secret: process.env.SECRET_KEY,
+    secret: process.env.SECRET_KEY || 'Speak Friend and Enter',
     resave: false,
     saveUninitialized: false,
     cookie: {
