@@ -1,4 +1,10 @@
 const mongoose = require('mongoose');
+
+require("dotenv").config();
+
+const connectionString = 
+  process.env.MONGODB_URI;
+
 // using .envfile
 require("dotenv").config();
 
